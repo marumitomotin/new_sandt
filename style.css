@@ -257,55 +257,14 @@ p {
   gap: 10px;
 }
 
-/*----------------------------------------------------------
-# Container, Area
-----------------------------------------------------------*/
-
-/* override */
+/**********************************************************
+ コンテナ、レイアウト系
+**********************************************************/
 
 .container {
-  max-width: 1152px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-.gray-area {
-  background-color: #f5f5f5;
-}
-
-.sidebar {
-  width: 180px;
-  padding: 0 20px 0 0;
-  float: left;
-}
-
-.right-sidebar {
-  width: 180px;
-  padding: 0 20px 0 0;
-  float: right;
-}
-
-.content-area {
-  max-width: 920px;
-  padding: 0;
-  float: right;
-}
-
-#section_renew,
-#section_contact,
-#section01,
-#section1,
-#section2,
-#section3,
-#section4,
-#section5,
-#section6 {
-  margin-top: -118px !important;
-  padding-top: 118px !important;
-}
-
-.narrow-section {
-  padding:0 65px 118px 100px;
+  max-width: 1090px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 /*----------------------------------------------------------
@@ -1163,6 +1122,26 @@ a:hover {
   animation-delay: 4.5s;
 }
 
+#top-about {
+  text-align: center;
+}
+
+#top-about .circle-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 780px;
+  margin: 0 auto 10px auto;
+}
+
+#top-about .logo {
+  margin-bottom: 50px;
+}
+
+#top-about h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
 
 @keyframes fadeInUp {
   from {

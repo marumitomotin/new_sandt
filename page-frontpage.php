@@ -23,35 +23,26 @@ get_header(); ?>
   </div>
 </section>
 
-<div id="new-top">
+<section id="top-about">
+  <div class="container">
 
-  <section id="information" style="background:#F6F6F6;margin-top:-15px;">
-    <div class="container" style="max-width:1000px;margin:0 auto;padding-top:60px;padding-bottom:75px;">
-
-      <h2 style="display:inline-block;margin-bottom:45px;margin-left: 15px;">NEWS</h2>
-
-      <?php $postslist = get_posts(array('post_type'=>'post','posts_per_page'=>'5','paged'=>$paged)); ?>
-
-        <?php foreach ($postslist as $post) : setup_postdata($post); ?>
-          <div class="row">
-            <div class="col-lg-3">
-              <span style="font-size:14px;font-weight:bold;"><?php echo get_the_date('Y.m.d');?></span>
-              <span class="news-tag"><?php the_field('アイコン'); ?></span>
-            </div>
-            <div class="col-lg-9" style="margin:6px 0;">
-              <a href="<?php the_permalink(); ?>">
-                <span style="font-size:16px;font-weight:bold;"><i class="fa fa-play" aria-hidden="true" style="color:#EB5C01;"></i> <?php the_title(); ?></span>
-              </a>
-            </div>
-          </div>
-        <?php endforeach; wp_reset_postdata();?>
-
-      <a href="/newslist/">
-        <div class="white-c-button" style="border-radius:0;border:1px solid #707070;width:265px;margin-top:40px;min-height:37px;font-size:14px;display:flex;align-items:center;justify-content:center;padding:0;">一覧を見る</div>
-      </a>
-
+    <div class="circle-area">
+      <img src="<?=$r?>/images/top/circle_st.png" alt="S&T">
+      <img src="<?=$r?>/images/top/icon_cross.png" alt="cross">
+      <img src="<?=$r?>/images/top/circle_more.png" alt="S&T more">
     </div>
-  </section>
+
+    <img src="<?=$r?>/images/top/logo_top.svg" class="logo" alt="ロゴ">
+
+    <p style="margin-bottom:15px;">― 私たちの使命 ―</p>
+    <h2>『不動産の収益と資産価値の最大化』</h2>
+    <p>オーナー様がご所有されている</p>
+    <p>アパートやマンションの賃貸経営のパートナーとして</p>
+    <p>必要不可欠な存在になることが</p>
+    <p>私たちの使命です。</p>
+
+  </div>
+</section>
 
   <section id="recommend">
     <div class="container" style="margin:0 auto;padding-top:75px;padding-bottom:75px;">
@@ -170,8 +161,6 @@ get_header(); ?>
       </div><!--modal-->
 
     </div>
-  </section>
+  </section> <?php
 
-</div>
-
-<?php get_footer(); ?>
+get_footer();
