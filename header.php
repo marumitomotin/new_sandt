@@ -42,10 +42,12 @@
 
     <?php wp_head(); ?>
 
-    <link rel="stylesheet" type="text/css" href="<?=$r?>/inc/slick/slick.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="<?=$r?>/inc/slick/slick-theme.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="<?=$r?>/inc/assets/css/aos.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="<?=$r?>/inc/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="<?=$r?>/inc/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="<?=$r?>/inc/assets/css/aos.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="<?=$r?>/style.css">
+
     <script src="<?=$r?>/inc/slick/slick.min.js"></script>
     <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
     <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
@@ -343,6 +345,7 @@
             <div class="btn-green">お問い合わせ</div>
           </div>
 
+<?php /*
           <div id="main-nav" class="navbar-collapse">
             <ul id="menu-main" class="navbar-nav">
               <li>
@@ -382,6 +385,7 @@
               </li>
             </ul>
           </div>
+*/?>
         </div>
       </nav>
     </div>

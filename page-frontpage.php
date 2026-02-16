@@ -6,6 +6,7 @@ get_header(); ?>
 
 <section id="top-firstview">
   <div class="container">
+
     <img src="<?=$r?>/images/top/firstview_07.jpg" class="image-wrap-07 rellax" data-rellax-speed="-5" data-rellax-tablet-speed="0" data-rellax-xs-speed="-4" style="transform: translate3d(0px, 0px, 0px);" alt="">
     <img src="<?=$r?>/images/top/firstview_01.jpg" class="image-wrap-01 rellax" data-rellax-speed="-4" data-rellax-tablet-speed="0.5" data-rellax-xs-speed="-2" style="transform: translate3d(0px, 0px, 0px);" alt="">
     <img src="<?=$r?>/images/top/firstview_04.jpg" class="image-wrap-04 rellax" data-rellax-speed="4" data-rellax-xs-speed="2" style="transform: translate3d(0px, 0px, 0px);" alt="">
@@ -20,10 +21,11 @@ get_header(); ?>
     <img src="<?=$r?>/images/top/firstview_03.jpg" class="image-wrap-03 rellax" data-rellax-speed="2" data-rellax-xs-speed="1" style="transform: translate3d(0px, 0px, 0px);" alt="">
     <img src="<?=$r?>/images/top/firstview_08.jpg" class="image-wrap-08 rellax" data-rellax-speed="1" style="transform: translate3d(0px, 0px, 0px);" alt="">
     <img src="<?=$r?>/images/top/firstview_06.jpg" class="image-wrap-06 rellax" data-rellax-speed="4.5" data-rellax-xs-speed="0.5" style="transform: translate3d(0px, 0px, 0px);" alt="">
+
   </div>
 </section>
 
-<section id="top-about">
+<section id="top-about" class="shippori">
   <div class="container">
 
     <div class="circle-area">
@@ -35,132 +37,203 @@ get_header(); ?>
     <img src="<?=$r?>/images/top/logo_top.svg" class="logo" alt="ロゴ">
 
     <p style="margin-bottom:15px;">― 私たちの使命 ―</p>
-    <h2>『不動産の収益と資産価値の最大化』</h2>
-    <p>オーナー様がご所有されている</p>
-    <p>アパートやマンションの賃貸経営のパートナーとして</p>
-    <p>必要不可欠な存在になることが</p>
-    <p>私たちの使命です。</p>
+    <h2 class="shippori">『不動産の収益と資産価値の最大化』</h2>
+    <p class="description">オーナー様がご所有されている</p>
+    <p class="description">アパートやマンションの賃貸経営のパートナーとして</p>
+    <p class="description">必要不可欠な存在になることが</p>
+    <p class="description">私たちの使命です。</p>
 
   </div>
 </section>
 
-  <section id="recommend">
-    <div class="container" style="margin:0 auto;padding-top:75px;padding-bottom:75px;">
+<section id="top-city-photo">
+  <img src="<?=$r?>/images/top/city_photo.jpg" alt="街の写真">
+</section>
 
-      <h2>RECOMMEND</h2>
+<section id="top-information">
+  <div class="container">
 
-      <div class="row">
-        <div class="col-lg-6">
-          <a href="http://sandtmore.co.jp/" target="_blank">
-            <div class="recommend-box recommend-right">
-              <img src="<?=$r?>/images/recommend1.png" alt="recommend">
-              <p style="font-size:12px;bottom:44px;">グループ会社</p>
-              <img src="<?=$r?>/images/more_logo.svg" style="width:78px;bottom:20px;top:initial;transform:translateX(-50%);" alt="recommend">
-            </div>
-          </a>
-          <a href="/magazines/">
-            <div class="recommend-box recommend-left">
-              <img src="<?=$r?>/images/recommend2.png" alt="recommend">
-              <p>メディア掲載</p>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a href="/resident/">
-            <div class="recommend-box recommend-right">
-              <img src="<?=$r?>/images/recommend3.png" alt="recommend">
-              <p>ご入居者様へ</p>
-            </div>
-          </a>
-          <a href="http://sandtmore.co.jp/blog/" target="_blank">
-            <div class="recommend-box recommend-left">
-              <img src="<?=$r?>/images/recommend4.png" alt="recommend">
-              <p>社長ブログ</p>
-            </div>
-          </a>
+    <div class="title shippori">
+      <div class="title-with-line">
+        <h2 class="shippori">お知らせ</h2>
+        <div>
+          <hr class="hr-title">
+          <p>Information</p>
         </div>
       </div>
+      <p>一覧へ <img src="<?=$r?>/images/top/arrow.png" alt="矢印"></p>
+    </div> <?php
 
-    </div>
-  </section>
+    $post_ids = get_posts([
+      'post_type' => 'post',
+      'posts_per_page' => 3,
+      'oederby' => 'date',
+      'oederby' => 'desc',
+      'fields' => 'ids',
+    ]); ?>
 
-  <section id="renovation" style="background:#F6F6F6;">
-    <div class="container" style="margin:0 auto;padding-top:60px;padding-bottom:75px;">
+    <table> <?php
+      foreach ($post_ids as $post_id) { ?>
+        <tr>
+          <td colspan="2" style="padding-bottom:0;">
+            <?=get_the_date('Y.m.d', $post_id)?>
+          </td>
+        </tr>
+        <tr>
+          <td style="border-bottom:1px solid #000000;width:20%;">
+            <span class="seal-white"><?=get_field('アイコン', $post_id)?></span>
+          </td>
+          <td style="border-bottom:1px solid #000000;">
+            <a href="<?=get_the_permalink($post)?>">
+              <?=get_the_title($post_id);?>
+            </a>
+          </td>
+        </tr> <?php
+      } ?>
+    </table>
 
-      <h2><img src="<?=$r?>/images/suteki_logo_b.png" style="margin:0 auto;" alt="recommend"></h2>
+  </div>
+</section>
 
-      <div class="row" style="margin-bottom:30px !important;">
+<section id="top-topics">
+  <div class="container">
 
-      <?php query_posts(array('post_type'=>'renovation','posts_per_page'=>'4','paged'=>$paged)); ?>
-
-      <?php $i=1; while ( have_posts() ) : the_post(); ?>
-
-        <?php $image = get_field('メイン画像'); ?>
-        <?php
-          $diff = '';
-          $day = new DateTime(get_the_date('Y-m-d'));
-          $today = new DateTime('now');
-          $diff = $day->diff($today);
-        ?>
-
-        <div class="col-lg-3" style="margin-bottom:20px;">
-          <div style="border:1px solid #cccccc;height:260px;background:#ffffff;width:100%;margin:0 auto;">
-          <a href="<?php the_permalink(); ?>">
-            <div class="img_box" style="height:156px;overflow:hidden;">
-              <img src="<?=$image['url']?>" alt="空室対策" style="width:100%;height:180px;object-fit:cover;object-position:bottom;">
-            </div>
-            <?php if (get_field('アイコン') == 'シングル') { ?>
-              <div class="single-tag" style="margin-left:15px;">シングル</div>
-            <?php } else if (get_field('アイコン') == 'ファミリー') { ?>
-              <div class="family-tag" style="margin-left:15px;">ファミリー</div>
-            <?php } else if (get_field('アイコン') == 'DINKS') { ?>
-              <div class="dinks-tag" style="margin-left:15px;">DINKS</div>
-            <?php } ?>
-
-            <?php if ($diff->days < 14) { ?>
-              <div class="new-tag">NEW</div>
-            <?php } ?>
-
-            <p style="font-size:14px;max-width:280px;font-weight:bold;line-height:1.6;margin-left:15px;margin-right:15px;margin-bottom:10px;"><?php the_title(); ?></p>
-          </a>
-          </div>
+    <div class="title shippori">
+      <div class="title-with-line">
+        <h2 class="shippori">トピックス</h2>
+        <div>
+          <hr class="hr-title">
+          <p>Topics</p>
         </div>
-
-      <?php endwhile; ?>
-
       </div>
-
-      <a href="/renovations/">
-        <div class="c-button">
-          <span>more</span>
-        </div>
-      </a>
-
     </div>
-  </section>
 
-  <section id="philosophy" class="gray-area">
-    <div class="container">
-
-        <h2 class="white">Our Philosophy</h2>
-        <p style="color:#ffffff;font-size:26px;text-align:center;margin:65px 0;line-height:1.5;">いつも全力で仕事に取り組む。人として正しい生き方を貫く。</p>
-
-      <a href="" class="js-modal-open">
-        <div class="c-button" style="color:#ffffff;border:1px solid #ffffff;background-color:transparent !important;">
-          <span>more</span>
-        </div>
-      </a>
-
-      <div class="modal js-modal">
-        <div class="modal__bg js-modal-close"></div>
-          <a class="js-modal-close batsu-con" href=""><span class="batsu"></span></a>
-          <div class="modal__content">
-            <p style="margin-bottom:20px;">私たちはいかなる状況でも一生懸命、真剣に仕事に取り組むこと</p>
-            <p>損得ではなく人として正しいと思う判断をすることを何よりも大切にしています。</p>
-          </div><!--modal__inner-->
-      </div><!--modal-->
-
+    <div class="row">
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/topics_01.jpg" style="margin-bottom:15px;" alt="topics">
+        <img src="<?=$r?>/images/top/logo_more.svg" style="margin-bottom:15px;" alt="S&T moreロゴ">
+        <p>
+          <span>建築プロデュース・施設再⽣</span>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </p>
+      </div>
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/topics_02.jpg" style="margin-bottom:15px;" alt="topics">
+        <img src="<?=$r?>/images/top/logo_suteki.svg" style="margin-bottom:7px;" alt="素敵賃貸1ロゴ">
+        <p>
+          <span>リフォーム＆リノベ事例</span>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </p>
+      </div>
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/topics_03.jpg" style="margin-bottom:15px;" alt="topics">
+        <h3 style="margin-bottom:15px;">地域活性化プロデュース</h3>
+        <p>
+          <span>瀬⼾内Project</span>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </p>
+      </div>
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/topics_04.jpg" style="margin-bottom:15px;" alt="topics">
+        <h3 style="margin-bottom:15px;">メディア掲載</h3>
+        <p>
+          <span>取材・You Tube</span>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </p>
+      </div>
     </div>
-  </section> <?php
+
+  </div>
+</section>
+
+<section id="top-business">
+  <div class="container">
+
+    <div class="title shippori">
+      <div class="title-with-line">
+        <h2 class="shippori">事業一覧</h2>
+        <div>
+          <hr class="hr-title">
+          <p>Business</p>
+        </div>
+      </div>
+    </div>
+
+    <img src="<?=$r?>/images/top/business_banner.jpg" style="width:100%;" alt="事業一覧">
+    <h3 class="shippori" style="margin:20px 0;">
+      賃貸不動産の管理・運営
+      <img src="<?=$r?>/images/top/arrow_fat.svg" style="margin-left:40px;" alt="矢印アイコン">
+    </h3>
+    <p style="margin-bottom:40px;line-height:2;">
+      メイン事業である賃貸管理は、蕨市・さいたま市・川⼝市を中⼼にマンション・アパートの管理を⾏っております。賃貸管理に特化した社内体制と地域密着型管理だからこそ実現できる⼊居率の⾼さや充実したサービスでオーナー様の賃貸経営をサポート致します。
+    </p>
+
+    <div class="row">
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/business_01.jpg" class="main-img" alt="topics">
+        <div class="title">
+          <h3 class="shippori">不動産／売却・購入</h3>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </div>
+        <table>
+          <tr>
+            <td>□不動産の購入</td>
+            <td>□不動産の売却</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/business_02.jpg" class="main-img" alt="topics">
+        <div class="title">
+          <h3 class="shippori">店舗・テナント</h3>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </div>
+        <table>
+          <tr>
+            <td>□店舗誘致</td>
+          </tr>
+          <tr>
+            <td>□テナントリーシング</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/business_03.jpg" class="main-img" alt="topics">
+        <div class="title">
+          <h3 class="shippori">土地活用</h3>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </div>
+        <table>
+          <tr>
+            <td>□建築プロディース</td>
+            <td>□空家活用</td>
+          </tr>
+          <tr>
+            <td>□ロードサイド</td>
+            <td>□医院施設</td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-liq-3">
+        <img src="<?=$r?>/images/top/business_04.jpg" class="main-img" alt="topics">
+        <div class="title">
+          <h3 class="shippori">不動産コンサルティング</h3>
+          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+        </div>
+        <table>
+          <tr>
+            <td>□相続対策</td>
+            <td>□顧問サービス</td>
+          </tr>
+          <tr>
+            <td>□調査分析</td>
+            <td>□借地権・底地権</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section> <?php
 
 get_footer();
