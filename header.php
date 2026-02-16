@@ -392,35 +392,4 @@
 
   </header>
 
-  <?php if (is_page('resident')) { ?>
-    <img src="<?=$r?>/images/city.jpg" alt="ヘッダーバナー">
-  <?php } else if (is_page('forowner')) { ?>
-    <img src="<?=$r?>/images/owner-header.jpg" alt="ヘッダーバナー">
-  <?php } else if (is_page('information')) { ?>
-    <img src="<?=$r?>/images/information-header.jpg" alt="ヘッダーバナー">
-  <?php } else if (is_page('contact') || is_page('kaiyaku') || is_page('park-kaiyaku') || is_page('kaiyaku-thanks')) { ?>
-    <img src="<?=$r?>/images/contact-header.jpg" alt="ヘッダーバナー">
-  <?php } else if (is_page('broker')) { ?>
-    <img src="<?=$r?>/images/broker-header.jpg" alt=="ヘッダーバナー">
-  <?php } else if (is_page('recruitment')) { ?>
-    <img src="<?=$r?>/images/recruitment-header.png" alt=="ヘッダーバナー">
-  <?php } else if (is_page('rentry')) { ?>
-    <div class="text-center text-white" style="background-image:url(<?=$r?>/images/recruitment-header.jpg);width:100%;height:180px;padding-top:50px;background-position:center;">
-      <h2 class="text-center text-white" style="font-family:'Sawarabi Mincho';margin-bottom:20px;font-size:36px;">募集要項</h2>
-      <p style="fontis-ze:18px;font-weight:bold;">ENTRY</p>
-    </div>
-  <?php } ?>
-
-  <?php
-    if(is_page('recruitment') || is_page('rentry')) {
-      $background = 'background:#e6e6e6;';
-    }
-  ?>
-
-  <?php if ( !is_page(array(792,794,796,798,866,868)) ) { ?>
-    <div class="container" style="margin-top:15px;font-size:12px;">
-      <?php if (!is_front_page()) bcn_display(); ?>
-    </div>
-  <?php } ?>
-
-  <main id="main-content" style="<?=$background?>;">
+  <main id="main-content">
