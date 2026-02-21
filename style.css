@@ -16,15 +16,14 @@ body {
   margin: 0;
   background: #fff;
   -webkit-font-smoothing: auto;
-  font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "Helvetica Neue", "Helvetica Regular";
+  font-family: "Noto Sans JP", sans-serif;
   font-size: 14px;
+  font-optical-sizing: auto;
   font-weight: normal;
+  font-style: normal;
   line-height: 1;
   position: relative;
-}
-
-.body-attr {
-  padding-top: 100px;
+  color: #000000;
 }
 
 article,aside,footer,header,main,menu,nav,section {
@@ -41,7 +40,6 @@ a:active,
 a:hover {
   outline: 0;
   text-decoration: none;
-  color: #ffffff;
 }
 
 a:hover {
@@ -146,9 +144,11 @@ td {
 **********************************************************/
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "Helvetica Neue", "Helvetica Regular"; 
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
   clear: both;
-  color: #000000;
   font-weight: normal;
   margin: 0;
   line-height: 1;
@@ -211,86 +211,27 @@ section {
   padding: 70px 0;
 }
 
+main {
+  margin-top: 110px;
+}
+
 .container {
   max-width: 1090px;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-/*----------------------------------------------------------
-# Navigation
-----------------------------------------------------------*/
-header#masthead {
-  margin-bottom: 0;
-  background-color: #ffffff;
-  box-shadow: 0 6px 16px -8px #707070;
-  padding: 0;
-}
+/**********************************************************
+ ヘッダー
+**********************************************************/
 
-.header-padding {
-  padding:12px 15px 12px 18px;
-}
-
-.navbar-brand > a {
-  color: rgba(0, 0, 0, 0.9);
-  font-size: 1.1rem;
-  outline: medium none;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-}
-
-.navbar-brand > a:visited, .navbar-brand > a:hover {
-  text-decoration: none;
-}
-
-#page-sub-header {
-  position: relative;
-  padding-top: 5rem;
-  padding-bottom: 0;
-  text-align: center;
-  font-size: 1.25rem;
-  background-size: cover !important;
-}
-
-body:not(.theme-preset-active) #page-sub-header h1 {
-  line-height: 1.6;
-  font-size: 4rem;
-  color: #563e7c;
-  margin: 0 0 1rem;
-  border: 0;
-  padding: 0;
-}
-
-#page-sub-header p {
-  margin-bottom: 0;
-  line-height: 1.4;
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-body:not(.theme-preset-active) #page-sub-header p {
-color: #3e3e3e;
-}
-a.page-scroller {
-  color: #333;
-  font-size: 2.6rem;
-  display: inline-block;
-  margin-top: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  body:not(.theme-preset-active) #page-sub-header h1 {
-    font-size: 3.750rem;
-  }
-  body:not(.theme-preset-active) #page-sub-header {
-    font-size: 1.25rem;
-  }
-}
-@media screen and (min-width: 992px) {
-  #page-sub-header p {
-    max-width: 43rem;
-    margin: 0 auto;
-  }
+header {
+  height: 110px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 9999;
+  background: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -985,6 +926,804 @@ footer {
 }
 
 /**********************************************************
+ Service
+**********************************************************/
+
+#service .content-area {
+  max-width: 1000px;
+}
+
+#service h2 {
+  color: #375d52;
+  font-size: 30px;
+  text-align: left;
+  letter-spacing: 5px;
+}
+
+#service h3 {
+  font-size: 34px;
+  text-align: center;
+  line-height: 1.6;
+}
+
+#service p {
+  line-height: 2;
+}
+
+#service .caret-down {
+  margin: 25px auto 20px auto;
+  display: block;
+}
+
+#service .with-seal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-fill-green {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 15px;
+  background: #36525d;
+  line-height: initial;
+  letter-spacing: initial;
+}
+
+#service #firstview {
+  height: 300px;
+  padding: 0;
+  background: url(images/service/service_header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#service #firstview .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+#service #firstview h1 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#service #introduction h2 {
+  margin-bottom: 100px;
+}
+
+#service #points .list {
+  margin-bottom: 30px;
+}
+
+#service #merit th,
+#service #merit td {
+ padding: 17px 25px;
+}
+
+#service #merit th {
+  font-weight: bold;
+  text-align: center;
+}
+
+#service #merit td {
+  color: #3f3f3f;
+  background: #efefef;
+}
+
+#service #scheme {
+  text-align: center;
+}
+
+#service #work .col-liq-3,
+#service #howto .col-liq-3 {
+  margin-bottom: 15px;
+}
+
+#service #work .col-liq-3 .thumbnail,
+#service #howto .col-liq-3 .thumbnail {
+  width: 100%;
+  aspect-ratio: 240/173;
+  border-radius: 10px;
+}
+
+#service #work .col-liq-3 p,
+#service #howto .col-liq-3 p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.btn-consult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #375d52;
+  font-size: 22px;
+  font-weight: bold;
+  border: 1px solid #375d52;
+  border-radius: 50px;
+  width: 470px;
+  height: 60px;
+  margin: 10px auto 0 auto;
+}
+
+#service #work .btn-consult .arrow-green {
+  position: absolute;
+  right: 25px;
+}
+
+#service #broker h2 {
+  margin-bottom: 50px;
+}
+
+#service #broker th,
+#service #howto th {
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+  background: #0a543a;
+  height: 120px;
+  width: 200px;
+  font-size: 20px;
+}
+
+#service #broker td,
+#service #howto td {
+  vertical-align: middle;
+  text-align: center;
+  line-height: initial;
+  font-size: 16px;
+}
+
+#service #rent .col-liq-4 {
+  margin-bottom: 15px;
+}
+
+#service #rent .col-liq-4 .thumbnail {
+  width: 100%;
+  aspect-ratio: 324/190;
+  border-radius: 10px;
+}
+
+#service #rent .col-liq-4 p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+#service #howto td {
+ padding: 12px;
+}
+
+#service #consulting p:first-of-type {
+  margin-bottom: 60px;
+}
+
+/**********************************************************
+ About
+**********************************************************/
+
+#about #firstview {
+  height: 300px;
+  padding: 0;
+  background: url(images/about/about_header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#about #firstview .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+#about #firstview h1 {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#about #introduction h2 {
+  font-size: 30px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+#about #introduction p {
+  line-height: 2;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#about #produce {
+  text-align: center;
+  letter-spacing: 5px;
+  background: url(images/about/produce_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#about .circle-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 780px;
+  margin: 0 auto 60px auto;
+}
+
+/**********************************************************
+ Rentry
+**********************************************************/
+
+#rentry #firstview {
+  height: 300px;
+  padding: 0;
+  background: url(images/rentry/rentry_header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#rentry #firstview .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#rentry #firstview .container h1 {
+  color: #ffffff;
+}
+
+#rentry #content h2 {
+  font-size: 50px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+#rentry #content h3 {
+  font-size: 30px;
+}
+
+#rentry #content h4 {
+  font-size: 21px;
+  margin: 60px 0;
+}
+
+#rentry #content table {
+  line-height: 2;
+}
+
+#rentry #content .title-th {
+  letter-spacing: 10px;
+  padding: 25px;
+  background: #3A9827;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: none;
+}
+
+#rentry #content th {
+  background: #f6f6f7;
+  color: #000000;
+  font-size: 20px;
+  padding: 25px 40px;
+  width: 30%;
+  border-bottom: 1px solid #000000;
+}
+
+#rentry #content td {
+  padding: 25px;
+  border-bottom: 1px solid #000000;
+}
+
+.btn-rentry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 340px;
+  height: auto;
+  aspect-ratio: 338/76;
+  font-size: 30px;
+  letter-spacing: 5px;
+  background: #0A543A;
+  border-radius: 50px;
+  color: #ffffff;
+  margin: 80px auto 0 auto;
+}
+
+.btn-rentry img {
+  position: absolute;
+  right: 30px;
+}
+
+/**********************************************************
+ Contact
+**********************************************************/
+
+#contact #firstview {
+  height: 300px;
+  padding: 0;
+  background: #F2F5F6;
+  position: relative;
+}
+
+#contact #firstview .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+#contact #firstview h1 {
+  font-size: 44px;
+  color: #375D52;
+}
+
+#contact #content h2 {
+  font-size: 50px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+#contact #contact h3 {
+  font-size: 30px;
+}
+
+#contact #content table {
+  margin: 60px auto;
+  max-width:750px ;
+}
+
+#contact #content th {
+  color: #000000;
+  width: 25%;
+}
+
+#contact #content .tel-textbox {
+  width: 89px;
+  height: 36px;
+}
+
+#contact #content .zip-textbox {
+  width: 152px;
+  height: 36px;
+}
+
+#contact #content .textarea-textbox {
+  width: 352px;
+  height: 80px;
+}
+
+#contact input[type=text],
+#contact select {
+  height: 36px;
+  display: inline-block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #000000;
+  border-radius: 0;
+}
+
+#contact .wpcf7-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 15px;
+  background: #36525d;
+  line-height: initial;
+  letter-spacing: initial;
+  border: none;
+  width: 200px;
+  margin: 0 auto;
+}
+
+/**********************************************************
+ Rental Management
+**********************************************************/
+
+#rental-management {
+  color: #3f3f3f;
+}
+
+#rental-management #firstview {
+  padding: 80px 0;
+  background: url(images/rental_management/rental_management_header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+}
+
+#rental-management #firstview h1 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+#rental-management #firstview h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+#rental-management #firstview .btn-area {
+  gap: 50px;
+  letter-spacing: 5px;
+  margin-top: 50px;
+}
+
+#rental-management #firstview .btn-1,
+#rental-management #firstview .btn-2 {
+  background: #3A9927;
+  color: #ffffff;
+  border-radius: 80px;
+  padding: 15px;
+}
+
+#rental-management #firstview .btn-1 .first,
+#rental-management #firstview .btn-2 .first {
+  font-size: 24px;
+}
+
+#rental-management #firstview .btn-1 .second,
+#rental-management #firstview .btn-2 .second {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size:24px;
+}
+
+#rental-management #firstview .btn-1 .second span,
+#rental-management #firstview .btn-2 .second span {
+  font-size: 80px;
+  font-weight:bold !important;
+}
+
+#rental-management #firstview .btn-1 .third,
+#rental-management #firstview .btn-2 .third {
+  font-size: 12px;
+}
+
+#rental-management #firstview .btn-1 {
+  width: 426px;
+}
+
+#rental-management #firstview .btn-2 {
+  width: 305px;
+}
+
+#rental-management #firstview .box {
+  padding: 25px;
+  background: #ffffff;
+  line-height: 2;
+  letter-spacing: 3px;
+  max-width: 615px;
+  margin: 50px auto 0 auto;
+}
+
+#rental-management #firstview .box h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#rental-management #ask {
+  text-align: center;
+}
+
+#rental-management #ask h2 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+}
+
+#rental-management #ask h3 {
+  color: #3a9927;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 30px auto 40px auto;
+}
+
+#rental-management #ask .images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#rental-management #feature {
+  background: #F9FEF4;
+}
+
+#rental-management #feature h2 {
+  color: #3a9927;
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin: 20px auto 60px auto;
+}
+
+#rental-management #feature .seal-fill-green,
+#rental-management #point5 .seal-fill-green {
+  background: #3a9927;
+  padding: 5px 25px;
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 1;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+#rental-management #feature h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: left;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+#rental-management #feature .col-liq-6 {
+  margin-bottom: 60px;
+}
+
+#rental-management #feature .col-liq-6 p {
+  line-height: 2;
+}
+
+#rental-management #point5 {
+  text-align: center;
+}
+
+#rental-management #point5 h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+}
+
+#rental-management #point5 p {
+  line-height: 2.5;
+  margin-bottom: 30px;
+}
+
+#rental-management .btn-consult .arrow-green {
+    position: absolute;
+    right: 25px;
+}
+
+#rental-management #introduction .box {
+  border: 1px solid #3A9927;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 317px;
+  height: 70px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 45px;
+}
+
+#rental-management #introduction .box .seal-square-fill-green {
+  position: absolute;
+  top: -21px;
+  left: -21px;
+}
+
+#rental-management #introduction .bigbox {
+  background: #F9FEF4;
+  padding: 20px 40px;
+  font-size: 18px;
+}
+
+#rental-management #introduction .bigbox .title-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+#rental-management #introduction .bigbox h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#rental-management #introduction .bigbox td {
+  font-size: 18px;
+  padding: 10px 20px 10px 0;
+}
+
+#rental-management #plan th {
+  color: #000000;
+  background: #f2f2f2;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#rental-management #plan th,
+#rental-management #plan td {
+  text-align: center;
+  height: 77px;
+  vertical-align: middle;
+  border: 1px solid #d6d6d6;
+}
+
+#rental-management #plan .circle-1 {
+  background: #8EC221;
+}
+
+#rental-management #plan .circle-2 {
+ background: #3A9927;
+}
+
+/**********************************************************
+ Resident
+**********************************************************/
+
+#resident section {
+  border-bottom: 2px solid #d9d9d9;
+}
+
+#resident #firstview {
+  padding: 70px 0;
+  background: #F2F5F6;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+#resident #firstview h1 {
+  font-size: 44px;
+  color: #375D52;
+  margin-bottom: 30px;
+}
+
+#resident #firstview p {
+  font-size: 18px;
+  line-height: 2.2;
+}
+
+.small-title {
+  color: #375D52;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#resident h2 {
+  color: #375D52;
+  font-size: 30px;
+  text-align: left;
+  margin-bottom: 60px;
+}
+
+#resident h4 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#resident p {
+  margin-bottom: 20px;
+}
+
+#resident #cancel .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #375D52;
+  padding: 30px;
+  color: #375D52;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#resident .seal-fill-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  position: relative;
+  font-size: 14px;
+  width: 270px;
+  height: 42px;
+  line-height: 1;
+}
+
+#resident .seal-fill-green img {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+#resident .sub-section {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#resident .sub-p {
+  line-height: 2;
+}
+
+#resident .renew-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #375D52;
+  margin-bottom: 20px;
+}
+
+#resident .btn-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 287px;
+  height: 42px;
+  position: relative;
+}
+
+
+#resident .btn-green img {
+  position: absolute;
+  right: 15px;
+}
+
+#resident .contact-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+#resident .contact-info p {
+  margin-bottom: 0;
+}
+
+#resident .contact-info p:first-child {
+  color: #375D52;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#resident .contact-info p:nth-child(2) {
+  color: #F68E00;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#resident #contact-info2 h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/**********************************************************
  Misc
 **********************************************************/
 
@@ -995,6 +1734,39 @@ footer {
   line-height; 1;
   letter-spacing: initial;
 }
+
+.seal-fill-green {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 5px 15px;
+  background: #36525d;
+  line-height: initial;
+  letter-spacing: initial;
+  border-radius: 5px;
+}
+
+.seal-square-fill-green {
+  width: 42px;
+  height: 42px;
+  font-weight: bold;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #3A9927;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+
 
 /**********************************************************
 * レスポンシブ
