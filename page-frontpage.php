@@ -84,7 +84,7 @@ get_header(); ?>
             <span class="seal-white"><?=get_field('アイコン', $post_id)?></span>
           </td>
           <td style="border-bottom:1px solid #000000;">
-            <a href="<?=get_the_permalink($post)?>">
+            <a href="<?=get_the_permalink($post_id)?>">
               <?=get_the_title($post_id);?>
             </a>
           </td>

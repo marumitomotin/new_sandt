@@ -4,13 +4,13 @@
   $r = get_template_directory_uri();
   get_header(); ?>
 
-<section id="company-firstview">
+<section id="firstview">
   <div class="container">
     <h1 class="shippori">企業情報</h1>
   </div>
 </section>
 
-<section id="company-greeting">
+<section id="greeting">
   <div class="container">
 
     <h3 class="shippori sub-title">TOP MESSAGE</h3>
@@ -30,7 +30,7 @@
   </div>
 </section>
 
-<section id="company-philosophy">
+<section id="philosophy">
   <div class="container">
 
     <h3 class="shippori sub-title">経営理念</h3>
@@ -47,11 +47,11 @@
   </div>
 </section>
 
-<section id="company-slogan">
+<section id="slogan">
   <img src="<?=$r?>/images/company/slogan_banner.jpg" alt="スローガン">
 </section>
 
-<section id="company-information">
+<section id="information">
 
   <h2 class="shippori">会社概要</h2>
 
@@ -124,7 +124,7 @@
 
 </section>
 
-<section id="company-history">
+<section id="history">
 
   <h2 class="shippori">沿革</h2>
 
@@ -189,7 +189,7 @@
 
 </section>
 
-<section id="company-map">
+<section id="map">
 
   <h2 class="shippori">アクセス</h2>
   <div id="campus-map"></div>

@@ -5,7 +5,7 @@ Version: 2.0.0
 */
 
 /**********************************************************
- 初期化
+ Basic
 **********************************************************/
 
 *,*::before,*::after {
@@ -140,7 +140,7 @@ td {
 }
 
 /**********************************************************
- フォント系
+ Font, Text
 **********************************************************/
 
 h1, h2, h3, h4, h5, h6 {
@@ -173,6 +173,7 @@ h5 {
 
 p {
   margin: 0;
+  line-height: 1.4;
 }
 
 .shippori {
@@ -182,7 +183,7 @@ p {
 }
 
 /**********************************************************
- ボタン
+ Button
 **********************************************************/
 
 .btn-green {
@@ -204,7 +205,7 @@ p {
 }
 
 /**********************************************************
- コンテナ、レイアウト系
+ Container, Layout
 **********************************************************/
 
 section {
@@ -221,12 +222,53 @@ main {
   margin: 0 auto;
 }
 
+#service .container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+}
+
+.content-area {
+  padding: 0 15px;
+  flex: 1;
+}
+
+.right-sidebar {
+  margin-top: -60px;
+  width: 170px;
+  padding: 110px 15px;
+  text-align: right;
+  position: sticky;
+  top: 0;
+  color: #d9d9d9;
+}
+
+.right-sidebar p {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0 10px;
+  font-weight: bold;
+}
+
+.map-active {
+  fill: #0a543a;
+  color: #0a543a;
+}
+
+.right-sidebar .vertical-line {
+  margin-right: 3.6px;
+  margin-top: -8px;
+  margin-bottom: -8px;
+}
+
 /**********************************************************
- ヘッダー
+ Header
 **********************************************************/
 
 header {
-  height: 110px;
+  height: 100px;
   position: fixed;
   top: 0px;
   width: 100%;
@@ -234,215 +276,60 @@ header {
   background: #ffffff;
 }
 
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-#masthead nav {
-  padding-left: 0;
-  padding-right: 0;
+header .container {
+  height: 100%;
+  max-width: 1420px;
+  padding: 20px 0;
 }
 
-body:not(.theme-preset-active) #masthead .navbar-nav > li > a {
-  padding: 14px 18px;
-  border-right: 1px dotted #707070;
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-body:not(.theme-preset-active) #masthead .navbar-nav > li > a:hover,
-body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a {
-  font-family: "GothicMBmedium";
-  color: #fff;
-  background: #467065;
-}
-
-.navbar-brand {
-  height: auto;
-  padding: 0;
-  margin: 0;
-}
-
-.navbar-toggle .icon-bar {
-  background: #000 none repeat scroll 0 0;
-}
-
-.dropdown-menu .dropdown-toggle::after {
-  border-bottom: 0.3em solid transparent;
-  border-left: 0.3em solid;
-  border-top: 0.3em solid transparent;
-}
-
-#main-nav a:hover {
-  opacity: 1;
-}
-
-h1:hover {
-  opacity: 0.6;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-  display: block;
-}
-
-.dropdown-item {
-  padding-bottom: 12px;
-  padding-top: 8px;
-}
-
-.dropdown-menu {
-  min-width: 213px;
-}
-
-.dropdown .open .dropdown-menu {
-  display: block;
-  left: 12.250em;
-  top: 0;
-}
-
-.dropdown:hover {
-  color: #fff;
-  background: #467065;
-}
-
-.dropdown-menu .dropdown-item {
-  font-family: "GothicMBlight";
-  white-space: normal;
-  background: transparent;
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: bold;
-}
-
-.dropdown-menu .dropdown-item:hover {
-  background: transparent;
-}
-
-.navbar-nav {
-  font-family: "GothicMBlight";
-  padding-right: 8px;
+header ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style-type: none;
+  gap: 0 20px;
   font-size: 13px;
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: inherit;
+header .menu {
+  position: relative;
 }
 
-.navbar-nav .dropdown-menu {
-  position: static;
-  float: none;
-  background: #467065;
-  color: #ffffff;
-  padding: 15px 0 7px 0;
-} 
-
-.dropdown-menu {
-  border-radius: 0;
-  margin: 0;
-  border: 0;
-}
-
-.dropdown-item {
+header .menu:hover > ul {
   display: block;
-  width: 100%;
-  padding: 8px 20px 12px 20px;
-  clear: both;
-  font-weight: 400;
-  color: #3e3e3e;
-  text-align: inherit;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
 }
 
-.dropdown-toggle::after {
+header .menu ul {
   display: none;
+  position: absolute;
+  bottom: -140px;
+  left: -27px;
+  width: 110px;
+  background: #ffffff;
+  padding: 10px 0 0 0;
 }
 
-.dropdown > a {
-  color: #ffffff;
+header #sub-menu-2 {
+  bottom: -175px;
+  left: -52px;
+  width: 160px;
 }
 
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-}
-@media screen and (min-width: 769px) {
-  .dropdown-menu li > .dropdown-menu {
-    right: -9.875rem;
-    top: 1.375rem;
-  }
-}
-@media screen and (max-width: 991px) {
-  .navbar-nav .dropdown-menu {
-    border: medium none;
-    margin-left: 1.250rem;
-    padding: 0;
-  }
-
-  .dropdown-menu li a {
-    padding: 0;
-  }
-
-  #masthead .navbar-nav > li > a {
-    padding-bottom: 0.625rem;
-    padding-top: 0.313rem;
-  }
-
-  .navbar-light .navbar-toggler {
-    border: medium none;
-    outline: none;
-  }
-}
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden;
+header .menu ul li {
+  line-height: 2.5;
+  text-align: center;
 }
 
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-.comment-content.card-block {
-  padding: 20px;
-}
-
-.navigation.post-navigation {
-  padding-top: 1.875rem;
-}
-
-.post-navigation .nav-previous a,
-.post-navigation .nav-next a {
-  border: 1px solid #ddd;
-  border-radius: 0.938rem;
-  display: inline-block;
-  padding: 0.313rem 0.875rem;
-  text-decoration: none;
-}
-
-.post-navigation .nav-next a::after {
-  content: " \2192";
-}
-
-.post-navigation .nav-previous a::before {
-  content: "\2190 ";
-}
-
-.post-navigation .nav-previous a:hover,
-.post-navigation .nav-next a:hover {
-  background: #eee none repeat scroll 0 0;
+header .btn-area {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 /**********************************************************
@@ -708,6 +595,9 @@ footer {
 
 #top-city-photo img {
   width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: bottom;
 }
 
 #top-information {
@@ -827,7 +717,7 @@ footer {
  Company
 **********************************************************/
 
-#company-firstview {
+#company #firstview {
   height: 300px;
   padding: 0;
   background: url(images/company/company_header.jpg);
@@ -836,92 +726,92 @@ footer {
   position: relative;
 }
 
-#company-firstview .container {
+#company #firstview .container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 100%;
 }
 
-#company-firstview h1 {
+#company #firstview h1 {
   font-size: 24px;
   color: #ffffff;
 }
 
-#company-greeting .container {
+#company #greeting .container {
   max-width: 890px;
 }
 
-#company-greeting .container .sub-title,
-#company-philosophy .container .sub-title {
+#company #greeting .container .sub-title,
+#company #philosophy .container .sub-title {
   text-align: center;
   margin-bottom: 30px;
   font-size: 14px;
   letter-spacing: 3px;
 }
 
-#company-greeting .container h2 {
+#company #greeting .container h2 {
   font-size: 30px;
   letter-spacing: 5px;
   margin-bottom: 60px;
 }
 
-#company-greeting .container p {
+#company #greeting .container p {
   margin-bottom: 25px;
 }
 
-#company-philosophy {
+#company #philosophy {
   background: #f9f9fa;
   text-align: center;
 }
 
-#company-philosophy h2 {
+#company #philosophy h2 {
   font-size: 24px;
   margin-bottom: 35px;
 }
 
-#company-philosophy p {
+#company #philosophy p {
   line-height: 2;
 }
 
-#company-philosophy hr {
+#company #philosophy hr {
   border-top: 1px solid #d9d9d9;
   border-bottom: none;
   margin: 70px 0;
 }
 
-#company-slogan {
+#company #slogan {
   padding: 0;
 }
 
-#company-slogan img {
+#company #slogan img {
   width: 100%;
 }
 
-#company-information {
+#company #information {
   border-bottom: 1px solid #d9d9d9;
 }
 
-#company-information table,
-#company-history table {
+#company #information table,
+#company #history table {
   margin: 50px auto 0 auto;
   max-width: 500px;
   color: #595757;
   font-size: 12px;
 }
 
-#company-information td,
-#company-history td {
+#company #information td,
+#company #history td {
   padding: 15px 0;
   line-height: 1.6;
 }
 
-#company-information td:first-child,
-#company-history td:first-child {
+#company #information td:first-child,
+#company #history td:first-child {
   width: 25%;
 }
 
-#company-history table {
+#company #history table {
   max-width: 605px;
 }
 
@@ -1163,6 +1053,108 @@ footer {
   align-items: center;
   max-width: 780px;
   margin: 0 auto 60px auto;
+}
+
+/**********************************************************
+ Sustainable
+**********************************************************/
+
+#sustainable #firstview {
+  height: 300px;
+  padding: 0;
+  background: url(images/sustainable/sustainable_header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#sustainable #firstview .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+}
+
+#sustainable #firstview h1 {
+  font-size: 24px;
+  color: #ffffff;
+  line-height: 1.6;
+  letter-spacing: 5px;
+}
+
+#sustainable #introduction {
+  text-align: center;
+  border-bottom: 1px solid #000000;
+  padding: 100px 0;
+}
+
+#sustainable #introduction p {
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+#sustainable #introduction p:last-of-type {
+  margin-bottom: 60px;
+}
+
+#sustainable #introduction img:first-of-type {
+  max-width: 370px;
+}
+
+#sustainable #introduction .icon-area {
+  max-width: 650px;
+  margin: 20px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+#sustainable #introduction .icon-area img {
+  width: 100px;
+}
+
+#sustainable #howto {
+  padding: 100px 0 0 0;
+}
+
+#sustainable #howto .row {
+  margin-bottom: 80px;
+}
+
+#sustainable #howto .col-liq-6 {
+  padding: 0 20px;
+}
+
+#sustainable #howto .col-liq-6 img {
+  width: 100%;
+}
+
+#sustainable #howto h2 {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 26px;
+  margin: 0 0 30px 0;
+  letter-spacing: 3px;
+}
+
+#sustainable #howto p {
+  line-height: 1.6;
+  margin-bottom: 60px;
+}
+
+#sustainable #howto .icon-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+#sustainable #howto .icon-area img {
+  width: 60px;
 }
 
 /**********************************************************
@@ -1721,6 +1713,110 @@ footer {
 #resident #contact-info2 h3 {
   font-size: 20px;
   font-weight: bold;
+}
+
+/**********************************************************
+ スライドページ（実質カスタムポスト）
+**********************************************************/
+
+#slideshow h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.ug-item-wrapper {
+  max-width: 720px !important;
+  height: 450px !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  border-radius: 5px;
+}
+
+/**********************************************************
+ 投稿ページ
+**********************************************************/
+
+.post-content-area {
+  padding: 0 15px;
+  flex: 1;
+}
+
+.post-content-area img {
+  max-width: 100%;
+}
+
+.post-right-sidebar {
+  width: 180px;
+  padding: 0 15px;
+}
+
+.post-right-sidebar .sidebar-title {
+  font-size: 18px;
+  border-bottom: 4px solid #467065;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 30px !important;
+}
+
+.single-p .above-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.single-p p {
+  line-height: 2;
+}
+
+.with-border {
+  font-size: 26px;
+  font-weight: normal;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 25px;
+  margin-bottom: 35px;
+}
+
+ul#menu, ul.sub-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  width: 160px;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  padding: 13px 0;
+  cursor: pointer;
+  width: 160px;
+  height: 40px;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.sub-menu li {
+  padding: 10px 0;
+  width: 180px;
+  height: auto;
+}
+
+.sub-menu li a {
+  font-size: 14px;
+  line-height: 1.6;
+  display: block;
 }
 
 /**********************************************************

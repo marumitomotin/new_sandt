@@ -1,6 +1,10 @@
 <?php
-  // footer
-  $r = get_template_directory_uri(); ?>
+
+$r = get_template_directory_uri(); ?>
+
+    </main>
+
+    <footer>
 
       <section id="pre-footer">
         <h2 class="shippori" style="letter-spacing:3px;margin-bottom:40px;">お問い合わせ</h2>
@@ -31,10 +35,6 @@
           </div>
         </div>
       </section>
-
-    </main>
-
-    <footer>
 
       <section id="footer">
         <div class="container">
@@ -112,13 +112,32 @@
     wp_footer(); ?>
 
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script src="<?=$r?>/inc/assets/js/aos.js"></script>
 
     <script>
 
-      window.onload = function() {
-        AOS.init();
-      }
+/*******************************************
+ アコーディオン
+********************************************/
+
+      const accordionHeaders = document.querySelectorAll(".main-menu");
+      accordionHeaders.forEach((header) => {
+        const triangle = header.querySelector('.triangle'); // header内の三角取得
+        const content = header.nextElementSibling; // 次のul.sub-menu
+        header.addEventListener("click", () => {
+          const isOpen = content.style.display === 'block';
+          // 開閉
+          content.style.display = isOpen ? 'none' : 'block';
+          // 三角回転
+          if (triangle) {
+            triangle.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
+            triangle.style.transition = 'transform 0.3s'; // ニュルっと回転
+          }
+        });
+      });
+
+/*******************************************
+ パララックス
+********************************************/
 
       var rellax = new Rellax('.rellax');
 

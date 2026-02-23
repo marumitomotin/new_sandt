@@ -1,53 +1,6 @@
 <?php
 
 /*************************************************
- ルーティング
-**************************************************/
-
-function custom_rewrite_rule() {
-  /***** SDGS *****/
-  add_rewrite_rule('^sustainable/?$','index.php?page_sustainable=1','top');
-}
-add_action('init', 'custom_rewrite_rule', 10, 0);
-
-function custom_query_vars($vars){
-  $vars[] = 'page_sustainable';
-  return $vars;
-}
-add_filter('query_vars', 'custom_query_vars');
-
-/***** テンプレート *****/
-add_filter('template_include', function($template) {
-  // 固定ページ
-  if (get_query_var('page_sustainable')) {
-    $new_template = locate_template('page-sustainable.php');
-    if ($new_template) return $new_template;
-  }
-  return $template;
-});
-
-/*
-// リライトルールデバッグ
-add_action('template_redirect', function() {
-  global $wp, $wp_rewrite;
-  $rules = $wp_rewrite->wp_rewrite_rules();
-  if ( !empty($rules) ) {
-    foreach ($rules as $regex => $query) {
-      if (preg_match('#^' . $regex . '#', $wp->request, $matches)) {
-        echo '<pre>';
-        echo "Matched rule: " . esc_html($regex) . "\n";
-        echo "Query: " . esc_html($query) . "\n";
-        echo "Request: " . esc_html($wp->request) . "\n";
-        echo "Matches:\n";
-        print_r($matches);
-        echo '</pre>';
-        exit;
-      }
-    }
-  }
-});
-
-/*************************************************
  必要なオリジナル関数
 **************************************************/
 

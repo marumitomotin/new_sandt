@@ -15,25 +15,18 @@ get_header(); ?>
   <div class="content-area">
 
     <section id="introduction">
-
       <h2>不動産賃貸管理業</h2>
-
       <h3 class="shippori" style="margin-bottom:30px;">
         S&amp;Tのプロパティマネジメント<br>どこの会社も同じと思っていませんか？
       </h3>
-
       <p>
         私共エスアンドティでは、オーナー様の大切な財産である土地・建物の受託物件に対し欧米で一般的なプロパティマネジメントの手法を取り入れて実践しています。私共のビジネスの目的は、オーナー様から委託される管理物件であるマンションやビルの”経営”を行い、キャッシュフローを最大化し、その物件の価値自体を最大にするという事です。
       </p>
-
       <img src="<?=$r?>/images/service/caret_down.svg" class="caret-down" alt="矢印">
-
       <h3 class="shippori" style="margin-bottom:30px;">そして、その考え方とは</h3>
-
     </section>
 
     <section id="points">
-
       <p class="with-seal">
         <span class="seal-fill-green">Point 1</span>
         賃貸物件の「売上」を上げること　～ 収益力アップ ～
@@ -45,7 +38,6 @@ get_header(); ?>
         ●貸主側（元付）に特化したリーシング力（マーケティング）<br>
         ●最新の市場動向を常に把握する情報収集力
       </p>
-
       <p class="with-seal">
         <span class="seal-fill-green">Point 2</span>
         賃貸物件の『経費の適正化・合理化』をすること～ コストの削減 ～
@@ -56,7 +48,6 @@ get_header(); ?>
         ●建物のライフサイクルコストの削減<br>
         ●ロングライフビルの実現
       </p>
-
       <p class="with-seal">
         <span class="seal-fill-green">Point 3</span>
         賃貸物件の『資産価値』を高めること～ グレード＆イメージ ～
@@ -68,15 +59,12 @@ get_header(); ?>
         ●全ての関連図面・書類・ツール類のレベルの向上・クラウド化<br>
         ●付加価値として優秀な不動産会社に委託しているということ（安心）
       </p>
-
     </section>
 
     <section id="merit">
-
       <p style="text-align:center;margin-bottom:25px;">
         <span class="btn-fill-green">PM導入の目的とメリット</span>
       </p>
-
       <table>
         <tr>
           <th style="background:#e9fbe5;color:#000000;">目的</th>
@@ -102,31 +90,24 @@ get_header(); ?>
           <td>満室化と運営コストの削減</td>
         </tr>
       </table>
-
     </section>
 
     <section id="scheme">
-
       <p style="margin-bottom:25px;">
         <span class="btn-fill-green">PM導入の基本スキーム</span>
       </p>
-
       <img src="<?=$r?>/images/service/scheme.png" alt="PM導入の基本スキーム">
-
     </section>
 
     <section id="work">
-
       <p style="margin-bottom:25px;text-align:center;">
         <span class="btn-fill-green">管理実績</span>
       </p> <?php
-
       query_posts([
         'post_type' => 'chintaikanri',
         'posts_per_page' => '8',
         'paged' => $paged
       ]); ?>
-
       <div class="row"> <?php
         while ( have_posts() ) {
           the_post();
@@ -148,18 +129,14 @@ get_header(); ?>
         }
         wp_reset_query(); ?>
       </div>
-
       <a href="" class="btn-consult">
         賃貸管理の無料相談はこちら
         <img src="<?=$r?>/images/service/arrow_green.svg" class="arrow-green" alt="矢印">
       </a>
-
     </section>
 
     <section id="broker">
-
       <h2>不動産仲介業</h2>
-
       <table style="margin-bottom:20px;">
         <tr>
           <th rowspan="2">売買仲介</th>
@@ -173,7 +150,6 @@ get_header(); ?>
           </td>
         </tr>
       </table>
-
       <table>
         <tr>
           <th rowspan="2">賃貸仲介</th>
@@ -187,29 +163,23 @@ get_header(); ?>
           </td>
         </tr>
       </table>
-
     </section>
 
     <section id="rent" style="padding-bottom:30px;">
-
       <h2 style="margin-bottom:28px;">不動産賃貸業</h2>
-
       <p>
         弊社では、プロパティマネジメント（賃貸用不動産の経営代行）を主たる事業とする一方自社でも実際に賃貸用不動産を所有し経営を行なっております。価値観の多様化　人口構成の変化（高齢化）が進む今、時代の趨勢（すうせい）に合わせて賃貸経営を行なっていかなければなりません。自社所有不動産でさまざまな　企画・実験・検証を行ないながら、お客様の賃貸経営にフィードバックしてまいります。
       </p>
-
       <p style="margin:40px auto 25px auto;text-align:center;">
         <span class="btn-fill-green">自社物件</span>
       </p> <?php
-
       query_posts([
         'post_type' => 'chintai',
         'posts_per_page' => '3',
         'paged' => $paged
       ]); ?>
-
       <div class="row"> <?php
-        while ( have_posts() ) {
+        while (have_posts()) {
           the_post();
           if (has_post_thumbnail()) {
             $image_id = get_post_thumbnail_id ();
@@ -229,16 +199,13 @@ get_header(); ?>
         }
         wp_reset_query(); ?>
       </div>
-
     </section>
 
     <section id="howto">
-
       <h2 style="margin-bottom:28px;">土地活用</h2>
       <p style="margin-bottom:20px;">
         企画とデザインを得意とする弊社では、テナント誘致のみでなく、テナントの外装・内装等も担当することで収益の最大化を図ることができます。
       </p>
-
       <table>
         <tr>
           <td style="color:#ffffff;background:#84b756;">
@@ -251,17 +218,14 @@ get_header(); ?>
           </td>
         </tr>
       </table>
-
       <p style="margin:40px auto 25px auto;text-align:center;">
         <span class="btn-fill-green">土地活用実績</span>
       </p>  <?php
-
       query_posts([
         'post_type' => 'tochi',
         'posts_per_page' => '4',
         'paged' => $paged
       ]); ?>
-
       <div class="row"> <?php
         while ( have_posts() ) : the_post();
           if ( has_post_thumbnail() ) {
@@ -279,23 +243,16 @@ get_header(); ?>
               </p>
             </a>
           </div>
-
         <?php endwhile; ?>
-
         <?php wp_reset_query(); ?>
-
       </div>
-
     </section>
 
     <section id="consulting">
-
       <h2 style="margin-bottom:28px;">不動産コンサルティング</h2>
-
       <p>
         エスアンドティでは、弁護士・税理士・司法書士・土地家屋調査士・建築士の専門知識の豊富なネットワークスタッフがお客様のあらゆる問題に対して最適な方法をご提案し、業務を実行してまいります。
       </p>
-
       <P style="font-size:18px;font-weight:bold;color:#467065;margin-bottom:8px;">コンサルティング業務</p>
       <P class="standard-p" style="margin-bottom:40px;">
         1. 遊休地の有効活用<br>
@@ -311,9 +268,7 @@ get_header(); ?>
         11. 金融機関等のルートに依る特殊物件の売買取引<br>
         12. その他不動産（一部不動産を含む）
       </p>
-
       <P style="font-size:18px;font-weight:bold;color:#467065;margin-bottom:15px;">概要例</p>
-
       <p style="margin:20px 0;">
         <span class="btn-fill-green">有効活用</span>
       </p>
@@ -321,7 +276,6 @@ get_header(); ?>
         土地を最大に有効活用するための市場分析、事業計画を立案します。<br>
         住宅・流通店舗・アパート・マンション経営のトータルマネジメント
       </p>
-
       <p style="margin:20px 0;">
         <span class="btn-fill-green">相続対策（売却・購入・交換）</span>
       </p>
@@ -329,14 +283,12 @@ get_header(); ?>
         相続対策や資産運用に伴う不動産の処分・取得の最良の企画をご提案します。<br>
         税務上の有効な対策をプランニング致します。
       </p>
-
       <p style="margin:20px 0;">
         <span class="btn-fill-green">権利関係の調査・整理</span>
       </p>
       <p class="standard-p" style="margin-bottom:22px;">
         借地・借家・境界・共用持分等の複雑な権利関係を調査し、スムーズな解決をご提案致します。
       </p>
-
       <p style="margin:20px 0;">
         <span class="btn-fill-green">収益物件の購入・管理</span>
       </p>
@@ -344,49 +296,107 @@ get_header(); ?>
         収益性を高めるための管理運営システムをご提案致します。<br>
         収益性・将来性のある質の高い物件をご紹介致します。
       </p>
-
     </section>
 
   </div>
 
-  <div class="sidebar">
-
-    <p class="sidebar-title">CONTENT</p>
-
-    <p class="sidebar-sub">
-      <a href="#section1">
-        <i class="fa fa-play" aria-hidden="true" style="color:#467065;"></i>
-        不動産賃貸管理業
-      </a>
+  <div id="right-sidebar" class="right-sidebar">
+    <p>
+      <span id="word-introduction"> 不動産賃貸管理業</sapn>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle id="map-introduction" cx="6" cy="6" r="6" fill="#d9d9d9">
+      </svg>
     </p>
-    <p class="sidebar-sub">
-      <a href="#section2">
-        <i class="fa fa-play" aria-hidden="true" style="color:#467065;"></i>
-        不動産仲介業
-      </a>
+    <p>
+      <span></span>
+      <svg class="vertical-line" xmlns="http://www.w3.org/2000/svg" width="4" height="50" viewBox="0 0 4 50" fill="none">
+        <line x1="2" y1="8.74228e-08" x2="2" y2="50" stroke="#D9D9D9" stroke-width="4">
+      </svg>
     </p>
-    <p class="sidebar-sub">
-      <a href="#section3">
-        <i class="fa fa-play" aria-hidden="true" style="color:#467065;"></i>
-        不動産賃貸業
-      </a>
+    <p>
+      <span id="word-broker">不動産仲介業</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle id="map-broker" cx="6" cy="6" r="6" fill="#d9d9d9">
+      </svg>
     </p>
-    <p class="sidebar-sub">
-      <a href="#section4">
-        <i class="fa fa-play" aria-hidden="true" style="color:#467065;"></i>
-        土地活用
-      </a>
+    <p>
+      <span></span>
+      <svg class="vertical-line" xmlns="http://www.w3.org/2000/svg" width="4" height="50" viewBox="0 0 4 50" fill="none">
+        <line x1="2" y1="8.74228e-08" x2="2" y2="50" stroke="#D9D9D9" stroke-width="4">
+      </svg>
     </p>
-    <p class="sidebar-sub">
-      <a href="#section5">
-        <i class="fa fa-play" aria-hidden="true" style="color:#467065;"></i>
-        不動産コンサル
-      </a>
+    <p>
+      <span id="word-rent">不動産賃貸業</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle id="map-rent" cx="6" cy="6" r="6" fill="#d9d9d9">
+      </svg>
     </p>
-
+    <p>
+      <span></span>
+      <svg class="vertical-line" xmlns="http://www.w3.org/2000/svg" width="4" height="50" viewBox="0 0 4 50" fill="none">
+        <line x1="2" y1="8.74228e-08" x2="2" y2="50" stroke="#D9D9D9" stroke-width="4">
+      </svg>
+    </p>
+    <p>
+      <span id="word-howto">土地活用</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle id="map-howto" cx="6" cy="6" r="6" fill="#d9d9d9">
+      </svg>
+    </p>
+    <p>
+      <span></span>
+      <svg class="vertical-line" xmlns="http://www.w3.org/2000/svg" width="4" height="50" viewBox="0 0 4 50" fill="none">
+        <line x1="2" y1="8.74228e-08" x2="2" y2="50" stroke="#D9D9D9" stroke-width="4">
+      </svg>
+    </p>
+    <p>
+      <span id="word-consulting">不動産コンサル</span>
+      <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle id="map-consulting" cx="6" cy="6" r="6" fill="#d9d9d9">
+      </svg>
+    </p>
   </div>
 
-  <div class="clearfix"></div>
-</div> <?php
+</div>
+
+<script>
+
+/*******************************************
+ ライトサイドナビ
+********************************************/
+
+  const sections = [
+    document.querySelector("#introduction"),
+    document.querySelector("#broker"),
+    document.querySelector("#rent"),
+    document.querySelector("#howto"),
+    document.querySelector("#consulting")
+  ];
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const mapTarget = document.querySelector("#map-" + entry.target.id);
+      const wordTarget = document.querySelector("#word-" + entry.target.id);
+      if (!mapTarget) return;
+      if (entry.isIntersecting) {
+        // いったん全部消す
+        document.querySelectorAll('[id^="map-"]').forEach(el => {
+          el.classList.remove("map-active");
+        });
+        document.querySelectorAll('[id^="word-"]').forEach(el => {
+          el.classList.remove("map-active");
+        });
+        // 対応するものだけ付ける
+        mapTarget.classList.add("map-active");
+        wordTarget.classList.add("map-active");
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+  sections.forEach(section => {
+    if (section) observer.observe(section);
+  });
+
+</script> <?php
 
 get_footer();

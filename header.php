@@ -33,10 +33,10 @@ global $post; ?>
 
     wp_head(); ?>
 
-    <link rel="stylesheet" type="text/css" href="<?=$r?>/inc/assets/css/aos.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="<?=$r?>/style.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
     <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -308,65 +308,58 @@ global $post; ?>
 
     <header>
       <div class="container">
-        <nav class="navbar navbar-expand-xl">
-          <div class="navbar-brand">
-            <a href="/">
-              <img src="<?=$r?>/images/header/logo.svg" alt="S&T Group">
-            </a>
-          </div>
-          <button class="navbar-toggler" id="toggler-button" type="button" style="margin-left:auto;">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-          </button>
+        <nav>
+
+          <a href="/"><img src="<?=$r?>/images/header/logo.svg" alt="S&T Group"></a>
+
           <div class="nav-area">
             <div class="btn-area">
               <div class="btn-green">賃貸管理の無料相談</div>
               <div class="btn-green">退居・解約受付</div>
               <div class="btn-green">お問い合わせ</div>
             </div>
-            <?php /*
-            <div id="main-nav" class="navbar-collapse">
-              <ul id="menu-main" class="navbar-nav">
-                <li>
-                  <a href="/" class="nav-link">企業情報</a>
-                  <ul role="menu" class="dropdown-menu nav-menu-dropdown-sub">
-                    <li class="nav-item menu-item">
-                      <a href="/project#section1" class="dropdown-item">不動産賃貸管理業</a>
-                    </li>
-                    <li id="menu-item-78" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-78">
-                      <a href="/project#section2" class="dropdown-item">不動産仲介業</a>
-                    </li>
-                    <li id="menu-item-79" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-79">
-                      <a href="/project#section3" class="dropdown-item">不動産賃貸業</a>
-                    </li>
-                    <li id="menu-item-80" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-80">
-                      <a href="/project#section4" class="dropdown-item">土地活用</a>
-                    </li>
-                    <li id="menu-item-81" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-81">
-                      <a href="/project#section5" class="dropdown-item">不動産コンサル</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-menu-dropdown nav-item menu-item dropdown">
-                  <a href="/project/" class="dropdown-toggle nav-link" aria-haspopup="true">事業紹介</a>
-                </li>
-                <li class="nav-menu-dropdown nav-item menu-item dropdown">
-                  <a href="/project/" class="dropdown-toggle nav-link" aria-haspopup="true"></a>
-                </li>
-                <li class="nav-menu-dropdown nav-item menu-item dropdown">
-                  <a href="/project/" class="dropdown-toggle nav-link" aria-haspopup="true">事業紹介</a>
-                </li>
-                <li class="nav-menu-dropdown nav-item menu-item dropdown">
-                  <a href="/project/" class="dropdown-toggle nav-link" aria-haspopup="true">事業紹介</a>
-                </li>
-                <li class="nav-menu-dropdown nav-item menu-item dropdown">
-                  <a href="/project/" class="dropdown-toggle nav-link" aria-haspopup="true">事業紹介</a>
-                </li>
-              </ul>
-            </div>
-            */ ?>
+            <ul id="menu-main" class="dropdown-menu">
+              <li class="menu">
+                <a href="/">企業情報</a>
+                <ul id="sub-menu-1">
+                  <li><a href="/company/#greeting">ごあいさつ</a></li>
+                  <li><a href="/company/#information">会社概要</a></li>
+                  <li><a href="/compamny/#history">沿革</a></li>
+                  <li><a href="/company/#map">アクセス</a></li>
+                </ul>
+              </li>
+              <li class="menu">
+                <a href="/service/">事業紹介</a>
+                <ul id="sub-menu-2">
+                  <li><a href="/service/#introduction">不動産賃貸管理業</a></li>
+                  <li><a href="/service/#broker">不動産仲介業</a></li>
+                  <li><a href="/service/#rent">不動産賃貸業</a></li>
+                  <li><a href="/service/#howto">土地活用</a></li>
+                  <li><a href="/service/#consulting">不動産コンサルティング</a></li>
+                </ul>
+              </li>
+              <li class="menu">
+                <a href="/sustainable/">サステナビリティ</a>
+              </li>
+              <li class="menu">
+                <a href="/about/">S&amp;Tを知る</a>
+              </li>
+              <li class="menu">
+                <a href="/resident/">暮らしのガイド</a>
+              </li>
+              <li class="menu">
+                <a href="/rentry/">採用情報</a>
+              </li>
+            </ul>
           </div>
+
+          <!-- バーガー -->
+          <button id="toggler-button" type="button" style="display:none;">
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
         </nav>
       </div>
     </header>
