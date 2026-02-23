@@ -61,7 +61,11 @@ get_header(); ?>
           <p>Information</p>
         </div>
       </div>
-      <p>一覧へ <img src="<?=$r?>/images/top/arrow.png" alt="矢印"></p>
+      <p>
+        <a href="/newslist/">
+          一覧へ <img src="<?=$r?>/images/top/arrow.png" alt="矢印">
+        </a>
+      </p>
     </div> <?php
 
     $post_ids = get_posts([
@@ -110,36 +114,56 @@ get_header(); ?>
 
     <div class="row">
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/topics_01.jpg" style="margin-bottom:15px;" alt="topics">
-        <img src="<?=$r?>/images/top/logo_more.svg" style="margin-bottom:15px;" alt="S&T moreロゴ">
-        <p>
-          <span>建築プロデュース・施設再⽣</span>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </p>
+        <a href="https://sandtmore.co.jp/" target="_blank">
+          <div class="topics-wrap">
+            <img src="<?=$r?>/images/top/topics_01.jpg" style="margin-bottom:15px;" alt="topics">
+            <span>詳細はこちら</span>
+          </div>
+          <img src="<?=$r?>/images/top/logo_more.svg" style="margin-bottom:15px;" alt="S&T moreロゴ">
+          <p>
+            <span>建築プロデュース・施設再⽣</span>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </p>
+        </a>
       </div>
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/topics_02.jpg" style="margin-bottom:15px;" alt="topics">
-        <img src="<?=$r?>/images/top/logo_suteki.svg" style="margin-bottom:7px;" alt="素敵賃貸1ロゴ">
-        <p>
-          <span>リフォーム＆リノベ事例</span>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </p>
+        <a href="/renovations/">
+          <div class="topics-wrap">
+            <img src="<?=$r?>/images/top/topics_02.jpg" style="margin-bottom:15px;" alt="topics">
+            <span>詳細はこちら</span>
+          </div>
+          <img src="<?=$r?>/images/top/logo_suteki.svg" style="margin-bottom:7px;" alt="素敵賃貸ロゴ">
+          <p>
+            <span>リフォーム＆リノベ事例</span>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </p>
+        </a>
       </div>
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/topics_03.jpg" style="margin-bottom:15px;" alt="topics">
-        <h3 style="margin-bottom:15px;">地域活性化プロデュース</h3>
-        <p>
-          <span>瀬⼾内Project</span>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </p>
+        <a href="/seto/">
+          <div class="topics-wrap">
+            <img src="<?=$r?>/images/top/topics_03.jpg" style="margin-bottom:15px;" alt="topics">
+            <span>詳細はこちら</span>
+          </div>
+          <h3 style="margin-bottom:15px;">地域活性化プロデュース</h3>
+          <p>
+            <span>瀬⼾内Project</span>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </p>
+        </a>
       </div>
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/topics_04.jpg" style="margin-bottom:15px;" alt="topics">
-        <h3 style="margin-bottom:15px;">メディア掲載</h3>
-        <p>
-          <span>取材・You Tube</span>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </p>
+        <a href="/magazines/">
+          <div class="topics-wrap">
+            <img src="<?=$r?>/images/top/topics_04.jpg" style="margin-bottom:15px;" alt="topics">
+            <span>詳細はこちら</span>
+          </div>
+          <h3 style="margin-bottom:15px;">メディア掲載</h3>
+          <p>
+            <span>取材・You Tube</span>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </p>
+        </a>
       </div>
     </div>
 
@@ -161,8 +185,10 @@ get_header(); ?>
 
     <img src="<?=$r?>/images/top/business_banner.jpg" style="width:100%;" alt="事業一覧">
     <h3 class="shippori" style="margin:20px 0;">
-      賃貸不動産の管理・運営
-      <img src="<?=$r?>/images/top/arrow_fat.svg" style="margin-left:40px;" alt="矢印アイコン">
+      <a href="/service/#introduction">
+        賃貸不動産の管理・運営
+        <img src="<?=$r?>/images/top/arrow_fat.svg" style="margin-left:40px;" alt="矢印アイコン">
+      </a>
     </h3>
     <p style="margin-bottom:40px;line-height:2;">
       メイン事業である賃貸管理は、蕨市・さいたま市・川⼝市を中⼼にマンション・アパートの管理を⾏っております。賃貸管理に特化した社内体制と地域密着型管理だからこそ実現できる⼊居率の⾼さや充実したサービスでオーナー様の賃貸経営をサポート致します。
@@ -171,10 +197,12 @@ get_header(); ?>
     <div class="row">
       <div class="col-liq-3">
         <img src="<?=$r?>/images/top/business_01.jpg" class="main-img" alt="topics">
-        <div class="title">
-          <h3 class="shippori">不動産／売却・購入</h3>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </div>
+        <a href="/service/#broker">
+          <div class="title">
+            <h3 class="shippori">不動産／売却・購入</h3>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </div>
+        </a>
         <table>
           <tr>
             <td>□不動産の購入</td>
@@ -184,10 +212,12 @@ get_header(); ?>
       </div>
       <div class="col-liq-3">
         <img src="<?=$r?>/images/top/business_02.jpg" class="main-img" alt="topics">
-        <div class="title">
-          <h3 class="shippori">店舗・テナント</h3>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </div>
+        <a href="/service/#rent">
+          <div class="title">
+            <h3 class="shippori">店舗・テナント</h3>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </div>
+        </a>
         <table>
           <tr>
             <td>□店舗誘致</td>
@@ -199,10 +229,12 @@ get_header(); ?>
       </div>
       <div class="col-liq-3">
         <img src="<?=$r?>/images/top/business_03.jpg" class="main-img" alt="topics">
-        <div class="title">
-          <h3 class="shippori">土地活用</h3>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </div>
+        <a href="/service/#howto">
+          <div class="title">
+            <h3 class="shippori">土地活用</h3>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </div>
+        </a>
         <table>
           <tr>
             <td>□建築プロディース</td>
@@ -216,10 +248,12 @@ get_header(); ?>
       </div>
       <div class="col-liq-3">
         <img src="<?=$r?>/images/top/business_04.jpg" class="main-img" alt="topics">
-        <div class="title">
-          <h3 class="shippori">不動産コンサルティング</h3>
-          <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
-        </div>
+        <a href="/service/#consulting">
+          <div class="title">
+            <h3 class="shippori">不動産コンサルティング</h3>
+            <img src="<?=$r?>/images/top/arrow_fat.svg" alt="矢印アイコン">
+          </div>
+        </a>
         <table>
           <tr>
             <td>□相続対策</td>

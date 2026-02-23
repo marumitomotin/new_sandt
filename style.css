@@ -8,6 +8,10 @@ Version: 2.0.0
  Basic
 **********************************************************/
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,*::before,*::after {
   box-sizing: border-box;
 }
@@ -210,6 +214,7 @@ p {
 
 section {
   padding: 70px 0;
+  scroll-margin-top: 100px;
 }
 
 main {
@@ -681,7 +686,46 @@ footer {
 #top-topics .col-liq-3 p img {
   position: absolute;
   right: 4px;
-  bottom: 0;
+  bottom: 4px;
+}
+
+#top-topics a:hover {
+  opacity: 1;
+}
+
+#top-topics .topics-wrap {
+  position: relative;
+  height: 187px;
+  margin-bottom: 20px;
+}
+
+#top-topics .topics-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* ホバー時にオーバーレイを表示 */
+#top-topics .topics-wrap:hover::after {
+  opacity: 1;
+}
+
+#top-topics .topics-wrap:hover > span {
+  display: inline-block;
+  line-height: 1;
+}
+
+#top-topics .topics-wrap span {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  z-index: 100;
 }
 
 #top-business h3 {
@@ -813,6 +857,39 @@ footer {
 
 #company #history table {
   max-width: 605px;
+}
+
+/**********************************************************
+ Newslist
+**********************************************************/
+
+#newslist h1 {
+  color: #3e3e3e;
+  font-size: 28px;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  margin: 0 auto 50px auto;
+}
+
+#newslist h1:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  display: inline-block;
+  width: 113px;
+  height: 2px;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%);
+  background-color: #467065;
+}
+
+#newslist td {
+  vertical-align: middle;
+  padding: 10px 0;
 }
 
 /**********************************************************
@@ -1713,6 +1790,37 @@ footer {
 #resident #contact-info2 h3 {
   font-size: 20px;
   font-weight: bold;
+}
+
+/**********************************************************
+ 瀬戸内での取り組み
+**********************************************************/
+
+#seto {
+  text-align: center;
+}
+
+#seto h1 {
+  font-weight: bold;
+  margin-bottom: 37px;
+  color: #467065;
+  line-height: 60px;
+}
+
+#seto img {
+  display: block;
+  margin: 0 auto 47px auto;
+}
+
+#seto p {
+  font-size: 16px;
+  line-height: 2;
+  margin-bottom: 7px;
+}
+
+#seto .map {
+  border: 2px solid #eaeaea;
+  margin-top: 90px;
 }
 
 /**********************************************************

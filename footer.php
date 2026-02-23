@@ -141,6 +141,254 @@ $r = get_template_directory_uri(); ?>
 
       var rellax = new Rellax('.rellax');
 
+/*************************************************
+ header.phpから
+**************************************************/
+
+    <?php if (is_front_page()) { ?>
+
+    <?php } else if (is_page('kaiyaku') || is_page('park-kaiyaku')) {?>
+
+        jQuery(function($) {
+          $('.wpcf7-confirm').click(function() {
+            $('#step1').css('opacity','0.2');
+            $('#step2').css('opacity','1');
+            $('#step3').css('opacity','0.2');
+          })
+          $('.wpcf7-submit').click(function() {
+            $('#step1').css('opacity','0.2');
+            $('#step2').css('opacity','0.2');
+            $('#step3').css('opacity','1');
+          })
+          $('.wpcf7-back').click(function() {
+            $('#step1').css('opacity','1');
+            $('#step2').css('opacity','0.2');
+            $('#step3').css('opacity','0.2');
+          })
+        });
+
+    <?php } ?>
+
+    <!-- Google gray map -->
+      jQuery(window).load(function initialize() {
+        var latlng = new google.maps.LatLng(35.82544, 139.680716);
+        var myOptions = {  zoom: 17,
+                          center: latlng,
+                          mapTypeId: google.maps.MapTypeId.ROADMAP };
+        var map = new google.maps.Map(document.getElementById('campus-map'), myOptions);
+
+        //オリジナルアイコン
+        var icon = new google.maps.MarkerImage('<?=$r?>/images/map_marker.png',
+                                                new google.maps.Size(150,77),
+                                                new google.maps.Point(0,0),
+                                                new google.maps.Point(70,65));
+        var markerOptions = { position: latlng,
+                              map: map,
+                              icon: icon,
+                              title: 'S&T' };
+        var marker = new google.maps.Marker(markerOptions);
+
+        //グレースケール
+        var mapStyle = [{"stylers": [{ "saturation": -100 }]}];
+        var mapType = new google.maps.StyledMapType(mapStyle);
+        map.mapTypes.set('GrayScaleMap', mapType);
+        map.setMapTypeId('GrayScaleMap');
+      });
+
+      jQuery(function ($) {
+        $(function(){
+          $('.js-modal-open').on('click',function(){
+            $('.js-modal').fadeIn();
+            return false;
+          });
+          $('.js-modal-close').on('click',function(){
+            $('.js-modal').fadeOut();
+            return false;
+          });
+        });
+      });
+
+      jQuery(function ($) {
+
+        $("#cal1").click(function(){
+          $("#cal1").attr("readonly",true);
+        });
+        $("#cal2").click(function(){
+          $("#cal2").attr("readonly",true);
+        });
+
+        $('#cal1').on('focus',function(){
+          $(this).trigger('blur');
+        });
+
+        $('#cal2').on('focus',function(){
+          $(this).trigger('blur');
+        });
+
+        // 解約日
+        var kaiyakubi = new Date();
+        kaiyakubi.setMonth(kaiyakubi.getMonth() + 1);
+        kaiyakubi.setDate(kaiyakubi.getDate() - 1);
+
+        // 立合最終日
+        var tachiaibi = new Date;
+        tachiaibi.setMonth(tachiaibi.getMonth() + 1);
+        tachiaibi.setDate(tachiaibi.getDate() - 1);
+
+        var opt = {
+          isRTL: false,
+          prevText: '&#x3C;前',
+          nextText: '次&#x3E;',
+          monthNames: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+          monthNamesShort: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+          dayNames: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
+          dayNamesShort: ['日','月','火','水','木','金','土'],
+          dayNamesMin: ['日','月','火','水','木','金','土'],
+          weekHeader: '週',
+          dateFormat: 'yy-mm-dd',
+          firstDay: 0,
+          showMonthAfterYear: true,
+          yearSuffix: '年',
+          changeMonth: false,
+          changeYear: false,
+          yearRange: 'c-80:c+80',
+
+        };
+
+        var opt2 = {
+          isRTL: false,
+          prevText: '&#x3C;前',
+          nextText: '次&#x3E;',
+          monthNames: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+          monthNamesShort: ['1月','2月','3月','4月','5月','6月','7月','8月','9月','10月','11月','12月'],
+          dayNames: ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'],
+          dayNamesShort: ['日','月','火','水','木','金','土'],
+          dayNamesMin: ['日','月','火','水','木','金','土'],
+          weekHeader: '週',
+          dateFormat: 'yy-mm-dd',
+          firstDay: 0,
+          showMonthAfterYear: true,
+          yearSuffix: '年',
+          changeMonth: false,
+          changeYear: false,
+          yearRange: 'c-80:c+80',
+          beforeShowDay : function(date) {
+            if (date.getDay() === 3 || date.getDay() === 0)
+              return [ false, "closed", "水曜、日曜は休業日" ]
+            else
+              return [ true, "", "" ]
+          }
+        };
+
+        /***** デフォルトのアクション *****/
+
+        var dates = $('#cal1').datepicker(opt);
+        var dates2 = $('#cal2').datepicker(opt2);
+
+        /***** 日付を選択した時のアクション *****/
+
+        $('#cal1').datepicker('option', {
+          minDate: kaiyakubi,
+          onSelect: function (selectedDate) {
+
+            // 立会日のカレンダー変更
+            newKaiyakubi = new Date(selectedDate);
+            newKaiyakubi.setDate(newKaiyakubi.getDate()),
+            console.log(newKaiyakubi);
+            $('#cal2').datepicker('option', {
+              minDate: new Date(),
+              maxDate: newKaiyakubi,
+            });
+
+            // 解約日のカレンダー変更
+            var option = $(this).hasClass('dateFrom') ? 'minDate' : 'maxDate',
+                instance = $(this).data('datepicker'),
+                date = $.datepicker.parseDate(
+                  instance.settings.dateFormat ||
+                  $.datepicker._defaults.dateFormat,
+                  selectedDate, instance.settings);
+            dates.not(this).datepicker('option', option, date);
+          }
+        });
+
+        $('#cal2').datepicker('option', {
+          minDate: new Date(),
+          maxDate: tachiaibi,
+          onSelect: function (selectedDate) {
+            var option = $(this).hasClass('dateFrom') ? 'minDate' : 'maxDate',
+                instance = $(this).data('datepicker'),
+                date = $.datepicker.parseDate(
+                  instance.settings.dateFormat ||
+                  $.datepicker._defaults.dateFormat,
+                  selectedDate, instance.settings);
+            dates2.not(this).datepicker('option', option, date);
+          }
+        });
+
+      });
+
+      <!-- スマホメニュー内のドロップダウン -->
+      jQuery(function($) {
+        var body_width2 = jQuery('body').width();
+        if (body_width2 < 1199) {
+          $("#main-nav").css("display","none");
+          $("#toggler-button").on("click", function() {
+            $('#masthead').toggleClass('burger_area');
+            $("#main-nav").slideToggle();
+          }).next().hide();
+          $(".nav-menu-dropdown-sub").css("display","none");
+          $(".nav-menu-dropdown").on("click", function() {
+            $(".nav-menu-dropdown-sub").slideToggle();
+          });
+          $(".nav-menu-dropdown-sub2").css("display","none");
+          $(".nav-menu-dropdown2").on("click", function() {
+            $(".nav-menu-dropdown-sub2").slideToggle();
+          });
+          $(".nav-menu-dropdown-sub3").css("display","none");
+          $(".nav-menu-dropdown3").on("click", function() {
+            $(".nav-menu-dropdown-sub3").slideToggle();
+          });
+        }
+      });
+
+      <!-- accordion menu-->
+      jQuery(function(){
+        if (window.matchMedia( "(max-width: 1199px)" ).matches) {
+
+          jQuery(function(){
+            jQuery('.sub_menu').hide();
+            jQuery('.main_menu').click(function(){
+              jQuery('img').removeClass('rotate');
+              jQuery('ul.sub_menu').slideUp();
+              if(jQuery('+ul.sub_menu',this).css('display') == 'none'){
+                jQuery('img',this).addClass('rotate');
+                jQuery('+ul.sub_menu',this).slideDown();
+               }
+            });
+          });
+
+        } else {
+
+          jQuery(function(){
+            jQuery('img').addClass('rotate');
+            jQuery('.sub_menu').show();
+            jQuery('.main_menu').click(function(){
+              jQuery('img').removeClass('rotate');
+              jQuery('ul.sub_menu').slideUp();
+              if(jQuery('+ul.sub_menu',this).css('display') == 'none'){
+                jQuery('img',this).addClass('rotate');
+                jQuery('+ul.sub_menu',this).slideDown();
+               }
+            });
+          });
+
+        }
+      });
+
+      jQuery(document).ready(function(e) {
+        jQuery('img[usemap]').rwdImageMaps();
+      });
+
     </script>
 
   </body>
