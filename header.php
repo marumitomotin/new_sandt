@@ -8,7 +8,7 @@ global $post; ?>
 
   <head>
 
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?=$r?>/images/favicon.ico">
@@ -35,11 +35,7 @@ global $post; ?>
 
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="<?=$r?>/style.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
-    <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?=$r?>/css/aos.css">
 
   </head>
 
@@ -59,7 +55,7 @@ global $post; ?>
             </div>
             <ul id="menu-main" class="dropdown-menu">
               <li class="menu">
-                <a href="/">企業情報</a>
+                <a href="/company/">企業情報</a>
                 <ul id="sub-menu-1">
                   <li><a href="/company/#greeting">ごあいさつ</a></li>
                   <li><a href="/company/#information">会社概要</a></li>
@@ -93,10 +89,10 @@ global $post; ?>
           </div>
 
           <!-- バーガー -->
-          <button id="toggler-button" type="button" style="display:none;">
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
-            <span class="navbar-toggler-icon"></span>
+          <button id="btn-toggler" type="button">
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
+            <span class="toggler-bar"></span>
           </button>
 
         </nav>

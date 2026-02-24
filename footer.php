@@ -26,8 +26,8 @@ $r = get_template_directory_uri(); ?>
                 <div>
                   <h3 class="shippori">メールでのお問い合わせ</h3>
                   <a href="" class="btn-green">
-                    お問い合わせはこちら
-                    <img src="<?=$r?>/images/footer/arrow_green.svg" alt="矢印アイコン">
+                    <span>お問い合わせはこちら</span>
+                    <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
                   </a>
                 </div>
               </div>
@@ -111,6 +111,12 @@ $r = get_template_directory_uri(); ?>
 
     wp_footer(); ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="<?=$r?>/js/aos.js"></script>
+
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 
     <script>
@@ -139,7 +145,17 @@ $r = get_template_directory_uri(); ?>
  パララックス
 ********************************************/
 
-      var rellax = new Rellax('.rellax');
+      var rellax = new Rellax('.rellax',{
+        breakpoints: [576,768,1201]
+      });
+
+/*******************************************
+ もりのパララックス
+********************************************/
+
+      window.onload = function() {
+        AOS.init();
+      }
 
 /*************************************************
  header.phpから

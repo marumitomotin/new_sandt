@@ -18,13 +18,13 @@ get_header(); ?>
 
     <img src="<?=$r?>/images/seto/seto_map.jpg" usemap="#imagemap" class="map" alt="瀬戸内マップ">
       <map name="imagemap">
-        <area shape="rect" coords="481,47,904,175" href="/kdes/" alt="knocks design lab" />
-        <area shape="rect" coords="144,330,332,545" href="/morino/" alt="もりの農園" />
-        <area shape="rect" coords="742,358,1041,488" href="/utsumi/" alt="内海ハウス" />
-        <area shape="rect" coords="612,501,846,712" href="/yabu/" alt="やぶ椿と水仙の里" />
+        <area shape="rect" coords="481,47,904,175" href="/kdes/" alt="knocks design lab">
+        <area shape="rect" coords="144,330,332,545" href="/morino/" alt="もりの農園">
+        <area shape="rect" coords="742,358,1041,488" href="/utsumi/" alt="内海ハウス">
+        <area shape="rect" coords="612,501,846,712" href="/yabu/" alt="やぶ椿と水仙の里">
       </map>
 
   </div>
-</section>
+</section> <?php
 
-<?php get_footer(); ?>
+get_footer();
