@@ -34,12 +34,18 @@ get_header(); ?>
   <div class="container">
 
     <div class="circle-area">
-      <img src="<?=$r?>/images/top/circle_st.png" alt="S&T">
-      <img src="<?=$r?>/images/top/icon_cross.png" alt="cross">
-      <img src="<?=$r?>/images/top/circle_more.png" alt="S&T more">
+      <div class="col-liq-5">
+        <img src="<?=$r?>/images/top/circle_st.png" alt="S&T">
+      </div>
+      <div class="col-liq-2">
+        <img src="<?=$r?>/images/top/icon_cross.png" alt="cross">
+      </div>
+      <div class="col-liq-5">
+        <img src="<?=$r?>/images/top/circle_more.png" alt="S&T more">
+      </div>
     </div>
 
-    <h2 class="shippori" style="font-size:30px;">土地活用から賃貸経営へのトータルプロデュース</h2>
+    <h2 class="shippori">土地活用から賃貸経営へのトータルプロデュース</h2>
 
   </div>
 </section> <?php

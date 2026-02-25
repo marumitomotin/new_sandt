@@ -7,8 +7,8 @@ $r = get_template_directory_uri(); ?>
     <footer>
 
       <section id="pre-footer">
-        <h2 class="shippori" style="letter-spacing:3px;margin-bottom:40px;">お問い合わせ</h2>
         <div class="container">
+          <h2 class="shippori">お問い合わせ</h2>
           <div class="row">
             <div class="col-liq-6">
               <div class="box">
@@ -41,7 +41,7 @@ $r = get_template_directory_uri(); ?>
 
           <hr>
 
-          <div class="row" style="margin:0 0 30px 0;">
+          <div class="row" style="margin:0 0 10px 0;">
             <img src="<?=$r?>/images/header/logo.svg" alt="ロゴ">
             <div class="btn-area">
               <div class="btn-green">賃貸管理の無料相談</div>
@@ -52,10 +52,10 @@ $r = get_template_directory_uri(); ?>
 
           <div class="row" style="margin:0;">
             <div class="right-side">
-              <p style="line-height:2;margin-bottom:20px;">株式会社エスアンドティ<br>SPACE AND TRADE INCORPORATION</p>
+              <p style="line-height:2;margin:20px 0;">株式会社エスアンドティ<br>SPACE AND TRADE INCORPORATION</p>
               <p style="margin-bottom:30px;">〒335-0004 埼玉県蕨市中央5-12-13</p>
               <p style="font-size:20px;margin-bottom:25px;">TEL.048-433-0550</p>
-              <p style="display:flex;align-items:center;gap:10px;">
+              <p style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
                 <img src="<?=$r?>/images/footer/instagram.svg" alt="instagram">
                 公式アカウント sandt_official
               </p>
@@ -111,15 +111,26 @@ $r = get_template_directory_uri(); ?>
 
     wp_footer(); ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
-    <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="<?=$r?>/js/aos.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-
     <script>
+
+/*******************************************
+ バーガー
+********************************************/
+
+      const btn = document.getElementById('btn-toggler');
+      const nav = document.querySelector('.nav-area');
+      btn.addEventListener('click', () => {
+        nav.classList.toggle('open');
+      });
+
+      // 第二層
+      document.querySelectorAll('.has-sub').forEach(a => {
+        a.addEventListener('click', e => {
+          e.preventDefault();
+          const li = a.parentElement;
+          li.classList.toggle('open');
+        });
+      });
 
 /*******************************************
  アコーディオン
@@ -161,10 +172,7 @@ $r = get_template_directory_uri(); ?>
  header.phpから
 **************************************************/
 
-    <?php if (is_front_page()) { ?>
-
-    <?php } else if (is_page('kaiyaku') || is_page('park-kaiyaku')) {?>
-
+    <?php if (is_page('kaiyaku') || is_page('park-kaiyaku')) {?>
         jQuery(function($) {
           $('.wpcf7-confirm').click(function() {
             $('#step1').css('opacity','0.2');
@@ -182,7 +190,6 @@ $r = get_template_directory_uri(); ?>
             $('#step3').css('opacity','0.2');
           })
         });
-
     <?php } ?>
 
     <!-- Google gray map -->
@@ -341,30 +348,6 @@ $r = get_template_directory_uri(); ?>
           }
         });
 
-      });
-
-      <!-- スマホメニュー内のドロップダウン -->
-      jQuery(function($) {
-        var body_width2 = jQuery('body').width();
-        if (body_width2 < 1199) {
-          $("#main-nav").css("display","none");
-          $("#toggler-button").on("click", function() {
-            $('#masthead').toggleClass('burger_area');
-            $("#main-nav").slideToggle();
-          }).next().hide();
-          $(".nav-menu-dropdown-sub").css("display","none");
-          $(".nav-menu-dropdown").on("click", function() {
-            $(".nav-menu-dropdown-sub").slideToggle();
-          });
-          $(".nav-menu-dropdown-sub2").css("display","none");
-          $(".nav-menu-dropdown2").on("click", function() {
-            $(".nav-menu-dropdown-sub2").slideToggle();
-          });
-          $(".nav-menu-dropdown-sub3").css("display","none");
-          $(".nav-menu-dropdown3").on("click", function() {
-            $(".nav-menu-dropdown-sub3").slideToggle();
-          });
-        }
       });
 
       <!-- accordion menu-->

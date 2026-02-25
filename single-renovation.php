@@ -76,7 +76,7 @@ get_header(); ?>
 
     <a href="/renovations/" class="btn-white">
       リフォーム＆リノベーション一覧へ戻る
-      <img src="<?=$r?>/images/suteki/arrow_black.png" alt="矢印">
+      <img src="<?=$r?>/images/common/arrow_black.png" alt="矢印">
     </a>
 
   </section>

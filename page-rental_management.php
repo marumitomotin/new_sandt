@@ -29,7 +29,7 @@ get_header(); ?>
 
     <div class="box">
       <h3>受託可能エリア</h3>
-      <p style="margin-bottom:10px;">
+      <p style="margin-bottom:10px;font-size:17px;">
         蕨市・⼾⽥市・川⼝市・さいたま市・東京都北区・板橋区<br>
         その他の地域はご相談ください
       </p>
@@ -124,9 +124,9 @@ get_header(); ?>
     </p>
     <img src="<?=$r?>/images/rental_management/suteki.png" style="margin-bottom:40px;" alt="当社の強み">
 
-    <a href="" class="btn-consult">
+    <a href="/renovations/" class="btn-consult">
       事例集はこちら
-      <img src="<?=$r?>/images/service/arrow_green.svg" class="arrow-green" alt="矢印">
+      <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="arrow-green green-hover" alt="矢印">
     </a>
 
   </div>
@@ -134,6 +134,8 @@ get_header(); ?>
 
 <section id="introduction">
   <div class="container">
+
+    <h2>管理業務紹介</h2>
 
     <div class="row">
       <div class="col-liq-4">
@@ -209,11 +211,13 @@ get_header(); ?>
 <section id="plan">
   <div class="container">
 
+    <h2>賃貸管理プラン</h2>
+
     <table>
       <tr>
         <th>プラン名</th>
-        <td style="letter-spacing:5px;font-size:24px;background:#8EC221;color:#ffffff;">一般管理</td>
-        <td style="letter-spacing:5px;font-size:24px;background:#3A9927;color:#ffffff;">総合管理</td>
+        <td class="td-title" style="background:#8EC221;">一般管理</td>
+        <td class="td-title" style="background:#3A9927;">総合管理</td>
       </tr>
       <tr>
         <th>入居者募集</th>

@@ -11,7 +11,7 @@ get_header(); ?>
         <article>
           <h2><?=get_the_title()?></h2>
           <div class="entry-content">
-            <?=the_content()?>
+            <?php the_content(); ?>
           </div>
         </article> <?php
        } ?>

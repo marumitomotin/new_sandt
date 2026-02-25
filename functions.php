@@ -113,35 +113,6 @@ function create_post_type() {
      )
    );
 
-  register_post_type( 'slick_slider',
-    array(
-      'labels' => array(
-        'name' => __( 'スライダー' ),
-        'singular_name' => __( 'スライダー' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'menu_position' =>5, 
-       'supports' => array('title','editor','thumbnail',
-      'custom-fields','excerpt','author','trackbacks',
-      'comments','revisions','page-attributes')
-     )
-   );
-
-  register_post_type( 'slick_slider_sp',
-    array(
-      'labels' => array(
-        'name' => __( 'スライダー（スマホ）' ),
-        'singular_name' => __( 'スライダー（スマホ）' )
-      ),
-      'public' => true,
-      'has_archive' => true,
-      'menu_position' =>5, 
-       'supports' => array('title','editor','thumbnail',
-      'custom-fields','excerpt','author','trackbacks',
-      'comments','revisions','page-attributes')
-     )
-   );
 }
 
 add_filter( 'image_send_to_editor', 'remove_image_attribute', 10 );

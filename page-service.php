@@ -23,13 +23,13 @@ get_header(); ?>
         私共エスアンドティでは、オーナー様の大切な財産である土地・建物の受託物件に対し欧米で一般的なプロパティマネジメントの手法を取り入れて実践しています。私共のビジネスの目的は、オーナー様から委託される管理物件であるマンションやビルの”経営”を行い、キャッシュフローを最大化し、その物件の価値自体を最大にするという事です。
       </p>
       <img src="<?=$r?>/images/service/caret_down.svg" class="caret-down" alt="矢印">
-      <h3 class="shippori" style="margin-bottom:30px;">そして、その考え方とは</h3>
+      <h3 class="shippori" style="line-height:1;">そして、その考え方とは</h3>
     </section>
 
     <section id="points">
       <p class="with-seal">
         <span class="seal-fill-green">Point 1</span>
-        賃貸物件の「売上」を上げること　～ 収益力アップ ～
+        <span>賃貸物件の「売上」を上げること　～ 収益力アップ ～</span>
       </p>
       <p class="list">
         ●空室期間の最適化（スムーズな入退去・スピーディな入居募集と成約）<br>
@@ -40,7 +40,7 @@ get_header(); ?>
       </p>
       <p class="with-seal">
         <span class="seal-fill-green">Point 2</span>
-        賃貸物件の『経費の適正化・合理化』をすること～ コストの削減 ～
+        <span>賃貸物件の『経費の適正化・合理化』をすること～ コストの削減 ～</span>
       </p>
       <p class="list">
         ●保守・点検・清掃・リフォーム等の建物管理コストの明確化・システムの合理化<br>
@@ -50,7 +50,7 @@ get_header(); ?>
       </p>
       <p class="with-seal">
         <span class="seal-fill-green">Point 3</span>
-        賃貸物件の『資産価値』を高めること～ グレード＆イメージ ～
+        <span>賃貸物件の『資産価値』を高めること～ グレード＆イメージ ～</span>
       </p>
       <p class="list">
         ●トラブルが発生しない優良物件であり続ける（物件としての流通性）<br>
@@ -122,16 +122,16 @@ get_header(); ?>
               <img src="<?=$image_url[0]?>" class="thumbnail" alt="管理実績">
               <p>
                 <?=get_the_title()?>
-                <img src="<?=$r?>/images/service/arrow.png" alt="矢印">
+                <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
               </p>
             </a>
           </div> <?php
         }
         wp_reset_query(); ?>
       </div>
-      <a href="" class="btn-consult">
+      <a href="/rental-management/" class="btn-consult">
         賃貸管理の無料相談はこちら
-        <img src="<?=$r?>/images/service/arrow_green.svg" class="arrow-green" alt="矢印">
+        <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="arrow-green green-hover" alt="矢印">
       </a>
     </section>
 
@@ -192,7 +192,7 @@ get_header(); ?>
               <img src="<?=$image_url[0]?>" class="thumbnail" alt="自社物件">
               <p>
                 <?=get_the_title()?>
-                <img src="<?=$r?>/images/service/arrow.png" alt="矢印">
+                <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
               </p>
             </a>
           </div> <?php
@@ -239,7 +239,7 @@ get_header(); ?>
               <img src="<?=$image_url[0]?>" class="thumbnail" alt="土地活用">
               <p>
                 <?=get_the_title()?>
-                <img src="<?=$r?>/images/service/arrow.png" alt="矢印">
+                <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
               </p>
             </a>
           </div>

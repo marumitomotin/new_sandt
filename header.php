@@ -33,6 +33,13 @@ global $post; ?>
 
     wp_head(); ?>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="<?=$r?>/js/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="<?=$r?>/style.css">
     <link rel="stylesheet" type="text/css" href="<?=$r?>/css/aos.css">
@@ -45,7 +52,9 @@ global $post; ?>
       <div class="container">
         <nav>
 
-          <a href="/"><img src="<?=$r?>/images/header/logo.svg" alt="S&T Group"></a>
+          <a href="/">
+            <img src="<?=$r?>/images/header/logo.svg" alt="S&T Group">
+          </a>
 
           <div class="nav-area">
             <div class="btn-area">
@@ -55,7 +64,10 @@ global $post; ?>
             </div>
             <ul id="menu-main" class="dropdown-menu">
               <li class="menu">
-                <a href="/company/">企業情報</a>
+                <a href="/company/" class="has-sub">
+                  企業情報
+                  <svg class="fa-angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                </a>
                 <ul id="sub-menu-1">
                   <li><a href="/company/#greeting">ごあいさつ</a></li>
                   <li><a href="/company/#information">会社概要</a></li>
@@ -64,7 +76,10 @@ global $post; ?>
                 </ul>
               </li>
               <li class="menu">
-                <a href="/service/">事業紹介</a>
+                <a href="/service/" class="has-sub">
+                  事業紹介
+                  <svg class="fa-angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
+                </a>
                 <ul id="sub-menu-2">
                   <li><a href="/service/#introduction">不動産賃貸管理業</a></li>
                   <li><a href="/service/#broker">不動産仲介業</a></li>
@@ -88,7 +103,6 @@ global $post; ?>
             </ul>
           </div>
 
-          <!-- バーガー -->
           <button id="btn-toggler" type="button">
             <span class="toggler-bar"></span>
             <span class="toggler-bar"></span>
