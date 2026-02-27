@@ -33,16 +33,16 @@ global $post; ?>
 
     wp_head(); ?>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
-    <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="<?=$r?>/js/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="<?=$r?>/style.css">
     <link rel="stylesheet" type="text/css" href="<?=$r?>/css/aos.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="<?=$r?>/inc/assets/js/jquery.rwdImageMaps.min.js"></script>
+    <script src="//maps.google.com/maps/api/js?key=AIzaSyCoMbQi2wRXJNjCoptOa_otejcB0i1VmiI"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="<?=$r?>/js/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
 
   </head>
 
