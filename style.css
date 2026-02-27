@@ -2096,13 +2096,29 @@ footer {
 **********************************************************/
 
 #resident section {
+  padding: 50px 0;
   border-bottom: 2px solid #d9d9d9;
+}
+
+#resident h2 {
+  color: #375D52;
+  font-size: 30px;
+  text-align: left;
+}
+
+#resident h4 {
+  margin-top: 60px;
 }
 
 #resident #firstview {
   padding: 70px 0;
   background: #F2F5F6;
   border-bottom: 1px solid #d6d6d6;
+}
+
+#resident #firstview .container {
+  display: block;
+  letter-spacing: 2px;
 }
 
 #resident #firstview h1 {
@@ -2122,13 +2138,6 @@ footer {
   margin-bottom: 10px;
 }
 
-#resident h2 {
-  color: #375D52;
-  font-size: 30px;
-  text-align: left;
-  margin-bottom: 60px;
-}
-
 #resident h4 {
   margin-bottom: 20px;
   font-size: 20px;
@@ -2136,7 +2145,7 @@ footer {
 }
 
 #resident p {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #resident .container {
@@ -2165,6 +2174,30 @@ footer {
   margin-bottom: 20px;
 }
 
+#resident #cancel .col-liq-7 {
+  width: 60%;
+}
+
+#resident #cancel .col-liq-5 {
+  width: 40%;
+}
+
+#resident #cancel .insurance-box {
+  color: #F68E00;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 20px 30px;
+  font-weight: bold;
+}
+
+#resident #cancel .insurance-box .tel {
+  font-size: 48px;
+}
+
+#resident #cancel .insurance-box p {
+  margin-bottom: 0;
+}
+
 #resident .btn-fill-green {
   display: flex;
   justify-content: center;
@@ -2191,13 +2224,18 @@ footer {
 
 #resident .sub-p {
   line-height: 2;
+  margin-bottom: 30px;
+}
+
+#resident .sub-p:last-of-type {
+  margin-bottom: 0;
 }
 
 #resident .renew-title {
   font-size: 18px;
   font-weight: bold;
   color: #375D52;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #resident .btn-green {
@@ -2216,10 +2254,22 @@ footer {
   right: 15px;
 }
 
+#resident #contact h3 {
+  margin: 50px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#resident #contact .row {
+  margin-bottom: 40px;
+  align-items: center;
+}
+
 #resident .contact-info {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -2248,6 +2298,38 @@ footer {
 
   #resident #firstview {
     padding: 20px;
+  }
+
+  #resident #firstview h1 {
+    font-size: 40px;
+  }
+
+  #resident .btn-fill-green,
+  #resident .btn-green {
+    width: 100%;
+  }
+
+  #resident .col-liq-6 {
+    margin-bottom: 20px;
+  }
+
+  #resident #cancel .col-liq-7,
+  #resident #cancel .col-liq-5 {
+    width: 100%;
+  }
+
+  #resident #cancel .insurance-box {
+    padding: 10px;
+    margin: 10px 0 40px 0;
+  }
+
+  #resident #cancel .insurance-box .tel {
+    font-size: 40px;
+  }
+
+  #resident .contact-info {
+    margin-top: 20px;
+    gap: 0;
   }
 
 }

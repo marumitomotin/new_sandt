@@ -19,7 +19,7 @@ get_header(); ?>
 
   <div class="content-area">
 
-    <section id="cancellation">
+    <section id="cancel">
 
       <p class="small-title">Life Style Guide</p>
       <h2>退去・解約について</h2>
@@ -64,34 +64,22 @@ get_header(); ?>
         立会前までに部屋の荷物をすべて搬出してください。（自転車や外物置の中もお忘れなく）立会後はお部屋に一切入れなくなりますので、お忘れ物のないようご注意ください。立会時に残置物がある場合は別途撤去費用をいただく場合がございます。 契約者様で設置いただいた設備（配線含むネット機器等）のご撤去をお願いします。ゴミ置場に回収されないものを放置した場合は後日撤去費用を請求することがあります。
       </p>
 
-      <p class="sub-section">火災保険</p>
-      <p class="sub-p">
-        火災保険の解約手続きは、契約者様ご自身での手続きをお願いします。エスアンドティでご加入いただいている契約者様は右記にお電話ください。
-      </p>
-
-      <table>
-        <tr>
-          <th>火災保険に関するお問合せ</th>
-        </tr>
-        <tr>
-        <tr>
-          <td>
-            <p style="font-size:18px;font-weight:bold;">全管協少額短期保険</p>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0 15px;line-height:1;">
-            <p style="display:flex;align-items:center;justify-content:center;">
-              <span class="s-circle">TEL</span><span class="orange-tel">0120-208-001</span>
-            </p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p style="font-size:14px;">（日・祝日を除く　9:00〜18:00）</p>
-          </td>
-        </tr>
-      </table>
+      <div class="row">
+        <div class="col-liq-7">
+          <p class="sub-section">火災保険</p>
+          <p class="sub-p">
+            火災保険の解約手続きは、契約者様ご自身での手続きをお願いします。エスアンドティでご加入いただいている契約者様は右記にお電話ください。
+          </p>
+        </div>
+        <div class="col-liq-5">
+          <p><b style="font-size:20px;color:#375D52;">火災保険に関するお問合せ</b></p>
+          <div class="insurance-box">
+            <p style="font-size:20px;">全管協少額短期保険</p>
+            <p class="tel">0120-208-001</p>
+            <p style="color:#000000;font-weight:normal;">（日・祝日を除く　9:00〜18:00）</p>
+          </div>
+        </div>
+      </div>
 
       <p class="sub-section">ライフライン</p>
       <p class="sub-p">
@@ -150,9 +138,9 @@ get_header(); ?>
         </div>
       </div>
 
-      <div style="margin:50px 0 30px 0;font-weight:bold;font-size:18px;">
+      <div style="margin:50px 0 6px 0;font-weight:bold;font-size:18px;">
         <p>マイページからは下記の内容もご利用いただけます。</p>
-        <div class="row" style="justify-content:flex-start;gap:30px;">
+        <div class="row" style="justify-content:flex-start;gap:0 30px;">
           <p>・契約内容のご確認</p>
           <p>・⼊居者様情報の確認・変更</p>
           <p>・チャットによるお問い合わせ</p>
@@ -166,12 +154,16 @@ get_header(); ?>
         <p>※マイページ登録ができない場合は書⾯（郵送）での⼿続きも可能ですので、お気軽にお問い合わせください。</p>
       </div>
 
-      <div class="row" style="justify-content:flex-start;align-items:center;gap:30px;">
-        <span class="renew-title" style="margin-bottom:0;">わからないことはヘルプページより確認できます</span>
-        <a href="https://rentee-itandi.zendesk.com/hc/ja" class="btn-green" target="_blank">
-          ヘルプページはこちら
-          <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
-        </a>
+      <div class="row" style="align-items:center;">
+        <div class="col-liq-5" style="margin-bottom:10px;">
+          <span class="renew-title">わからないことはヘルプページより確認できます</span>
+        </div>
+        <div class="col-liq-7" style="margin-bottom:10px;">
+          <a href="https://rentee-itandi.zendesk.com/hc/ja" class="btn-green" target="_blank">
+            ヘルプページはこちら
+            <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
+          </a>
+        </div>
       </div>
 
     </section>
@@ -268,18 +260,40 @@ get_header(); ?>
 
     </section>
 
-    <section id="contact">
+    <section id="contact" style="border-bottom:none;">
 
       <p class="small-title">Life Style Guide</p>
       <h2>お問い合わせ</h2>
 
       <h3>お困り事がございましたら、下記のいずれかよりお問い合わせください。</h3>
 
-        <p style="font-size:16px;font-weight:bold;">● チャットからお問い合わせ</p>
-        <a href="https://taikyokun.com/tenants/login" style="color:#1247D9;">「賃貸物件マイページ」</a>からお問い合わせください。
-        <p style="font-size:16px;font-weight:bold;">● Webフォームからお問い合わせ</p>
-        <a href="/contact/" style="color:#1247D9;">こちら</a>からお問い合わせください。</p>
+      <p style="font-size:16px;font-weight:bold;">● チャットからお問い合わせ</p>
+      <div class="row">
+        <div class="col-liq-6" style="color:#375D52;font-size:20px;font-weight:bold;">
+          <a href="https://taikyokun.com/tenants/login" style="color:#375D52;" target="_blank">「賃貸物件マイページ」</a>からお問い合わせください。
+        </div>
+        <div class="col-liq-6">
+          <a href="https://taikyokun.com/tenants/login" class="btn-green" target="_blank">
+            チャットはこちら
+            <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
+          </a>
+        </div>
+      </div>
 
+      <p style="font-size:16px;font-weight:bold;">● Webフォームからお問い合わせ</p>
+      <div class="row">
+        <div class="col-liq-6" style="color:#375D52;font-size:20px;font-weight:bold;">
+          <a href="/contact/" style="color:#375D52;">こちら</a>からお問い合わせください。</p>
+        </div>
+        <div class="col-liq-6">
+          <a href="/contact/" class="btn-green">
+            フォームはこちら
+            <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
+          </a>
+        </div>
+      </div>
+
+      <p style="font-size:16px;font-weight:bold;margin-bottom:0;">● 電話からお問い合わせ</p>
       <div class="contact-info">
         <p>管理会社　株式会社エスアンドティ</p>
         <p>048-433-0550</p>
@@ -292,9 +306,9 @@ get_header(); ?>
 
   <div id="right-sidebar" class="right-sidebar">
     <p>
-      <span id="word-cancellation">退居・解約について</sapn>
+      <span id="word-cancel">退居・解約について</sapn>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle id="map-cancellation" cx="6" cy="6" r="6" fill="#d9d9d9">
+        <circle id="map-cancel" cx="6" cy="6" r="6" fill="#d9d9d9">
       </svg>
     </p>
     <p>
@@ -368,7 +382,7 @@ get_header(); ?>
 ********************************************/
 
   const sections = [
-    document.querySelector("#cancellation"),
+    document.querySelector("#cancel"),
     document.querySelector("#renew"),
     document.querySelector("#prepare"),
     document.querySelector("#manner"),
