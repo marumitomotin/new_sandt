@@ -729,18 +729,99 @@ footer {
   position: absolute;
   height: auto;
   display: block;
+  opacity: 0;
 }
 
-#home #firstview .image-wrap-07 { top: 3.64%; left:0%; width:31.2%; z-index:10; }
-#home #firstview .image-wrap-01 { top: 0%; left:26.76%; width:27.1%; z-index:9; }
-#home #firstview .image-wrap-04 { top:4.86%; right:8.45%; width:21.3%; z-index:8; }
-#home #firstview .image-wrap-10 { top:32.39%; left:4.23%; width:24%; z-index:9; }
-#home #firstview .image-wrap-02 { top:36.45%; left:31.69%; width:38.7%; z-index:10; }
-#home #firstview .image-wrap-05 { top:25.94%; right:0%; width:30.7%; z-index:9; }
-#home #firstview .image-wrap-09 { bottom:34.82%; right:4.93%; width:19%; z-index:10; }
-#home #firstview .image-wrap-03 { bottom:5.26%; left:0%; width:41%; z-index:11; }
-#home #firstview .image-wrap-08 { bottom:0%; left:44.37%; width:22.1%; z-index:9; }
-#home #firstview .image-wrap-06 { bottom:4.05%; right:0%; width:31.8%; z-index:9; }
+#home #firstview .image-wrap-07 {
+  top: 3.64%;
+  left: 0%;
+  width: 31.2%;
+  z-index: 10;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 0s;
+}
+
+#home #firstview .image-wrap-01 {
+  top: 0%;
+  left: 26.76%;
+  width: 27.1%;
+  z-index: 9;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: .5s;
+}
+
+#home #firstview .image-wrap-04 {
+  top: 4.86%;
+  right: 8.45%;
+  width: 21.3%;
+  z-index: 8;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 1s;
+
+}
+
+#home #firstview .image-wrap-10 {
+  top: 32.39%;
+  left: 4.23%;
+  width: 24%;
+  z-index: 9;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 1.5s;
+}
+
+#home #firstview .image-wrap-02 {
+  top: 36.45%;
+  left: 31.69%;
+  width: 38.7%;
+  z-index: 10;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 2s;
+}
+
+#home #firstview .image-wrap-05 {
+  top: 25.94%;
+  right: 0%;
+  width: 30.7%;
+  z-index: 9;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 2.5s;
+}
+
+#home #firstview .image-wrap-09 {
+  bottom: 34.82%;
+  right: 4.93%;
+  width: 19%;
+  z-index: 10;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 3s;
+}
+
+#home #firstview .image-wrap-03 {
+  bottom: 5.26%;
+  left:0%;
+  width: 41%;
+  z-index:11;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 3.5s;
+}
+
+#home #firstview .image-wrap-08 {
+  bottom: 0%;
+  left: 44.37%;
+  width: 22.1%;
+  z-index: 9;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 4s;
+}
+
+#home #firstview .image-wrap-06 {
+  bottom: 4.05%;
+  right: 0%;
+  width: 31.8%;
+  z-index: 9;
+  animation: fadeInUp .8s ease forwards;
+  animation-delay: 4.5s;
+}
 
 @media (max-width: 1260px) {
   #home #firstview .main-title { left:36.44%; }
