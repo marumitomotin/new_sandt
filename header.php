@@ -98,7 +98,7 @@ global $post; ?>
                 <a href="/resident/">暮らしのガイド</a>
               </li>
               <li class="menu">
-                <a href="/rentry/">採用情報</a>
+                <a href="/recruitment/">採用情報</a>
               </li>
             </ul>
           </div>

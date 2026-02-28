@@ -246,6 +246,16 @@ p {
   position: relative;
 }
 
+.btn-white:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border: 1px solid #ffffff;
+}
+
+.btn-white:hover .white-hover {
+  content: url(images/common/arrow_fat_white.svg);
+}
+
 .btn-white img {
   position: absolute;
   right: 20px;
@@ -1686,25 +1696,23 @@ footer {
   border-bottom: 1px solid #000000;
 }
 
-.btn-rentry {
+#rentry .btn-fill-green {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  max-width: 340px;
-  height: auto;
-  aspect-ratio: 338/76;
+  font-weight: normal;
   font-size: 30px;
-  letter-spacing: 5px;
-  background: #0A543A;
+  height: 76px;
+  margin: 70px auto 0 auto;
   border-radius: 50px;
-  color: #ffffff;
-  margin: 80px auto 0 auto;
+  width: 338px;
+  position: relative;
 }
 
-.btn-rentry img {
+#rentry .btn-fill-green img {
   position: absolute;
-  right: 30px;
+  right: 25px;
+  top: 34px;
 }
 
 /**********************************************************
@@ -2332,6 +2340,94 @@ footer {
     gap: 0;
   }
 
+}
+
+/**********************************************************
+ 採用情報
+**********************************************************/
+
+#recruitment #firstview {
+  background: url(images/recruitment/recruitment_header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: 2px;
+  height: 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#recruitment #firstview h1 {
+  font-size: 80px;
+  margin-bottom: 40px;
+}
+
+#recruitment #firstview p {
+  font-size: 30px;
+}
+
+#recruitment .title-area {
+  max-width: 381px;
+}
+
+#recruitment h2 {
+  border-bottom: 1px solid #000000;
+  font-size: 50px;
+  text-align: left;
+  padding-bottom: 20px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+}
+
+#recruitment h3 {
+  font-size: 30px;
+  letter-spacing: 4px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+#recruitment p {
+  letter-spacing: 2px;
+  line-height: 1.6;
+}
+
+#recruitment .btn-white {
+  border-radius: 0;
+  max-width: 287px;
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+#recruitment #about {
+  padding-top: 120px;
+}
+
+#recruitment #about p,
+#recruitment #mission p,
+#recruitment #message p {
+  max-width: 500px;
+}
+
+#recruitment .btn-fill-green {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  font-size: 30px;
+  height: 76px;
+  margin: 0 auto;
+  border-radius: 50px;
+  width: 338px;
+  position: relative;
+}
+
+#recruitment .btn-fill-green img {
+  position: absolute;
+  right: 25px;
+  top: 34px;
 }
 
 /**********************************************************
@@ -3656,7 +3752,7 @@ input[type="date"]::-webkit-inner-spin-button{
 input[type="date"]::-webkit-clear-button{
   -webkit-appearance: none;
 }
- 
+
 #kaiyaku input[type=date] {
   width: 150px !important;
 }

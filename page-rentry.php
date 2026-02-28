@@ -125,11 +125,10 @@ get_header(); ?>
       </tr>
     </table>
 
-    <a href="/contact/" class="btn-rentry shippori">
-      応募する
-      <img src="<?=$r?>/images/rentry/arrow_white.svg">
+    <a href="/contact/" class="btn-fill-green">
+      <span class="shippori">応募する</span><br>
+      <img src="<?=$r?>/images/common/arrow_fat_white.svg" class="fill-green-hover" alt="S&T">
     </a>
-
 
   </div>
 </section> <?php
