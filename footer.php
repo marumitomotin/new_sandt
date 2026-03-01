@@ -25,7 +25,7 @@ $r = get_template_directory_uri(); ?>
               <div class="box">
                 <div>
                   <h3 class="shippori">メールでのお問い合わせ</h3>
-                  <a href="" class="btn-green">
+                  <a href="/company/" class="btn-green">
                     <span>お問い合わせはこちら</span>
                     <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
                   </a>
@@ -52,9 +52,9 @@ $r = get_template_directory_uri(); ?>
 
           <div class="row" style="margin:0;">
             <div class="right-side">
-              <p style="line-height:2;margin:20px 0;">株式会社エスアンドティ<br>SPACE AND TRADE INCORPORATION</p>
-              <p style="margin-bottom:30px;">〒335-0004 埼玉県蕨市中央5-12-13</p>
-              <p style="font-size:20px;margin-bottom:25px;">TEL.048-433-0550</p>
+              <p style="line-height:1.8;margin:10px 0;">株式会社エスアンドティ<br>SPACE AND TRADE INCORPORATION</p>
+              <p style="margin-bottom:20px;">〒335-0004 埼玉県蕨市中央5-12-13</p>
+              <p style="font-size:20px;margin-bottom:20px;">TEL.048-433-0550</p>
               <p style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
                 <img src="<?=$r?>/images/footer/instagram.svg" alt="instagram">
                 公式アカウント sandt_official
@@ -85,12 +85,12 @@ $r = get_template_directory_uri(); ?>
                 </div>
                 <div class="col-footer-5">
                   <p class="title">暮らしのガイド</p>
-                  <p><a href="">退居・解約について</a></p>
-                  <p><a href="">ご入居の準備</a></p>
-                  <p><a href="">入居中について</a></p>
-                  <p><a href="">こんな時どうする？</a></p>
-                  <p><a href="">更新について</a></p>
-                  <p><a href="">特典・サービス</a></p>
+                  <p><a href="/resident/#cancel">退居・解約について</a></p>
+                  <p><a href="/resident/#renew">更新について</a></p>
+                  <p><a href="/resident/#prepare">ご入居の準備</a></p>
+                  <p><a href="/resident/#manner">暮らしのマナー</a></p>
+                  <p><a href="/resident/#living">入居中について</a></p>
+                  <p><a href="/resident/#contact">お問い合わせ窓口</a></p>
                 </div>
                 <div class="col-footer-6">
                   <p class="title">採用情報</p>
@@ -121,15 +121,6 @@ $r = get_template_directory_uri(); ?>
       const nav = document.querySelector('.nav-area');
       btn.addEventListener('click', () => {
         nav.classList.toggle('open');
-      });
-
-      // 第二層
-      document.querySelectorAll('.has-sub').forEach(a => {
-        a.addEventListener('click', e => {
-          e.preventDefault();
-          const li = a.parentElement;
-          li.classList.toggle('open');
-        });
       });
 
 /*******************************************

@@ -434,6 +434,12 @@ header #sub-menu-2 {
   width: 160px;
 }
 
+header #sub-menu-3 {
+  bottom: -210px;
+  left: -35px;
+  width: 160px;
+}
+
 header .menu ul li {
   line-height: 2.5;
   text-align: center;
@@ -898,7 +904,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   flex-wrap: wrap;
   gap: 20px 0;
 }
@@ -937,6 +943,10 @@ footer {
   padding-bottom: 30px;
 }
 
+#home #information .container {
+  padding-right: 100px;
+}
+
 #home #information .row {
   margin-bottom: 25px;
   max-width: 810px;
@@ -972,7 +982,7 @@ footer {
 
 #home #topics {
   text-align: center;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 #home #topics .col-liq-3 {
@@ -1087,12 +1097,29 @@ footer {
 
   #home #information .col-9 {
     width: 70%;
+    line-height: 1.4;
   }
 
   #home #topics .col-liq-3 p {
     max-width: 245px;
     margin: 0 auto;
   }
+
+  #home #city-photo,
+  #home #information,
+  #home #topics,
+  #home #business {
+    padding-top: 0;
+  }
+
+  #home #information .title-with-line {
+    flex-wrap: wrap;
+  }
+
+  #home #information .container {
+    padding-right: 10px;
+  }
+
 
 }
 
@@ -1578,6 +1605,10 @@ footer {
 
   #about #introduction h2 {
     font-size: 24px;
+  }
+
+  #about .circle-area > * {
+    margin-bottom: 0;
   }
 
   #about #produce h2 {

@@ -58,9 +58,9 @@ global $post; ?>
 
           <div class="nav-area">
             <div class="btn-area">
-              <div class="btn-green">賃貸管理の無料相談</div>
-              <div class="btn-green">退居・解約受付</div>
-              <div class="btn-green">お問い合わせ</div>
+              <a href="/rental-management/" class="btn-green">賃貸管理の無料相談</a>
+              <a href="/resident/" class="btn-green">退居・解約受付</a>
+              <a href="/contact/" class="btn-green">お問い合わせ</a>
             </div>
             <ul id="menu-main" class="dropdown-menu">
               <li class="menu">
@@ -71,7 +71,7 @@ global $post; ?>
                 <ul id="sub-menu-1">
                   <li><a href="/company/#greeting">ごあいさつ</a></li>
                   <li><a href="/company/#information">会社概要</a></li>
-                  <li><a href="/compamny/#history">沿革</a></li>
+                  <li><a href="/company/#history">沿革</a></li>
                   <li><a href="/company/#map">アクセス</a></li>
                 </ul>
               </li>
@@ -95,7 +95,15 @@ global $post; ?>
                 <a href="/about/">S&amp;Tを知る</a>
               </li>
               <li class="menu">
-                <a href="/resident/">暮らしのガイド</a>
+                <a href="/resident/" claas="has-sub">暮らしのガイド</a>
+                <ul id="sub-menu-3">
+                  <li><a href="/resident/#cancel">退居・解約について</a></li>
+                  <li><a href="/resident/#renew">更新について</a></li>
+                  <li><a href="/resident/#prepare">ご入居の準備</a></li>
+                  <li><a href="/resident/#manner">暮らしのマナー</a></li>
+                  <li><a href="/resident/#living">入居中について</a></li>
+                  <li><a href="/resident/#contact">お問い合わせ窓口</a></li>
+                </ul>
               </li>
               <li class="menu">
                 <a href="/recruitment/">採用情報</a>

@@ -80,8 +80,9 @@ get_header(); ?>
       'oederby' => 'date',
       'oederby' => 'desc',
       'fields' => 'ids',
-    ]);
+    ]); ?>
 
+    <div style="max-width:810px;margin:0 0 0 auto;"> <?php
     foreach ($post_ids as $post_id) { ?>
       <a href="<?=get_the_permalink($post_id)?>">
         <span><?=get_the_date('Y.m.d', $post_id)?></span>
@@ -95,6 +96,7 @@ get_header(); ?>
         </div>
       </a> <?php
     } ?>
+    </div>
 
   </div>
 </section>
@@ -183,21 +185,21 @@ get_header(); ?>
       </div>
     </div>
 
-    <img src="<?=$r?>/images/top/business_banner.jpg" style="width:100%;" alt="事業一覧">
-    <h3 class="shippori" style="margin:20px 0;">
-      <a href="/service/#introduction">
+    <a href="/service/#introduction">
+      <img src="<?=$r?>/images/top/business_banner.jpg" style="width:100%;" alt="事業一覧">
+      <h3 class="shippori" style="margin:15px 0;">
         賃貸不動産の管理・運営
         <img src="<?=$r?>/images/common/arrow_fat_black.svg" style="margin-left:40px;" alt="矢印アイコン">
-      </a>
-    </h3>
+      </h3>
+    </a>
     <p style="margin-bottom:40px;line-height:2;">
       メイン事業である賃貸管理は、蕨市・さいたま市・川⼝市を中⼼にマンション・アパートの管理を⾏っております。賃貸管理に特化した社内体制と地域密着型管理だからこそ実現できる⼊居率の⾼さや充実したサービスでオーナー様の賃貸経営をサポート致します。
     </p>
 
     <div class="row">
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/business_01.jpg" class="main-img" alt="topics">
         <a href="/service/#broker">
+          <img src="<?=$r?>/images/top/business_01.jpg" class="main-img" alt="topics">
           <div class="title">
             <h3 class="shippori">不動産／売却・購入</h3>
             <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
@@ -211,8 +213,8 @@ get_header(); ?>
         </table>
       </div>
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/business_02.jpg" class="main-img" alt="topics">
         <a href="/service/#rent">
+          <img src="<?=$r?>/images/top/business_02.jpg" class="main-img" alt="topics">
           <div class="title">
             <h3 class="shippori">店舗・テナント</h3>
             <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
@@ -228,8 +230,8 @@ get_header(); ?>
         </table>
       </div>
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/business_03.jpg" class="main-img" alt="topics">
         <a href="/service/#howto">
+          <img src="<?=$r?>/images/top/business_03.jpg" class="main-img" alt="topics">
           <div class="title">
             <h3 class="shippori">土地活用</h3>
             <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
@@ -247,8 +249,8 @@ get_header(); ?>
         </table>
       </div>
       <div class="col-liq-3">
-        <img src="<?=$r?>/images/top/business_04.jpg" class="main-img" alt="topics">
         <a href="/service/#consulting">
+          <img src="<?=$r?>/images/top/business_04.jpg" class="main-img" alt="topics">
           <div class="title">
             <h3 class="shippori">不動産コンサルティング</h3>
             <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
