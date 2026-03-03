@@ -132,7 +132,7 @@ get_header(); ?>
             まだマイページに登録していない⽅はこちらから
           </p>
           <a href="https://taikyokun.com/publics/invite_applications?&token=eb67939cbb98" class="btn-fill-green" target="_blank">
-            マイページ 新規ご登録URLの送信
+            マイページ新規登録
             <img src="<?=$r?>/images/common/arrow_fat_white.svg" class="fill-green-hover" alt="矢印">
           </a>
         </div>
@@ -246,7 +246,7 @@ get_header(); ?>
       </p>
 
       <h4>● 車庫証明の取り方</h4>
-      <p class="sub-p">
+      <p class="sub-p" style="margin-bottom:30px;">
         車庫証明（「自動車保管場所使用承諾証明書」）の発行につきましては発行手数料がかかります。発行を希望される方は、管理会社までお越しいただくかご連絡ください。<br>
          ※駐車区画に収まらない車は車庫証明が許可されませんので買い替え時はご自身で駐車スペースの実寸をご確認いただきますようお願い致します。<br>
         ＜必要書類＞車検証、免許証
@@ -293,7 +293,7 @@ get_header(); ?>
         </div>
       </div>
 
-      <p style="font-size:16px;font-weight:bold;margin-bottom:0;">● 電話からお問い合わせ</p>
+      <p style="font-size:16px;font-weight:bold;">● 電話からお問い合わせ</p>
       <div class="contact-info">
         <p>管理会社　株式会社エスアンドティ</p>
         <p>048-433-0550</p>

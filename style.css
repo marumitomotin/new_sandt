@@ -1083,7 +1083,7 @@ footer {
 
   #home #about .circle-area img {
     display: block;
-    margin: 20px auto;
+    margin: 0 auto;
   }
 
   #home #information .seal-white {
@@ -1174,6 +1174,11 @@ footer {
   margin-bottom: 25px;
 }
 
+#company #greeting .signature {
+  text-align: right;
+  margin-top: 90px;
+}
+
 #company #philosophy {
   background: #f9f9fa;
   text-align: center;
@@ -1254,6 +1259,18 @@ footer {
 
 #company #map {
   padding-bottom: 0;
+}
+
+@media (max-width:767px) {
+
+  #company #greeting {
+    padding-bottom: 40px;
+  }
+
+  #company #greeting .signature {
+    margin-top: 40px;
+  }
+
 }
 
 /**********************************************************
@@ -1383,6 +1400,7 @@ footer {
 #service #merit th {
   font-weight: bold;
   text-align: center;
+  font-size: 16px;
 }
 
 #service #merit td {
@@ -1603,12 +1621,12 @@ footer {
     background-position: center;
   }
 
-  #about #introduction h2 {
-    font-size: 24px;
+  #about #introduction {
+    padding-bottom: 0;
   }
 
-  #about .circle-area > * {
-    margin-bottom: 0;
+  #about #introduction h2 {
+    font-size: 24px;
   }
 
   #about #produce h2 {
@@ -1698,15 +1716,15 @@ footer {
 
 #sustainable #howto h2 {
   text-align: left;
-  line-height: 1.6;
+  line-height: 1.4;
   font-size: 26px;
-  margin: 0 0 30px 0;
+  margin: 0 0 15px 0;
   letter-spacing: 3px;
 }
 
 #sustainable #howto p {
   line-height: 1.6;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 #sustainable #howto .icon-area {
@@ -2200,6 +2218,10 @@ footer {
     margin: 0 auto 45px auto;
   }
 
+  #rental-management #feature {
+    padding-bottom: 0;
+  }
+
   #rental-management #plan .td-title {
     font-size:16px;
     letter-spacing: initial;
@@ -2407,6 +2429,7 @@ footer {
   color: #F68E00;
   font-size: 30px;
   font-weight: bold;
+  line-height: 1;
 }
 
 #resident #contact-info2 h3 {
@@ -2540,6 +2563,23 @@ footer {
   position: absolute;
   right: 25px;
   top: 34px;
+}
+
+@media (max-width:767px) {
+
+  #recruitment .col-liq-6 {
+    margin-bottom: 30px;
+  }
+
+  #recruitment #mission,
+  #recruitment #message {
+    padding-top: 0;
+  }
+
+  #recruitment #message {
+    padding-bottom: 0;
+  }
+
 }
 
 /**********************************************************
@@ -2688,6 +2728,16 @@ footer {
     font-size: 14px;
   }
 
+}
+
+/**********************************************************
+ ギャラリー
+**********************************************************/
+
+.ug-arrow-left.ug-skin-default, .ug-arrow-right.ug-skin-default {
+  width: 50px !important;
+  height: 90px !important;
+  background-position: 0px 0px !important;
 }
 
 /**********************************************************
@@ -3614,6 +3664,10 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+/**********************************************************
+ Contact
+**********************************************************/
 
 /**********************************************************
  解約申請フォーム

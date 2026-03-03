@@ -44,9 +44,9 @@ $r = get_template_directory_uri(); ?>
           <div class="row" style="margin:0 0 10px 0;">
             <img src="<?=$r?>/images/header/logo.svg" alt="ロゴ">
             <div class="btn-area">
-              <div class="btn-green">賃貸管理の無料相談</div>
-              <div class="btn-green">退居・解約受付</div>
-              <div class="btn-green">お問い合わせ</div>
+              <a href="/rental-management/" class="btn-green">賃貸管理の無料相談</a>
+              <a href="/resident/" class="btn-green">退居・解約受付</a>
+              <a href="/contact/" class="btn-green">お問い合わせ</a>
             </div>
           </div>
 
@@ -63,28 +63,28 @@ $r = get_template_directory_uri(); ?>
             <div class="left-side">
               <div class="row" style="margin:0;">
                 <div class="col-footer-1">
-                  <p class="title">企業情報</p>
-                  <p><a href="">ごあいさつ</a></p>
-                  <p><a href="">会社概要</a></p>
-                  <p><a href="">沿革 ギャラリー</a></p>
-                  <p><a href="">アクセス</a></p>
+                  <p class="title"><a href="/company/">企業情報</a></p>
+                  <p><a href="/company/#greeting">ごあいさつ</a></p>
+                  <p><a href="/company/#information">会社概要</a></p>
+                  <p><a href="/company/#history">沿革</a></p>
+                  <p><a href="/company/#map">アクセス</a></p>
                 </div>
                 <div class="col-footer-2">
-                  <p class="title">事業案内</p>
-                  <p><a href="">不動産賃貸管理業</a></p>
-                  <p><a href="">不動産仲介業</a></p>
-                  <p><a href="">不動産賃貸業</a></p>
-                  <p><a href="">土地活用</a></p>
-                  <p><a href="">不動産コンサル</a></p>
+                  <p class="title"><a href="/service/">事業案内</a></p>
+                  <p><a href="/service/#introduction">不動産賃貸管理業</a></p>
+                  <p><a href="/service/#broker">不動産仲介業</a></p>
+                  <p><a href="/service/#rent">不動産賃貸業</a></p>
+                  <p><a href="/service/#howto">土地活用</a></p>
+                  <p><a href="/service/#consulting">不動産コンサル</a></p>
                 </div>
                 <div class="col-footer-3">
-                  <p class="title">サスティナビリティ</p>
+                  <p class="title"><a href="/sustainable/">サスティナビリティ</a></p>
                 </div>
                 <div class="col-footer-4">
-                  <p class="title">S&amp;Tを知る</p>
+                  <p class="title"><a href="/about/">S&amp;Tを知る</a></p>
                 </div>
                 <div class="col-footer-5">
-                  <p class="title">暮らしのガイド</p>
+                  <p class="title"><a href="/resident/">暮らしのガイド</a></p>
                   <p><a href="/resident/#cancel">退居・解約について</a></p>
                   <p><a href="/resident/#renew">更新について</a></p>
                   <p><a href="/resident/#prepare">ご入居の準備</a></p>
@@ -93,7 +93,7 @@ $r = get_template_directory_uri(); ?>
                   <p><a href="/resident/#contact">お問い合わせ窓口</a></p>
                 </div>
                 <div class="col-footer-6">
-                  <p class="title">採用情報</p>
+                  <p class="title"><a href="/recruitment/">採用情報</a></p>
                 </div>
               </div>
             </div>

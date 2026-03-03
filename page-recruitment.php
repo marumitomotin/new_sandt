@@ -45,6 +45,7 @@ get_header(); ?>
           詳細はこちらへ
           <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="white-hover" alt="S&T">
         </a>
+リンク先をお知らせください
       </div>
       <div class="col-liq-6 left-item">
         <img src="<?=$r?>/images/recruitment/recruit02.jpg" style="width:96%;" alt="S&T">
@@ -64,7 +65,7 @@ get_header(); ?>
         <p class="shippori">
           エスアンドティは設立して30年が経ちました。これからの時代はAI（人工知能）や Iot（モノのインターネット）などで不動産業界も大きく様変わりしていきます。そんな時代だからこそ、新しい価値を生み出せるよう私たちは“挑戦”を続けていきます。またエスアンドティでは、若手のうちからさまざまなプロジェクトに関わることができます。好奇心をもってチャレンジする、チャンスを生かして成長し続けたい方はぜひご応募ください。皆様にお会いできることを心から楽しみにしております。
         </p>
-        <a href="/company" class="btn-white">
+        <a href="/company/" class="btn-white">
           詳細はこちらへ
           <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="white-hover" alt="S&T">
         </a>
@@ -76,7 +77,7 @@ get_header(); ?>
   </div>
 </section>
 
-<section id="btn-retry" style="padding-top:20px;">
+<section id="btn-rentry" style="padding-top:20px;">
   <div class="container">
     <a href="/rentry/" class="btn-fill-green">
       <span class="shippori">募集要項</span><br>
