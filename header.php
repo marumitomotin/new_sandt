@@ -13,6 +13,7 @@ global $post; ?>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="<?=$r?>/images/favicon.ico">
 
+    <title>株式会社エスアンドティ | この街でもっとステキに暮らす</title>
     <meta name="description" content="アパート・マンションなどの賃貸管理を埼玉で依頼するならエスアンドティへ経営代行（プロパティマネジメント）を通じ『その不動産からの収益と資産価値の最大化』を確実に実現するために土地活用から賃貸経営までをワンストップで行っています。">
     <meta name="robots" content="noodp"/>
     <link rel="canonical" href="http://sandt-inc.co.jp" />
