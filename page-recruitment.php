@@ -17,7 +17,7 @@ get_header(); ?>
       <div class="col-liq-6">
         <div class="title-area">
           <h2>About Us</h2>
-          <h3>土地活用から賃貸経営のトータルプロデュース</h3>
+          <h3>土地活用から賃貸経営の<br class="sp-show">トータルプロデュース</h3>
         </div>
         <p class="shippori">
           エスアンドティは、平成元年に創業し、現在では『日本一面積の小さい市』で古くから中仙道の宿場町として栄えた蕨市に本社をかまえ、「もっとステキに暮らす。」をテーマに土地活用から賃貸経営までさまざまな事業を展開している総合不動産会社です。本社オフィスはカフェのような空間で、風通しの良いオープンな社風です。<br><br>今では、小さい会社ながら各メディアにも多く取り上げられ、業界では当社のビジネスモデルが注目されるような存在になりました。
@@ -41,11 +41,10 @@ get_header(); ?>
         <p class="shippori">
           日本では今後さらに人口減少や空き家問題が深刻化し、不動産業を取り巻く環境は一層厳しくなります。市場やトレンドなど時代の変化についていくことが求められ、いかにオーナー様の「資産価値と収益の最大化」を実現していくか。不動産のプロとしてオーナー様から信頼される賃貸経営のパートナーになり、安心を提供することがエスアンドティの使命なのです。
         </p>
-        <a href="" class="btn-white">
+        <a href="/about/" class="btn-white">
           詳細はこちらへ
           <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="white-hover" alt="S&T">
         </a>
-リンク先をお知らせください
       </div>
       <div class="col-liq-6 left-item">
         <img src="<?=$r?>/images/recruitment/recruit02.jpg" style="width:96%;" alt="S&T">
@@ -65,10 +64,20 @@ get_header(); ?>
         <p class="shippori">
           エスアンドティは設立して30年が経ちました。これからの時代はAI（人工知能）や Iot（モノのインターネット）などで不動産業界も大きく様変わりしていきます。そんな時代だからこそ、新しい価値を生み出せるよう私たちは“挑戦”を続けていきます。またエスアンドティでは、若手のうちからさまざまなプロジェクトに関わることができます。好奇心をもってチャレンジする、チャンスを生かして成長し続けたい方はぜひご応募ください。皆様にお会いできることを心から楽しみにしております。
         </p>
-        <a href="/company/" class="btn-white">
-          詳細はこちらへ
-          <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="white-hover" alt="S&T">
-        </a>
+        <div class="row">
+          <div class="col-liq-6">
+            <a href="/company/" class="btn-white">
+              企業情報
+              <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="white-hover" alt="S&T">
+            </a>
+          </div>
+          <div class="col-liq-6">
+            <a href="/magazines/" class="btn-white message-second">
+              メディア掲載
+              <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="white-hover" alt="S&T">
+            </a>
+          </div>
+        </div>
       </div>
       <div class="col-liq-6">
         <img src="<?=$r?>/images/recruitment/recruit03.jpg" alt="S&T">

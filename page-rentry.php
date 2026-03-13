@@ -15,9 +15,9 @@ get_header(); ?>
 
     <h2 class="shippori">Entry</h2>
     <h3 class="shippori">募集要項</h3>
-    <h4 class="shippori">不動産業の経験がない方も歓迎です。まずはお気軽にご応募ください。</h4>
+    <h4>不動産業の経験がない方も歓迎です。まずはお気軽にご応募ください。</h4>
 
-    <table class="shippori">
+    <table>
       <tr>
         <th colspan="2" class="title-th">募集要項</th>
       </tr>
@@ -25,9 +25,9 @@ get_header(); ?>
         <th>募集職種</th>
         <td>
           <p style="font-size:18px;font-weight:bold;">営業職/マネジメント</p>
-          <p style="margin-bottom:50px;">担当オーナー様の月次報告・空室対策／担当物件の募集業務など幅広い業務</p>
+          <p style="margin-bottom:30px;">担当オーナー様の月次報告・空室対策／担当物件の募集業務など幅広い業務</p>
           <p style="font-size:18px;font-weight:bold;">事務職/資産管理部</p>
-          <p style="margin-bottom:50px;">賃貸物件の契約の更新や解約の手続き、オーナー様への送金などパソコンを使った業務</p>
+          <p>賃貸物件の契約の更新や解約の手続き、オーナー様への送金などパソコンを使った業務</p>
         </td>
       </tr>
       <tr>
@@ -39,8 +39,10 @@ get_header(); ?>
       <tr>
         <th>雇用形態</th>
         <td>
-          正社員（パートや契約社員がご希望であればご相談下さい。）<br>
-          20代、30代が多く活躍中です。
+          <p>
+            正社員（パートや契約社員がご希望であればご相談下さい。）<br>
+            20代、30代が多く活躍中です。
+          </p>
         </td>
       </tr>
       <tr>
@@ -48,6 +50,7 @@ get_header(); ?>
         <td>
           <p style="font-size:18px;font-weight:bold;">営業職</p>
           <p>250,000円～300,000円＋諸手当</p>
+          <br>
           <p style="font-size:18px;font-weight:bold;">事務職</p>
           <p>230,000円～250,000＋諸手当</p>
           <p>

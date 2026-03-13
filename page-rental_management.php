@@ -9,12 +9,12 @@ get_header(); ?>
 
     <h2>蕨エリアの賃貸管理は</h2>
     <h1>
-      <span style="color:#3A9927;">エスアンドティ</span><span style="font-size:24px;">に</span>お任せください
+      <span style="color:#3A9927;">エスアンドティ</span><span style="font-size:24px;">に</span><br class="sp-show">お任せください
     </h1>
 
     <div class="btn-area">
       <div class="btn-1">
-        <p class="first">管理個数</p>
+        <p class="first">管理戸数</p>
         <p class="second">
           約<span class="shippori">1,200</span>戸
         </p>
@@ -22,7 +22,7 @@ get_header(); ?>
       </div>
       <div class="btn-2">
         <p class="first">入居率</p>
-        <p class="second"><span class="shippori">99.2</span>%</p>
+        <p class="second"><span class="shippori" style="">99.2</span>%</p>
         <p class="third">＜2024年＞</p>
       </div>
     </div>
@@ -45,17 +45,33 @@ get_header(); ?>
 <section id="ask">
   <div class="container">
 
-    <h2>こんなお困りごとありませんか？</h2>
+    <h2>こんなお困りごと<br class="sp-show">ありませんか？</h2>
 
     <img src="<?=$r?>/images/rental_management/ask_main.png" alt="お困りごと">
 
-    <h3>当社の豊富な実績でお悩み解決！</h3>
+    <h3>当社の豊富な実績で<br class="sp-show">お悩み解決！</h3>
 
-    <div class="images">
-      <img src="<?=$r?>/images/rental_management/ask_01.png" alt="お悩み解決">
-      <img src="<?=$r?>/images/rental_management/ask_02.png" alt="お悩み解決">
-      <img src="<?=$r?>/images/rental_management/ask_03.png" alt="お悩み解決">
-      <img src="<?=$r?>/images/rental_management/ask_04.png" alt="お悩み解決">
+    <div class="row">
+      <div class="col-liq-6">
+        <div class="row">
+          <div class="col-6">
+            <img src="<?=$r?>/images/rental_management/ask_01.png" alt="お悩み解決">
+          </div>
+          <div class="col-6">
+            <img src="<?=$r?>/images/rental_management/ask_02.png" alt="お悩み解決">
+          </div>
+        </div>
+      </div>
+      <div class="col-liq-6">
+        <div class="row">
+          <div class="col-6">
+            <img src="<?=$r?>/images/rental_management/ask_03.png" alt="お悩み解決">
+          </div>
+          <div class="col-6">
+            <img src="<?=$r?>/images/rental_management/ask_04.png" alt="お悩み解決">
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -71,7 +87,7 @@ get_header(); ?>
         <p><span class="seal-fill-green">PONIT 1</span></p>
         <h3>
           <img src="<?=$r?>/images/rental_management/feature_01.png" alt="当社の強み">
-          <span>蕨市を中⼼に<br>多数の管理物件がございます</span>
+          <span>蕨市を中⼼に<br class="sp-hide">多数の管理物件がございます</span>
         </h3>
         <p>
           当社のお取り扱い物件数は、蕨市を中⼼に1200⼾以上を超え、駐⾞場は1000台以上を管理しております。豊富な物件数を管理しているからこそのノウハウをオーナー様に提供できます。
@@ -81,7 +97,7 @@ get_header(); ?>
         <p><span class="seal-fill-green">PONIT 2</span></p>
         <h3>
           <img src="<?=$r?>/images/rental_management/feature_02.png" alt="当社の強み">
-          <span>当社は『賃貸管理サービス』<br>がメイン事業です</span>
+          <span>当社は『賃貸管理サービス』<br class="sp-hide">がメイン事業です</span>
         </h3>
         <p>
           当社は賃貸管理サービスに特化した社内体制になっており、⾼い⼊居率や質の⾼い管理サービスを提供しております。
@@ -91,7 +107,7 @@ get_header(); ?>
         <p><span class="seal-fill-green">PONIT 3</span></p>
         <h3>
           <img src="<?=$r?>/images/rental_management/feature_03.png" alt="当社の強み">
-          <span>担当者（宅建保有者）が<br>つきます</span>
+          <span>担当者（宅建保有者）が<br class="sp-hide">つきます</span>
         </h3>
         <p>
           オーナー様へのサービスとして、担当者が毎⽉の収⽀報告を対⾯で⾏わせていただき、ご所有不動産の問題点等について⼀緒に向き合います。（無償）
@@ -116,7 +132,7 @@ get_header(); ?>
   <div class="container">
 
     <p><span class="seal-fill-green">PONIT 5</span></p>
-    <h2>『デザイン⼒』で付加価値を与えます</h2>
+    <h2>『デザイン⼒』で<br class="sp-show">付加価値を与えます</h2>
     <p>
       デザイン性が⾼く、住み⼼地の良い空間を賃貸住宅に。<br>
       住む⼈に喜んでもらえるお部屋、それは同時にオーナー様の賃貸不動産に付加価値を与えることになります。<br>

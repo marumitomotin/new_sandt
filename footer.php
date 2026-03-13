@@ -25,7 +25,7 @@ $r = get_template_directory_uri(); ?>
               <div class="box">
                 <div>
                   <h3 class="shippori">メールでのお問い合わせ</h3>
-                  <a href="/company/" class="btn-green">
+                  <a href="/contact/" class="btn-green">
                     <span>お問い合わせはこちら</span>
                     <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
                   </a>
@@ -39,10 +39,13 @@ $r = get_template_directory_uri(); ?>
       <section id="footer">
         <div class="container">
 
-          <hr>
+          <hr class="sp-hide">
 
           <div class="row" style="margin:0 0 10px 0;">
-            <img src="<?=$r?>/images/header/logo.svg" alt="ロゴ">
+            <a href="/" class="logo-a">
+              <img src="<?=$r?>/images/header/logo.svg" class="sp-hide" alt="ロゴ">
+              <img src="<?=$r?>/images/footer/footer_logo_sp.svg" class="sp-show" style="width:80%;margin:0 auto 10px auto;" alt="ロゴ">
+            </a>
             <div class="btn-area">
               <a href="/rental-management/" class="btn-green">賃貸管理の無料相談</a>
               <a href="/resident/" class="btn-green">退居・解約受付</a>
@@ -51,31 +54,26 @@ $r = get_template_directory_uri(); ?>
           </div>
 
           <div class="row" style="margin:0;">
-            <div class="right-side">
-              <p style="line-height:1.8;margin:10px 0;">株式会社エスアンドティ<br>SPACE AND TRADE INCORPORATION</p>
-              <p style="margin-bottom:20px;">〒335-0004 埼玉県蕨市中央5-12-13</p>
-              <p style="font-size:20px;margin-bottom:20px;">TEL.048-433-0550</p>
-              <p style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
-                <img src="<?=$r?>/images/footer/instagram.svg" alt="instagram">
-                公式アカウント sandt_official
-              </p>
-            </div>
-            <div class="left-side">
+            <div class="left-side right-item">
               <div class="row" style="margin:0;">
                 <div class="col-footer-1">
                   <p class="title"><a href="/company/">企業情報</a></p>
-                  <p><a href="/company/#greeting">ごあいさつ</a></p>
-                  <p><a href="/company/#information">会社概要</a></p>
-                  <p><a href="/company/#history">沿革</a></p>
-                  <p><a href="/company/#map">アクセス</a></p>
+                  <div>
+                    <p><a href="/company/#greeting">ごあいさつ</a></p>
+                    <p><a href="/company/#information">会社概要</a></p>
+                    <p><a href="/company/#history">沿革</a></p>
+                    <p><a href="/company/#map">アクセス</a></p>
+                  </div>
                 </div>
                 <div class="col-footer-2">
                   <p class="title"><a href="/service/">事業案内</a></p>
-                  <p><a href="/service/#introduction">不動産賃貸管理業</a></p>
-                  <p><a href="/service/#broker">不動産仲介業</a></p>
-                  <p><a href="/service/#rent">不動産賃貸業</a></p>
-                  <p><a href="/service/#howto">土地活用</a></p>
-                  <p><a href="/service/#consulting">不動産コンサル</a></p>
+                  <div>
+                    <p><a href="/service/#introduction">不動産賃貸管理業</a></p>
+                    <p><a href="/service/#broker">不動産仲介業</a></p>
+                    <p><a href="/service/#rent">不動産賃貸業</a></p>
+                    <p><a href="/service/#howto">土地活用</a></p>
+                    <p><a href="/service/#consulting">不動産コンサル</a></p>
+                  </div>
                 </div>
                 <div class="col-footer-3">
                   <p class="title"><a href="/sustainable/">サスティナビリティ</a></p>
@@ -85,22 +83,38 @@ $r = get_template_directory_uri(); ?>
                 </div>
                 <div class="col-footer-5">
                   <p class="title"><a href="/resident/">暮らしのガイド</a></p>
-                  <p><a href="/resident/#cancel">退居・解約について</a></p>
-                  <p><a href="/resident/#renew">更新について</a></p>
-                  <p><a href="/resident/#prepare">ご入居の準備</a></p>
-                  <p><a href="/resident/#manner">暮らしのマナー</a></p>
-                  <p><a href="/resident/#living">入居中について</a></p>
-                  <p><a href="/resident/#contact">お問い合わせ窓口</a></p>
+                  <div>
+                    <p><a href="/resident/#cancel">退居・解約について</a></p>
+                    <p><a href="/resident/#renew">更新について</a></p>
+                    <p><a href="/resident/#prepare">ご入居の準備</a></p>
+                    <p><a href="/resident/#manner">暮らしのマナー</a></p>
+                    <p><a href="/resident/#living">入居中について</a></p>
+                    <p><a href="/resident/#contact">お問い合わせ窓口</a></p>
+                  </div>
                 </div>
                 <div class="col-footer-6">
                   <p class="title"><a href="/recruitment/">採用情報</a></p>
                 </div>
               </div>
             </div>
+            <div class="right-side left-item">
+              <p style="line-height:1.8;margin:10px 0;">株式会社エスアンドティ<br>SPACE AND TRADE INCORPORATION</p>
+              <p style="margin-bottom:20px;">〒335-0004 埼玉県蕨市中央5-12-13</p>
+              <p style="font-size:20px;margin-bottom:20px;">TEL.048-433-0550</p>
+              <a href="https://www.instagram.com/sandt_warabi/" target="_blank">
+                <p style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
+                  <img src="<?=$r?>/images/footer/instagram.svg" alt="instagram">
+                  公式アカウント sandt_official
+                </p>
+              </a>
+            </div>
           </div>
 
           <p style="color:#3f3f3f;font-size:12px;">
-            <span>個人情報の取扱いについて ｜ カスタマーハラスメント基本⽅針</span>
+            <span>
+              <a href="/privacy/">個人情報の取扱いについて</a>
+              ｜
+              <a href="/カスタマーハラスメントに対する基本方針につい/">カスタマーハラスメント基本⽅針</a></span>
             <span>　©S&T CO.,LTD. ALL RIGHTS RESERVED</span>
           </p>
 

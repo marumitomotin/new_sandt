@@ -337,6 +337,10 @@ main {
 
 @media(max-width: 767px) {
 
+  section {
+    padding: 45px 0;
+  }
+
   .content-area {
     width: 100%;
   }
@@ -654,12 +658,6 @@ footer {
   margin-bottom: 85px;
 }
 
-#footer .right-side {
-}
-
-#footer .left-side {
-}
-
 #footer .left-side p {
   font-size: 12px;
   margin-bottom: 20px;
@@ -694,14 +692,74 @@ footer {
   width: 52px;
 }
 
-.col-footer-1 {
-
-}
-
 @media screen and (max-width: 767px) {
 
   .footer_logo {
     margin: 20px auto;
+  }
+
+  #footer {
+    padding: 30px 0;
+  }
+
+  #footer .logo-a {
+    width: 100%;
+  }
+
+  #footer .btn-area {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    align-items: center !important;
+  }
+
+
+  #footer .btn-area {
+    width: 100%;
+  }
+
+  #footer .btn-area .btn-green {
+    width: 168px;
+  }
+
+  .col-footer-1,
+  .col-footer-2,
+  .col-footer-3,
+  .col-footer-4,
+  .col-footer-5,
+  .col-footer-6 {
+    width: 100%;
+  }
+
+  .col-footer-1 .title,
+  .col-footer-2 .title,
+  .col-footer-3 .title,
+  .col-footer-4 .title,
+  .col-footer-5 .title,
+  .col-footer-6 .title {
+    margin: 20px 0 10px 0 !important;
+  }
+
+  .col-footer-1 div,
+  .col-footer-2 div,
+  .col-footer-3 div,
+  .col-footer-4 div,
+  .col-footer-5 div,
+  .col-footer-6 div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 15px;
+  }
+
+  .col-footer-1 div p,
+  .col-footer-2 div p,
+  .col-footer-3 div p,
+  .col-footer-4 div p,
+  .col-footer-5 div p,
+  .col-footer-6 div p {
+    margin-bottom: 10px !important;
   }
 
 }
@@ -881,6 +939,8 @@ footer {
 
 #home #about .description {
   margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #home #about .description:last-of-type {
@@ -895,7 +955,7 @@ footer {
 }
 
 #home #information {
-  letter-spacing: 5px;
+  letter-spacing: 2px;
 }
 
 #home #information .container .title,
@@ -956,12 +1016,16 @@ footer {
   padding: 20px 0 35px 0;
 }
 
-#home #information .col-3,
-#home #information .col-9 {
+#home #information .col-liq-3,
+#home #information .col-liq-9 {
   padding: 0;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+#home #information .col-liq-9 {
+  font-size: 16px;
 }
 
 #home #information a:hover {
@@ -976,7 +1040,7 @@ footer {
 }
 
 #home #information a:hover span,
-#home #information a:hover .col-9 {
+#home #information a:hover .col-liq-9 {
   color: rgba(0,0,0,0.6);
 }
 
@@ -985,20 +1049,21 @@ footer {
   padding-bottom: 10px;
 }
 
-#home #topics .col-liq-3 {
+#home #topics .col-6 {
   margin-bottom: 30px;
 }
 
-#home #topics .col-liq-3 h3 {
+#home #topics .col-6 h3 {
   font-size: 18px;
   font-weight: normal;
+  margin-bottom: 15px;
 }
 
-#home #topics .col-liq-3 p {
+#home #topics .col-6 p {
   position: relative;
 }
 
-#home #topics .col-liq-3 p img {
+#home #topics .col-6 p img {
   position: absolute;
   right: 4px;
   bottom: 4px;
@@ -1050,11 +1115,15 @@ footer {
   font-size: 18px;
 }
 
-#home #business .row .col-liq-3 {
+#home #business .row .col-6 {
   margin-bottom: 40px;
 }
 
-#home #business .row .col-liq-3 .title {
+#home #business .row .col-6 .col-liq-6 {
+  padding:  0 0 10px 10px;
+}
+
+#home #business .row .col-6 .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1064,10 +1133,6 @@ footer {
 #home #business .row .main-img {
   width: 100%;
   margin-bottom: 15px;
-}
-
-#home #business td {
-  padding: 5px 0;
 }
 
 @keyframes fadeInUp {
@@ -1114,12 +1179,45 @@ footer {
 
   #home #information .title-with-line {
     flex-wrap: wrap;
+    gap: 15px !important;
   }
 
   #home #information .container {
     padding-right: 10px;
   }
 
+  #home #about .logo {
+    margin-bottom: 25px;
+  }
+
+  .hr-title {
+    width: 30px;
+  }
+
+  #home #topics .col-6 h3 {
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+
+  #home #topics .topics-wrap {
+    position: relative;
+    height: initial;
+    margin-bottom: initial;
+  }
+
+  #home #topics .col-6 p img {
+    right: 0px;
+    bottom: 15px;
+  }
+
+  #home #topics .col-liq-6:last-of-type p img {
+    right: 4px;
+    bottom: 2px;
+  }
+
+  #home #business h3 {
+    font-size: 15px;
+  }
 
 }
 
@@ -1177,6 +1275,8 @@ footer {
 #company #greeting .signature {
   text-align: right;
   margin-top: 90px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #company #philosophy {
@@ -1235,7 +1335,8 @@ footer {
   margin: 50px auto 0 auto;
   max-width: 500px;
   color: #595757;
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 #company #information td {
@@ -1269,6 +1370,14 @@ footer {
 
   #company #greeting .signature {
     margin-top: 40px;
+  }
+
+  #company #philosophy hr {
+    margin: 35px 0;
+  }
+
+  #company #information table, #company #history table {
+    margin: 10px auto 0 auto;
   }
 
 }
@@ -1336,6 +1445,7 @@ footer {
   font-size: 34px;
   text-align: center;
   line-height: 1.6;
+  margin-bottom: 30px;
 }
 
 #service p {
@@ -1413,20 +1523,25 @@ footer {
   text-align: center;
 }
 
-#service #work .col-liq-3,
-#service #howto .col-liq-3 {
+#service #scheme img {
+  display: block;
+  margin: 0 auto;
+}
+
+#service #work .col-6,
+#service #howto .col-6 {
   margin-bottom: 15px;
 }
 
-#service #work .col-liq-3 .thumbnail,
-#service #howto .col-liq-3 .thumbnail {
+#service #work .col-6 .thumbnail,
+#service #howto .col-6 .thumbnail {
   width: 100%;
   aspect-ratio: 240/173;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-#service #work .col-liq-3 p,
-#service #howto .col-liq-3 p {
+#service #work .col-6 p,
+#service #howto .col-6 p {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1489,17 +1604,22 @@ footer {
   font-size: 16px;
 }
 
-#service #rent .col-liq-4 {
-  margin-bottom: 15px;
+#service #rent {
+  padding-top: 100px;
 }
 
-#service #rent .col-liq-4 .thumbnail {
+#service #rent .col-4 {
+  margin-bottom: 15px;
+  padding: 0 5px;
+}
+
+#service #rent .col-4 .thumbnail {
   width: 100%;
   aspect-ratio: 324/190;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
-#service #rent .col-liq-4 p {
+#service #rent .col-4 p {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1514,11 +1634,11 @@ footer {
   margin-bottom: 60px;
 }
 
-#service #consulting {
-  margin-bottom: 70px;
-}
-
 @media(max-width: 767px) {
+
+  #service section {
+    padding: 35px 0 0 0;
+  }
 
   #service #firstview {
     height: 200px;
@@ -1529,21 +1649,64 @@ footer {
   }
 
   #service h2 {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   #service #introduction h2 {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 
   #service h3 {
-    font-size: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   .btn-consult {
     width: 100%;
     height: 60px;
     font-size: 16px;
+  }
+
+  #service .with-seal {
+    font-size: 18px;
+  }
+
+  .btn-fill-green {
+    font-size: 16px;
+  }
+
+  #service #work .col-6 p, #service #howto .col-6 p, #service #howto .col-4 p {
+    font-size: 14px;
+  }
+
+  .btn-consult {
+    height: 40px;
+  }
+
+  #service #work .btn-consult .arrow-green {
+    top: 15px;
+  }
+
+  #service #rent .col-4 p {
+    font-size: 12px;
+  }
+
+  #service #consulting p:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  #service #broker th, #service #howto th {
+    height: initial;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  #service #broker td, #service #howto td {
+    padding: 15px;
+  }
+
+  #service #rent {
+    padding-top: 40px;
   }
 
 }
@@ -1584,6 +1747,8 @@ footer {
   line-height: 2;
   text-align: center;
   margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #about #produce {
@@ -1630,7 +1795,8 @@ footer {
   }
 
   #about #produce h2 {
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1.4;
   }
 
 }
@@ -1749,12 +1915,37 @@ footer {
     background-position: center;
   }
 
+  #sustainable #introduction {
+    padding: 30px 0;
+  }
+
+  #sustainable #introduction p {
+    font-size: 16px;
+  }
+
   #sustainable #howto .col-liq-6 {
     margin-bottom: 15px;
   }
 
   #sustainable #howto p {
     margin-bottom: 20px;
+  }
+
+  #sustainable #howto {
+    padding: 30px 0 0 0;
+  }
+
+
+  #sustainable #introduction p:last-of-type {
+    margin-bottom: 20px;
+  }
+
+  #sustainable #howto h2 {
+    font-size: 20px;
+  }
+
+  #sustainable #howto .row {
+    margin-bottom: 30px;
   }
 
 }
@@ -1799,7 +1990,13 @@ footer {
 }
 
 #rentry #content table {
-  line-height: 2;
+  line-height: 2 !important;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#rentry #content table p {
+  line-height: 2 !important;
 }
 
 #rentry #content .title-th {
@@ -1843,6 +2040,62 @@ footer {
   position: absolute;
   right: 25px;
   top: 34px;
+}
+
+@media (max-width:767px) {
+
+  #rentry #firstview {
+    height: 250px;
+  }
+
+  #rentry #firstview .container h1 {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 22px;
+  }
+
+  #rentry #content h2 {
+    font-size: 36px;
+  }
+
+  #rentry #content h3 {
+    font-size: 18px;
+  }
+
+  #rentry #content h4 {
+    line-height: 2;
+    font-size: 16px;
+    margin: 30px 0;
+  }
+
+  #rentry #content table,
+  #rentry #content thead,
+  #rentry #content tbody,
+  #rentry #content th,
+  #rentry #content td,
+  #rentry #content tr {
+    display: block;
+  }
+
+  #rentry #content th,
+  #rentry #content td,
+  #rentry #content .title-th {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #rentry .btn-fill-green {
+    font-size: 22px;
+    height: 50px;
+    margin: 40px auto 0 auto;
+    border-radius: 50px;
+    width: 90%;
+  }
+
+  #rentry .btn-fill-green img {
+    top: 20px;
+  }
+
 }
 
 /**********************************************************
@@ -2198,20 +2451,46 @@ footer {
 
 @media (max-width:767px) {
 
+  #rental-management #firstview {
+    padding: 40px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  #rental-management #firstview .box {
+    margin-top: 25px;
+  }
+
   #rental-management #firstview .btn-area {
     justify-content: center !important;
     gap: 15px 15px;
   }
 
   #rental-management #firstview .btn-1 {
-    width: 100%;
+    width: 60%;
+    border-radius: 40px;
   }
 
-  #rental-management #ask .images {
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+  #rental-management #firstview .btn-2 {
+    width: 40%;
+    border-radius: 40px;
+  }
+
+  #rental-management #ask h2 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+
+  #rental-management #ask h3 {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  #rental-management #ask .col-6 {
+    margin-bottom: 15px;
   }
 
   #rental-management #introduction .box {
@@ -2229,6 +2508,82 @@ footer {
 
   #rental-management #plan th {
     width: 40%;
+  }
+
+  #rental-management #feature h2 {
+    font-size: 22px;
+    margin: 0px auto 30px auto;
+  }
+
+  #rental-management #feature h3 {
+    font-size: 20px;
+  }
+
+  #rental-management #feature .col-liq-6 {
+    margin-bottom: 30px;
+  }
+
+  #rental-management #point5 h2 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  #rental-management .btn-consult .arrow-green {
+    top: 15px;
+  }
+
+  #rental-management #introduction .bigbox .title-area {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #rental-management #introduction .bigbox .title-area h3 {
+    margin-bottom: 15px;
+  }
+
+  #rental-management #introduction .bigbox {
+   padding: 15px;
+  }
+
+  #rental-management #introduction .bigbox table,
+  #rental-management #introduction .bigbox thead,
+  #rental-management #introduction .bigbox tbody,
+  #rental-management #introduction .bigbox th,
+  #rental-management #introduction .bigbox td,
+  #rental-management #introduction .bigbox tr {
+    display: block;
+  }
+
+  #rental-management #firstview h2 {
+    font-size: 20px;
+  }
+
+  #rental-management #firstview h1 {
+    font-size: 32px;
+    line-height: 1.4;
+  }
+
+  #rental-management #firstview .btn-1 .second span, #rental-management #firstview .btn-2 .second span {
+    font-size: 35px;
+  }
+
+  #rental-management #firstview .btn-area {
+    flex-direction: initial;
+    gap: 0 10px;
+    margin-top: 30px;
+  }
+
+  #rental-management #firstview .btn-1 .first, #rental-management #firstview .btn-2 .first {
+    font-size: 12px;
+  }
+
+  #rental-management #firstview .btn-1 .second, #rental-management #firstview .btn-2 .second {
+    font-size: 13px;
+    margin-bottom: 0;
+  }
+
+  #rental-management #firstview .btn-1 .third, #rental-management #firstview .btn-2 .third {
+    letter-spacing: initial;
   }
 
 }
@@ -2288,6 +2643,8 @@ footer {
 
 #resident p {
   margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 #resident .container {
@@ -2324,7 +2681,7 @@ footer {
   width: 40%;
 }
 
-#resident #cancel .insurance-box {
+#resident #cancel-sub .insurance-box {
   color: #F68E00;
   border: 1px solid #000000;
   border-radius: 10px;
@@ -2332,11 +2689,11 @@ footer {
   font-weight: bold;
 }
 
-#resident #cancel .insurance-box .tel {
+#resident #cancel-sub .insurance-box .tel {
   font-size: 48px;
 }
 
-#resident #cancel .insurance-box p {
+#resident #cancel-sub .insurance-box p {
   margin-bottom: 0;
 }
 
@@ -2437,6 +2794,18 @@ footer {
   font-weight: bold;
 }
 
+#resident .right-sidebar a {
+  color: inherit;
+  font-size: 14px;
+}
+
+#resident #contact .left {
+  color: #375D52;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
 @media (max-width:767px) {
 
   #resident #firstview {
@@ -2444,12 +2813,22 @@ footer {
   }
 
   #resident #firstview h1 {
-    font-size: 40px;
+    font-size: 22px;
+    font-weight: bold !important;
+  }
+
+  #resident #firstview p {
+    font-size: 14px;
+  }
+
+  #resident h2 {
+    font-size: 22px;
   }
 
   #resident .btn-fill-green,
   #resident .btn-green {
-    width: 100%;
+    width: 293px;
+    margin: 0 auto;
   }
 
   #resident .col-liq-6 {
@@ -2472,7 +2851,42 @@ footer {
 
   #resident .contact-info {
     margin-top: 20px;
-    gap: 0;
+    gap: 10px;
+  }
+
+  #resident #cancel .box {
+    font-size: 17px;
+  }
+
+  #cancel-sub .col-liq-5 {
+    margin: 20px 0;
+  }
+
+  #resident h4 {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  #resident .mypage .row {
+    display: block;
+  }
+
+  #resident #renew .renew-title {
+    text-align: center;
+  }
+
+  #resident .contact-info p:last-child {
+    font-size: 13px;
+  }
+
+  #resident #contact h3 {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+
+  #resident #contact .row {
+    margin-bottom: 20px;
   }
 
 }
@@ -2544,6 +2958,8 @@ footer {
 #recruitment #mission p,
 #recruitment #message p {
   max-width: 500px;
+  font-size: 15px;
+  font-weight: bold !important;
 }
 
 #recruitment .btn-fill-green {
@@ -2567,6 +2983,20 @@ footer {
 
 @media (max-width:767px) {
 
+  #recruitment #firstview {
+    height: 390px;
+    background-position: center center;
+  }
+
+  #recruitment #firstview h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+  }
+
+  #recruitment #firstview p {
+    font-size: 18px;
+  }
+
   #recruitment .col-liq-6 {
     margin-bottom: 30px;
   }
@@ -2578,6 +3008,22 @@ footer {
 
   #recruitment #message {
     padding-bottom: 0;
+  }
+
+  #recruitment #about {
+    padding-top: 40px;
+  }
+
+  #recruitment h2 {
+    font-size: 36px;
+  }
+
+  #recruitment h3 {
+    font-size: 22px;
+  }
+
+  #recruitment #message .message-second {
+    margin-top: 10px;
   }
 
 }
@@ -2599,7 +3045,40 @@ footer {
   padding-top: 0;
 }
 
-#magazines .col-liq-4 {
+#magazines h2 {
+  color: #3e3e3e;
+  font-size: 32px;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  margin-bottom: 55px;
+}
+
+#magazines h2:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  display: inline-block;
+  width: 113px;
+  height: 2px;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%);
+  background-color: #467065;
+}
+
+#magazines #youtube .col-liq-4 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#magazines #youtube .col-liq-4 h4 {
+  margin: 10px auto;
+}
+
+#magazines #magazine .col-liq-4 {
   margin-bottom: 60px;
 }
 
@@ -2610,6 +3089,7 @@ footer {
 #renovation h3 {
   text-align: center;
   font-size: 18px;
+  font-weight: bold;
   line-height: 2.2;
   margin-top: 25px;
   margin-bottom: 65px;
@@ -4086,6 +4566,14 @@ ul#menu, ul.sub-menu {
   display : none !important;
 }
 
+.sp-hide-table {
+  display: table !important;
+}
+
+.sp-show-table {
+  display : none !important;
+}
+
 @media screen and (max-width: 1080px) {
 
   .sp-hide {
@@ -4094,6 +4582,14 @@ ul#menu, ul.sub-menu {
 
   .sp-show {
     display : block !important;
+  }
+
+  .sp-hide-table {
+    display: none !important;
+  }
+
+  .sp-show-table {
+    display : table !important;
   }
 
   .sp-center {

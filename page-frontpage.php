@@ -42,7 +42,7 @@ get_header(); ?>
 
     <img src="<?=$r?>/images/top/logo_top.svg" class="logo" alt="ロゴ">
 
-    <p style="margin-bottom:15px;">― 私たちの使命 ―</p>
+    <p class="description">― 私たちの使命 ―</p>
     <h2 class="shippori">『不動産の収益と資産価値の最大化』</h2>
     <p class="description">オーナー様がご所有されている</p>
     <p class="description">アパートやマンションの賃貸経営のパートナーとして</p>
@@ -50,10 +50,6 @@ get_header(); ?>
     <p class="description">私たちの使命です。</p>
 
   </div>
-</section>
-
-<section id="city-photo">
-  <img src="<?=$r?>/images/top/city_photo.jpg" alt="街の写真">
 </section>
 
 <section id="information">
@@ -86,11 +82,11 @@ get_header(); ?>
     foreach ($post_ids as $post_id) { ?>
       <a href="<?=get_the_permalink($post_id)?>">
         <span><?=get_the_date('Y.m.d', $post_id)?></span>
-        <div class="row">
-          <div class="col-3">
+        <div class="row" style="gap:15px 0;">
+          <div class="col-liq-3">
             <span class="seal-white"><?=get_field('アイコン', $post_id)?></span>
           </div>
-          <div class="col-9">
+          <div class="col-liq-9">
               <?=get_the_title($post_id);?>
           </div>
         </div>
@@ -115,57 +111,65 @@ get_header(); ?>
     </div>
 
     <div class="row">
-      <div class="col-liq-3">
-        <a href="https://sandtmore.co.jp/" target="_blank">
-          <div class="topics-wrap">
-            <img src="<?=$r?>/images/top/topics_01.jpg" style="margin-bottom:15px;" alt="topics">
-            <span>詳細はこちら</span>
+      <div class="col-liq-6">
+        <div class="row">
+          <div class="col-6">
+            <a href="https://sandtmore.co.jp/" target="_blank">
+              <div class="topics-wrap">
+                <img src="<?=$r?>/images/top/topics_01.jpg" style="margin-bottom:15px;" alt="topics">
+                <span>詳細はこちら</span>
+              </div>
+              <img src="<?=$r?>/images/top/logo_more.svg" style="margin-bottom:15px;" alt="S&T moreロゴ">
+              <p>
+                <span>建築プロデュース・<br class="sp-show">施設再⽣</span>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
+              </p>
+            </a>
           </div>
-          <img src="<?=$r?>/images/top/logo_more.svg" style="margin-bottom:15px;" alt="S&T moreロゴ">
-          <p>
-            <span>建築プロデュース・施設再⽣</span>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
-          </p>
-        </a>
+          <div class="col-6">
+            <a href="/renovations/">
+              <div class="topics-wrap">
+                <img src="<?=$r?>/images/top/topics_02.jpg" style="margin-bottom:15px;" alt="topics">
+                <span>詳細はこちら</span>
+              </div>
+              <img src="<?=$r?>/images/top/logo_suteki.svg" style="margin-bottom:7px;" alt="素敵賃貸ロゴ">
+              <p>
+                <span>リフォーム＆リノベ<br class="sp-show">事例</span>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
+              </p>
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="col-liq-3">
-        <a href="/renovations/">
-          <div class="topics-wrap">
-            <img src="<?=$r?>/images/top/topics_02.jpg" style="margin-bottom:15px;" alt="topics">
-            <span>詳細はこちら</span>
+      <div class="col-liq-6">
+        <div class="row">
+          <div class="col-6">
+            <a href="/seto/">
+              <div class="topics-wrap">
+                <img src="<?=$r?>/images/top/topics_03.jpg" style="margin-bottom:15px;" alt="topics">
+                <span>詳細はこちら</span>
+              </div>
+              <h3>地域活性化<br class="sp-show">プロデュース</h3>
+              <p>
+                <span>瀬⼾内Project</span>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
+              </p>
+            </a>
           </div>
-          <img src="<?=$r?>/images/top/logo_suteki.svg" style="margin-bottom:7px;" alt="素敵賃貸ロゴ">
-          <p>
-            <span>リフォーム＆リノベ事例</span>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
-          </p>
-        </a>
-      </div>
-      <div class="col-liq-3">
-        <a href="/seto/">
-          <div class="topics-wrap">
-            <img src="<?=$r?>/images/top/topics_03.jpg" style="margin-bottom:15px;" alt="topics">
-            <span>詳細はこちら</span>
+          <div class="col-6">
+            <a href="/magazines/">
+              <div class="topics-wrap">
+                <img src="<?=$r?>/images/top/topics_04.jpg" style="margin-bottom:15px;" alt="topics">
+                <span>詳細はこちら</span>
+              </div>
+              <h3>メディア掲載<br class="sp-show">&nbsp;</h3>
+              <p>
+                <span>取材・You Tube</span>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
+              </p>
+            </a>
           </div>
-          <h3 style="margin-bottom:15px;">地域活性化プロデュース</h3>
-          <p>
-            <span>瀬⼾内Project</span>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
-          </p>
-        </a>
-      </div>
-      <div class="col-liq-3">
-        <a href="/magazines/">
-          <div class="topics-wrap">
-            <img src="<?=$r?>/images/top/topics_04.jpg" style="margin-bottom:15px;" alt="topics">
-            <span>詳細はこちら</span>
-          </div>
-          <h3 style="margin-bottom:15px;">メディア掲載</h3>
-          <p>
-            <span>取材・You Tube</span>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
-          </p>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -187,9 +191,9 @@ get_header(); ?>
 
     <a href="/service/#introduction">
       <img src="<?=$r?>/images/top/business_banner.jpg" style="width:100%;" alt="事業一覧">
-      <h3 class="shippori" style="margin:15px 0;">
+      <h3 class="shippori" style="margin:15px 0;font-weight:bold !important;">
         賃貸不動産の管理・運営
-        <img src="<?=$r?>/images/common/arrow_fat_black.svg" style="margin-left:40px;" alt="矢印アイコン">
+        <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" style="margin-left:40px;" alt="矢印アイコン">
       </h3>
     </a>
     <p style="margin-bottom:40px;line-height:2;">
@@ -197,75 +201,69 @@ get_header(); ?>
     </p>
 
     <div class="row">
-      <div class="col-liq-3">
-        <a href="/service/#broker">
-          <img src="<?=$r?>/images/top/business_01.jpg" class="main-img" alt="topics">
-          <div class="title">
-            <h3 class="shippori">不動産／売却・購入</h3>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
+      <div class="col-liq-6">
+        <div class="row">
+          <div class="col-6">
+            <a href="/service/#broker">
+              <img src="<?=$r?>/images/top/business_01.jpg" class="main-img" alt="topics">
+              <div class="title">
+                <h3 class="shippori" style="font-weight:bold !important;">不動産／売却・購入</h3>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
+              </div>
+            </a>
+            <div class="row">
+              <div class="col-liq-6">□不動産の購入</div>
+              <div class="col-liq-6">□不動産の売却</div>
+            </div>
           </div>
-        </a>
-        <table>
-          <tr>
-            <td>□不動産の購入</td>
-            <td>□不動産の売却</td>
-          </tr>
-        </table>
+          <div class="col-6">
+            <a href="/service/#rent">
+              <img src="<?=$r?>/images/top/business_02.jpg" class="main-img" alt="topics">
+              <div class="title">
+                <h3 class="shippori" style="font-weight:bold !important;">店舗・テナント</h3>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
+              </div>
+            </a>
+            <div class="row">
+              <div class="col-liq-6">□店舗誘致</div>
+              <div class="col-liq-8">□テナントリーシング</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="col-liq-3">
-        <a href="/service/#rent">
-          <img src="<?=$r?>/images/top/business_02.jpg" class="main-img" alt="topics">
-          <div class="title">
-            <h3 class="shippori">店舗・テナント</h3>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
+      <div class="col-liq-6">
+        <div class="row">
+          <div class="col-6">
+            <a href="/service/#howto">
+              <img src="<?=$r?>/images/top/business_03.jpg" class="main-img" alt="topics">
+              <div class="title">
+                <h3 class="shippori" style="font-weight:bold !important;">土地活用</h3>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
+              </div>
+            </a>
+            <div class="row">
+              <div class="col-liq-6">□建築プロディース</div>
+              <div class="col-liq-6">□空家活用</div>
+              <div class="col-liq-6">□ロードサイド</div>
+              <div class="col-liq-6">□医院施設</div>
+            </div>
           </div>
-        </a>
-        <table>
-          <tr>
-            <td>□店舗誘致</td>
-          </tr>
-          <tr>
-            <td>□テナントリーシング</td>
-          </tr>
-        </table>
-      </div>
-      <div class="col-liq-3">
-        <a href="/service/#howto">
-          <img src="<?=$r?>/images/top/business_03.jpg" class="main-img" alt="topics">
-          <div class="title">
-            <h3 class="shippori">土地活用</h3>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
+          <div class="col-6">
+            <a href="/service/#consulting">
+              <img src="<?=$r?>/images/top/business_04.jpg" class="main-img" alt="topics">
+              <div class="title">
+                <h3 class="shippori" style="font-weight:bold !important;">不動産コンサルティング</h3>
+                <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
+              </div>
+            </a>
+            <div class="row">
+              <div class="col-liq-6">□相続対策</div>
+              <div class="col-liq-6">□顧問サービス</div>
+              <div class="col-liq-6">□調査分析</div>
+              <div class="col-liq-6">□借地権・底地権</div>
+            </div>
           </div>
-        </a>
-        <table>
-          <tr>
-            <td>□建築プロディース</td>
-            <td>□空家活用</td>
-          </tr>
-          <tr>
-            <td>□ロードサイド</td>
-            <td>□医院施設</td>
-          </tr>
-        </table>
-      </div>
-      <div class="col-liq-3">
-        <a href="/service/#consulting">
-          <img src="<?=$r?>/images/top/business_04.jpg" class="main-img" alt="topics">
-          <div class="title">
-            <h3 class="shippori">不動産コンサルティング</h3>
-            <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
-          </div>
-        </a>
-        <table>
-          <tr>
-            <td>□相続対策</td>
-            <td>□顧問サービス</td>
-          </tr>
-          <tr>
-            <td>□調査分析</td>
-            <td>□借地権・底地権</td>
-          </tr>
-        </table>
+        </div>
       </div>
     </div>
 

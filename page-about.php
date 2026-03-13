@@ -45,7 +45,7 @@ get_header(); ?>
       </div>
     </div>
 
-    <h2 class="shippori">土地活用から賃貸経営へのトータルプロデュース</h2>
+    <h2 class="shippori">土地活用から賃貸経営への<br class="sp-show">トータルプロデュース</h2>
 
   </div>
 </section> <?php

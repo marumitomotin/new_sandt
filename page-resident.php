@@ -19,7 +19,7 @@ get_header(); ?>
 
   <div class="content-area">
 
-    <section id="cancel">
+    <section id="cancel" style="border-bottom:none;padding-bottom:0;">
 
       <p class="small-title">Life Style Guide</p>
       <h2>退去・解約について</h2>
@@ -56,6 +56,10 @@ get_header(); ?>
           <img src="<?=$r?>/images/common/arrow_fat_white.svg" class="fill-green-hover" alt="矢印">
         </a>
       </div>
+
+    </section>
+
+    <section id="cancel-sub" style="padding-top:0;border-bottom:2px solid #d9d9d9;">
 
       <h4>● 退去立会前までに行うこと</h4>
 
@@ -138,12 +142,12 @@ get_header(); ?>
         </div>
       </div>
 
-      <div style="margin:50px 0 6px 0;font-weight:bold;font-size:18px;">
+      <div class="mypage" style="margin:50px 0 6px 0;font-weight:bold;font-size:18px;">
         <p>マイページからは下記の内容もご利用いただけます。</p>
         <div class="row" style="justify-content:flex-start;gap:0 30px;">
-          <p>・契約内容のご確認</p>
-          <p>・⼊居者様情報の確認・変更</p>
-          <p>・チャットによるお問い合わせ</p>
+          <p>・「契約内容のご確認」</p>
+          <p>・「⼊居者様情報の確認・変更」</p>
+          <p>・「チャットによるお問い合わせ」</p>
         </div>
       </div>
 
@@ -269,7 +273,7 @@ get_header(); ?>
 
       <p style="font-size:16px;font-weight:bold;">● チャットからお問い合わせ</p>
       <div class="row">
-        <div class="col-liq-6" style="color:#375D52;font-size:20px;font-weight:bold;">
+        <div class="col-liq-6 left">
           <a href="https://taikyokun.com/tenants/login" style="color:#375D52;" target="_blank">「賃貸物件マイページ」</a>からお問い合わせください。
         </div>
         <div class="col-liq-6">
@@ -282,7 +286,7 @@ get_header(); ?>
 
       <p style="font-size:16px;font-weight:bold;">● Webフォームからお問い合わせ</p>
       <div class="row">
-        <div class="col-liq-6" style="color:#375D52;font-size:20px;font-weight:bold;">
+        <div class="col-liq-6 left">
           <a href="/contact/" style="color:#375D52;">こちら</a>からお問い合わせください。</p>
         </div>
         <div class="col-liq-6">
@@ -306,7 +310,9 @@ get_header(); ?>
 
   <div id="right-sidebar" class="right-sidebar">
     <p>
-      <span id="word-cancel">退居・解約について</sapn>
+      <span id="word-cancel">
+        <a href="#cancel">退居・解約について</a>
+      </sapn>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle id="map-cancel" cx="6" cy="6" r="6" fill="#d9d9d9">
       </svg>
@@ -318,7 +324,9 @@ get_header(); ?>
       </svg>
     </p>
     <p>
-      <span id="word-renew">更新について</span>
+      <span id="word-renew">
+        <a href="#renew">更新について</a>
+      </span>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle id="map-renew" cx="6" cy="6" r="6" fill="#d9d9d9">
       </svg>
@@ -330,7 +338,9 @@ get_header(); ?>
       </svg>
     </p>
     <p>
-      <span id="word-prepare">ご入居の準備</span>
+      <span id="word-prepare">
+        <a href="#prepare">ご入居の準備</a>
+      </span>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle id="map-prepare" cx="6" cy="6" r="6" fill="#d9d9d9">
       </svg>
@@ -342,7 +352,9 @@ get_header(); ?>
       </svg>
     </p>
     <p>
-      <span id="word-manner">暮らしのマナー</span>
+      <span id="word-manner">
+        <a href="#manner">暮らしのマナー</a>
+      </span>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle id="map-manner" cx="6" cy="6" r="6" fill="#d9d9d9">
       </svg>
@@ -354,7 +366,9 @@ get_header(); ?>
       </svg>
     </p>
     <p>
-      <span id="word-living">入居中について</span>
+      <span id="word-living">
+        <a href="#living">入居中について</a>
+      </span>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle id="map-living" cx="6" cy="6" r="6" fill="#d9d9d9">
       </svg>
@@ -366,7 +380,9 @@ get_header(); ?>
       </svg>
     </p>
     <p>
-      <span id="word-contact">お問合せ窓口</span>
+      <span id="word-contact">
+        <a href="#contact">お問合せ窓口</a>
+      </span>
       <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <circle id="map-contact" cx="6" cy="6" r="6" fill="#d9d9d9">
       </svg>
@@ -408,7 +424,7 @@ get_header(); ?>
       }
     });
   }, {
-    threshold: 0.5
+    threshold: 0.4
   });
   sections.forEach(section => {
     if (section) observer.observe(section);

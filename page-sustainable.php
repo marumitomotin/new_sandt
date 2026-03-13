@@ -26,8 +26,8 @@ get_header(); ?>
       新しい住まいの価値や文化を創造することに努めて参ります。
     </p>
 
-    <img src="<?=$r?>/images/sustainable/icon_title.png" alt="sdgsアイコン">
-    <div class="icon-area">
+    <img src="<?=$r?>/images/sustainable/icon_title.png" alt="sdgsアイコン" class="sp-hide">
+    <div class="icon-area sp-hide">
       <img src="<?=$r?>/images/sustainable/icon_sdg01.png" alt="sdgsアイコン">
       <img src="<?=$r?>/images/sustainable/icon_sdg02.png" alt="sdgsアイコン">
       <img src="<?=$r?>/images/sustainable/icon_sdg03.png" alt="sdgsアイコン">
@@ -47,6 +47,8 @@ get_header(); ?>
       <img src="<?=$r?>/images/sustainable/icon_sdg17.png" alt="sdgsアイコン">
       <img src="<?=$r?>/images/sustainable/icon_sdg18.png" alt="sdgsアイコン">
     </div>
+
+    <img src="<?=$r?>/images/sustainable/sdg_icons.png" alt="sdgsアイコン" class="sp-show">
 
   </div>
 </section>
