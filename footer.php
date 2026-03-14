@@ -142,6 +142,26 @@ $r = get_template_directory_uri(); ?>
       });
 
 /*******************************************
+ アコーディオン
+********************************************/
+
+      const accordionHeaders = document.querySelectorAll(".main-menu");
+      accordionHeaders.forEach((header) => {
+        const triangle = header.querySelector('.triangle'); // header内の三角取得
+        const content = header.nextElementSibling; // 次のul.sub-menu
+        header.addEventListener("click", () => {
+          const isOpen = content.style.display === 'block';
+          // 開閉
+          content.style.display = isOpen ? 'none' : 'block';
+          // 三角回転
+          if (triangle) {
+            triangle.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
+            triangle.style.transition = 'transform 0.3s'; // ニュルっと回転
+          }
+        });
+      });
+
+/*******************************************
  パララックス
 ********************************************/
 

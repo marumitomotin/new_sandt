@@ -234,7 +234,7 @@ get_header(); ?>
         </tr>
       </table>
 
-      <table>
+      <table class="sp-show-table">
         <tr>
           <th>賃貸仲介</th>
         </tr>

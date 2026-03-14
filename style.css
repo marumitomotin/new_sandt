@@ -2200,6 +2200,28 @@ footer {
 }
 
 /**********************************************************
+ News list
+**********************************************************/
+
+@media (max-width:767px) {
+
+  #new-top table,
+  #new-top thead,
+  #new-top tbody,
+  #new-top th,
+  #new-top td,
+  #new-top tr {
+    display: block;
+    line-height: 1.4;
+  }
+
+  #new-top tr {
+    border-bottom: 1px solid #000000;
+  }
+
+}
+
+/**********************************************************
  Contact
 **********************************************************/
 
@@ -2257,7 +2279,12 @@ footer {
   height: 80px;
 }
 
+#contact input[type=email] {
+  width: 100%;
+}
+
 #contact input[type=text],
+#contact input[type=email],
 #contact select {
   height: 36px;
   display: inline-block;
@@ -2284,6 +2311,33 @@ footer {
   border: none;
   width: 200px;
   margin: 0 auto;
+}
+
+@media (max-width:767px) {
+
+  #contact #firstview {
+    height: 250px;
+  }
+
+  #contact #firstview h1 {
+    font-size: 22px;
+    color: #375D52;
+  }
+
+  #contact table,
+  #contact thead,
+  #contact tbody,
+  #contact th,
+  #contact td,
+  #contact tr {
+    display: block;
+    line-height: 1.4;
+  }
+
+  #contact #content th {
+    width: 100%;
+  }
+
 }
 
 /**********************************************************
@@ -3316,9 +3370,24 @@ footer {
 **********************************************************/
 
 .ug-arrow-left.ug-skin-default, .ug-arrow-right.ug-skin-default {
-  width: 50px !important;
-  height: 90px !important;
+  width: 30px !important;
+  height: 50px !important;
   background-position: 0px 0px !important;
+}
+
+@media (max-width:767px) {
+
+  .ug-arrow-left.ug-skin-default {
+    left: 5px !important;
+    top: 255px !important;
+  }
+
+  .ug-arrow-right.ug-skin-default {
+    left: initial !important;
+    right: 5px !important;
+    top: 255px !important;
+  }
+
 }
 
 /**********************************************************
