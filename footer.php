@@ -14,7 +14,7 @@ $r = get_template_directory_uri(); ?>
               <div class="box">
                 <div>
                   <h3 class="shippori">お電話でのお問い合わせ</h3>
-                  <p style="color:#447065;margin-bottom:20px;">
+                  <p class="tel">
                     TEL:<span style="font-size:42px;">048-433-0550</span>
                   </p>
                   <p>営業時間　10:00~17:30  (定休日 水曜日・日曜日)</p>
@@ -24,7 +24,7 @@ $r = get_template_directory_uri(); ?>
             <div class="col-liq-6">
               <div class="box">
                 <div>
-                  <h3 class="shippori">メールでのお問い合わせ</h3>
+                  <h3 class="shippori mail">メールでのお問い合わせ</h3>
                   <a href="/contact/" class="btn-green">
                     <span>お問い合わせはこちら</span>
                     <img src="<?=$r?>/images/common/arrow_fat_green.svg" class="green-hover" alt="矢印アイコン">
@@ -132,29 +132,13 @@ $r = get_template_directory_uri(); ?>
 ********************************************/
 
       const btn = document.getElementById('btn-toggler');
+      const closeBtn = document.getElementById('close');
       const nav = document.querySelector('.nav-area');
       btn.addEventListener('click', () => {
         nav.classList.toggle('open');
       });
-
-/*******************************************
- アコーディオン
-********************************************/
-
-      const accordionHeaders = document.querySelectorAll(".main-menu");
-      accordionHeaders.forEach((header) => {
-        const triangle = header.querySelector('.triangle'); // header内の三角取得
-        const content = header.nextElementSibling; // 次のul.sub-menu
-        header.addEventListener("click", () => {
-          const isOpen = content.style.display === 'block';
-          // 開閉
-          content.style.display = isOpen ? 'none' : 'block';
-          // 三角回転
-          if (triangle) {
-            triangle.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(90deg)';
-            triangle.style.transition = 'transform 0.3s'; // ニュルっと回転
-          }
-        });
+      closeBtn.addEventListener('click', () => {
+        nav.classList.remove('open');
       });
 
 /*******************************************

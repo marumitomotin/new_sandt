@@ -337,6 +337,10 @@ main {
 
 @media(max-width: 767px) {
 
+  main {
+    margin-top: 60px;
+  }
+
   section {
     padding: 45px 0;
   }
@@ -380,10 +384,6 @@ header nav {
   align-items: center;
 }
 
-header nav .fa-angle {
-  display: none;
-}
-
 header ul {
   display: flex;
   justify-content: flex-start;
@@ -408,6 +408,10 @@ header .menu::after {
   transition: width 0.3s ease, left 0.3s ease;
 }
 
+header .menu img {
+  display: none;
+}
+
 header .menu:hover::after {
   width: 50%;
   left: 25%;
@@ -418,8 +422,10 @@ header .menu a:hover {
   opacity: 1;
 }
 
-header .menu:hover > ul {
-  display: block;
+@media (min-width:768px) {
+  header .menu:hover > ul {
+    display: block;
+  }
 }
 
 header .menu ul {
@@ -455,11 +461,15 @@ header .btn-area {
   align-items: center;
 }
 
-#header #btn-toggler {
-  display: none;
-}
-
 @media (max-width: 767px) {
+
+  header {
+    height: 60px;
+  }
+
+  header .container {
+    padding: 15px 0;
+  }
 
   header nav {
     position: relative;
@@ -471,12 +481,12 @@ header .btn-area {
 
   #menu-main {
     width: 100%;
-    padding: 0 10px;
+    padding: 0 30px;
   }
 
   .nav-area {
     position: absolute;
-    top: 100%;
+    top: -20px;
     right: 0;
     left: 0;
     background: #ffffff;
@@ -485,32 +495,52 @@ header .btn-area {
     overflow: hidden;
     transition: max-height 1s ease;
     z-index: 999;
+    background: url(images/header/sp_bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .nav-area .cross {
+    float: right;
+    display: block;
+  }
+
+  .nav-area .sp-wrap {
+    padding: 20px;
   }
 
   .nav-area.open {
     max-height: 1000px;
   }
 
-  .menu {
-    border-bottom: 1px solid #cccccc;
-    padding: 10px 0;
+  .other-link .bottom {
+    margin-top: 40px;
+    font-size:12px;
+  }
+
+  .other-link {
+    display: flex;
+    flex-direction: column-reverse;
     width: 100%;
-    font-weight: bold;
-    color: #467065;
+    margin: 0 auto;
+  }
+
+  .menu {
+    padding: 15px 0;
+    width: 100%;
     position: relative;
   }
 
-  .menu .fa-angle {
-    width: 20px;
-    fill: #467065;
-    position: absolute;
-    right: 0;
-    top: 8px;
-    display: inline-block;
+  .menu a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: normal;
   }
 
-  .menu a {
-    color: #467065;
+  header .menu img {
     display: block;
   }
 
@@ -529,7 +559,7 @@ header .btn-area {
   }
 
   header .menu:hover > ul {
-    display: block;
+    display: none;
   }
 
   header .menu ul {
@@ -547,6 +577,13 @@ header .btn-area {
     gap: 10px;
     padding: 10px;
     align-items: flex-start !important;
+  }
+
+  header .btn-area hr {
+    border-top: 1px solid #000000;
+    border-bottom: none;
+    width: 100%;
+    margin: 0 0 20px 0;
   }
 
   .nav-area .btn-area .btn-green {
@@ -573,25 +610,25 @@ header .btn-area {
   header #btn-toggler .toggler-bar {
     background-image: none;
     background-color: #467065;
-    width: 30px;
-    height: 3px;
+    width: 25px;
+    height: 2px;
     position: absolute;
     transition: ease .5s;
     margin-right: 10px;
   }
 
   header #btn-toggler .toggler-bar:nth-of-type(1) {
-    top: 4px;
+    top: 8px;
     right: 5px;
   }
 
   header #btn-toggler .toggler-bar:nth-of-type(2) {
-    top: 12px;
+    top: 16px;
     right: 5px;
   }
 
   header #btn-toggler .toggler-bar:nth-of-type(3) {
-    top: 20px;
+    top: 24px;
     right: 5px;
   }
 
@@ -625,13 +662,26 @@ header .btn-area {
   border-radius: 10px;
   text-align: center;
   width: 94%;
-  min-height: 210px;
+  min-height: 208px;
   margin: 0 auto 20px auto;
+}
+
+#pre-footer .box .tel {
+  color: #447065;
+  margin-bottom: 10px;
+}
+
+#pre-footer .box .mail {
+  margin-bottom: 56px;
+}
+
+#pre-footer .box .btn-green {
+  margin-bottom: 10px;
 }
 
 #pre-footer .box h3 {
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 #pre-footer .btn-green {
@@ -694,6 +744,10 @@ footer {
 
 @media screen and (max-width: 767px) {
 
+  #pre-footer .container h2 {
+    font-size: 22px;
+  }
+
   .footer_logo {
     margin: 20px auto;
   }
@@ -720,6 +774,10 @@ footer {
 
   #footer .btn-area .btn-green {
     width: 168px;
+  }
+
+  #footer .right-side {
+    margin-top: 20px;
   }
 
   .col-footer-1,
@@ -760,6 +818,14 @@ footer {
   .col-footer-5 div p,
   .col-footer-6 div p {
     margin-bottom: 10px !important;
+  }
+
+  #pre-footer .box {
+    min-height: 175px;
+  }
+
+  #pre-footer .box h3 {
+    margin-bottom: 15px;
   }
 
 }
@@ -1111,6 +1177,15 @@ footer {
   padding-bottom: 30px;
 }
 
+#home #business .first-h3 {
+  margin: 15px 0;
+  font-weight: bold !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+}
+
 #home #business h3 {
   font-size: 18px;
 }
@@ -1149,6 +1224,22 @@ footer {
   #home #about .circle-area img {
     display: block;
     margin: 0 auto;
+  }
+
+  #home #about h2 {
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  #home #about .description:first-of-type {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+
+  #home #about .description {
+    margin-bottom: 0px;
+    font-size: 14px;
+    line-height: 2;
   }
 
   #home #information .seal-white {
@@ -1205,6 +1296,10 @@ footer {
     margin-bottom: initial;
   }
 
+  #home #topics .col-6 h3 {
+    font-size: 15px;
+  }
+
   #home #topics .col-6 p img {
     right: 0px;
     bottom: 15px;
@@ -1217,6 +1312,12 @@ footer {
 
   #home #business h3 {
     font-size: 15px;
+  }
+
+  #home #information .container .title-with-line h2,
+  #home #topics .container .title-with-line h2,
+  #home #business .container .title-with-line h2 {
+    font-size: 22px;
   }
 
 }

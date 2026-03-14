@@ -191,8 +191,8 @@ get_header(); ?>
 
     <a href="/service/#introduction">
       <img src="<?=$r?>/images/top/business_banner.jpg" style="width:100%;" alt="事業一覧">
-      <h3 class="shippori" style="margin:15px 0;font-weight:bold !important;">
-        賃貸不動産の管理・運営
+      <h3 class="shippori first-h3">
+        <p>賃貸不動産の管理・運営</p>
         <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" style="margin-left:40px;" alt="矢印アイコン">
       </h3>
     </a>

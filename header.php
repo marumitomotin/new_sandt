@@ -53,62 +53,89 @@ global $post; ?>
         <nav>
 
           <a href="/">
-            <img src="<?=$r?>/images/header/logo.svg" alt="S&T Group">
+            <img src="<?=$r?>/images/header/logo.svg" class="sp-hide" alt="S&T Group">
+            <img src="<?=$r?>/images/footer/footer_logo_sp.svg" class="sp-show" style="margin-left:15px;" alt="ロゴ">
           </a>
 
           <div class="nav-area">
-            <div class="btn-area">
-              <a href="/rental-management/" class="btn-green">賃貸管理の無料相談</a>
-              <a href="/resident/" class="btn-green">退居・解約受付</a>
-              <a href="/contact/" class="btn-green">お問い合わせ</a>
+            <div class="sp-wrap">
+              <img src="<?=$r?>/images/header/cross.svg" id="close" class="sp-show cross" alt="Xボタン">
+              <div style="clear:both;margin-bottom:10px;"></div>
+              <img src="<?=$r?>/images/footer/footer_logo_sp.svg" class="sp-show" style="margin-bottom:20px;" alt="ロゴ">
+              <div class="other-link">
+                <p class="sp-show bottom">
+                  <span>
+                    <a href="/privacy/">個人情報の取扱いについて</a>
+                    ｜
+                    <a href="/カスタマーハラスメントに対する基本方針につい/">カスタマーハラスメント基本⽅針</a></span>
+                </p>
+                <div class="btn-area">
+                  <hr class="sp-show">
+                  <a href="/rental-management/" class="btn-green">賃貸管理の無料相談</a>
+                  <a href="/resident/" class="btn-green">退居・解約受付</a>
+                  <a href="/contact/" class="btn-green">お問い合わせ</a>
+                </div>
+                <ul id="menu-main" class="dropdown-menu">
+                  <li class="menu">
+                    <a href="/company/" class="has-sub">
+                      企業情報
+                      <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
+                    </a>
+                    <ul id="sub-menu-1">
+                      <li><a href="/company/#greeting">ごあいさつ</a></li>
+                      <li><a href="/company/#information">会社概要</a></li>
+                      <li><a href="/company/#history">沿革</a></li>
+                      <li><a href="/company/#map">アクセス</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu">
+                    <a href="/service/" class="has-sub">
+                      事業紹介
+                      <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
+                    </a>
+                    <ul id="sub-menu-2">
+                      <li><a href="/service/#introduction">不動産賃貸管理業</a></li>
+                      <li><a href="/service/#broker">不動産仲介業</a></li>
+                      <li><a href="/service/#rent">不動産賃貸業</a></li>
+                      <li><a href="/service/#howto">土地活用</a></li>
+                      <li><a href="/service/#consulting">不動産コンサルティング</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu">
+                    <a href="/sustainable/">
+                      サステナビリティ
+                      <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
+                    </a>
+                  </li>
+                  <li class="menu">
+                    <a href="/about/">
+                      S&amp;Tを知る
+                      <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
+                    </a>
+                  </li>
+                  <li class="menu">
+                    <a href="/resident/" claas="has-sub">
+                      暮らしのガイド
+                      <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
+                    </a>
+                    <ul id="sub-menu-3">
+                      <li><a href="/resident/#cancel">退居・解約について</a></li>
+                      <li><a href="/resident/#renew">更新について</a></li>
+                      <li><a href="/resident/#prepare">ご入居の準備</a></li>
+                      <li><a href="/resident/#manner">暮らしのマナー</a></li>
+                      <li><a href="/resident/#living">入居中について</a></li>
+                      <li><a href="/resident/#contact">お問い合わせ窓口</a></li>
+                    </ul>
+                  </li>
+                  <li class="menu">
+                    <a href="/recruitment/">
+                      採用情報
+                      <img src="<?=$r?>/images/common/arrow.png" alt="矢印">
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <ul id="menu-main" class="dropdown-menu">
-              <li class="menu">
-                <a href="/company/" class="has-sub">
-                  企業情報
-                  <svg class="fa-angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
-                </a>
-                <ul id="sub-menu-1">
-                  <li><a href="/company/#greeting">ごあいさつ</a></li>
-                  <li><a href="/company/#information">会社概要</a></li>
-                  <li><a href="/company/#history">沿革</a></li>
-                  <li><a href="/company/#map">アクセス</a></li>
-                </ul>
-              </li>
-              <li class="menu">
-                <a href="/service/" class="has-sub">
-                  事業紹介
-                  <svg class="fa-angle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M297.4 438.6C309.9 451.1 330.2 451.1 342.7 438.6L502.7 278.6C515.2 266.1 515.2 245.8 502.7 233.3C490.2 220.8 469.9 220.8 457.4 233.3L320 370.7L182.6 233.4C170.1 220.9 149.8 220.9 137.3 233.4C124.8 245.9 124.8 266.2 137.3 278.7L297.3 438.7z"/></svg>
-                </a>
-                <ul id="sub-menu-2">
-                  <li><a href="/service/#introduction">不動産賃貸管理業</a></li>
-                  <li><a href="/service/#broker">不動産仲介業</a></li>
-                  <li><a href="/service/#rent">不動産賃貸業</a></li>
-                  <li><a href="/service/#howto">土地活用</a></li>
-                  <li><a href="/service/#consulting">不動産コンサルティング</a></li>
-                </ul>
-              </li>
-              <li class="menu">
-                <a href="/sustainable/">サステナビリティ</a>
-              </li>
-              <li class="menu">
-                <a href="/about/">S&amp;Tを知る</a>
-              </li>
-              <li class="menu">
-                <a href="/resident/" claas="has-sub">暮らしのガイド</a>
-                <ul id="sub-menu-3">
-                  <li><a href="/resident/#cancel">退居・解約について</a></li>
-                  <li><a href="/resident/#renew">更新について</a></li>
-                  <li><a href="/resident/#prepare">ご入居の準備</a></li>
-                  <li><a href="/resident/#manner">暮らしのマナー</a></li>
-                  <li><a href="/resident/#living">入居中について</a></li>
-                  <li><a href="/resident/#contact">お問い合わせ窓口</a></li>
-                </ul>
-              </li>
-              <li class="menu">
-                <a href="/recruitment/">採用情報</a>
-              </li>
-            </ul>
           </div>
 
           <button id="btn-toggler" type="button">
