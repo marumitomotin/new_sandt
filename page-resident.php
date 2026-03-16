@@ -47,7 +47,7 @@ get_header(); ?>
       </div>
       <div class="box">
         <span>駐車場の解約をご希望の方</span>
-        <a href="/park-kaiyaku/" class="btn-fill-green" style="width:316px;">
+        <a href="/park-kaiyaku/" class="btn-fill-green big">
           <span>駐車場解約申請フォームはこちらから</span>
           <img src="<?=$r?>/images/common/arrow_fat_white.svg" class="fill-green-hover" alt="矢印">
         </a>

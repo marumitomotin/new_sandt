@@ -1493,6 +1493,36 @@ footer {
     margin: 10px auto 0 auto;
   }
 
+  #company #philosophy h2 {
+    line-height: 2;
+    margin-bottom: 20px;
+  }
+
+  #company #philosophy .container .sub-title {
+    margin-bottom: 10px;
+  }
+
+  #company #history table,
+  #company #history thead,
+  #company #history tbody,
+  #company #history th,
+  #company #history td,
+  #company #history tr {
+    display: block;
+  }
+
+  #company #history th,
+  #company #history td,
+  #company #history .title-th {
+    width: 100% !important;
+    padding: 0;
+  }
+
+  #company #history td:nth-child(even) {
+    padding: 0 0 15px 0;
+  }
+
+
 }
 
 /**********************************************************
@@ -1754,7 +1784,7 @@ footer {
   }
 
   #service #firstview {
-    height: 200px;
+    height: 160px;
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1892,7 +1922,7 @@ footer {
 @media (max-width:767px) {
 
   #about #firstview {
-    height: 200px;
+    height: 160px;
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2021,7 +2051,7 @@ footer {
 @media (max-width:767px) {
 
   #sustainable #firstview {
-    height: 200px;
+    height: 160px;
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -2158,7 +2188,7 @@ footer {
 @media (max-width:767px) {
 
   #rentry #firstview {
-    height: 250px;
+    height: 160px;
   }
 
   #rentry #firstview .container h1 {
@@ -2328,7 +2358,7 @@ footer {
 @media (max-width:767px) {
 
   #contact #firstview {
-    height: 250px;
+    height: 160px;
   }
 
   #contact #firstview h1 {
@@ -2584,7 +2614,7 @@ footer {
 
 #rental-management #introduction .bigbox td {
   font-size: 18px;
-  padding: 10px 20px 10px 0;
+  padding: 10px 4px 10px 0;
 }
 
 #rental-management #plan .td-title {
@@ -2751,6 +2781,11 @@ footer {
 
   #rental-management #firstview .btn-1 .third, #rental-management #firstview .btn-2 .third {
     letter-spacing: initial;
+  }
+
+  #rental-management #introduction h2, #rental-management #plan h2 {
+    font-size: 22px;
+    margin-bottom: 40px;
   }
 
 }
@@ -2920,6 +2955,10 @@ footer {
   right: 15px;
 }
 
+#resident .btn-fill-green.big {
+  width: 316px;
+}
+
 #resident #contact h3 {
   margin: 50px 0;
   font-size: 20px;
@@ -2992,6 +3031,7 @@ footer {
     font-size: 22px;
   }
 
+  #resident .btn-fill-green.big,
   #resident .btn-fill-green,
   #resident .btn-green {
     width: 293px;
@@ -3012,7 +3052,7 @@ footer {
     margin: 10px 0 40px 0;
   }
 
-  #resident #cancel .insurance-box .tel {
+  #resident #cancel-sub .insurance-box .tel {
     font-size: 40px;
   }
 
@@ -4603,6 +4643,14 @@ input[type="date"]::-webkit-clear-button{
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
   border-radius: 5px;
+}
+
+@media (max-width:768px) {
+
+  #slideshow h2 {
+    margin-bottom: 0;
+  }
+
 }
 
 /**********************************************************
