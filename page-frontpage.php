@@ -119,7 +119,7 @@ get_header(); ?>
                 <img src="<?=$r?>/images/top/topics_01.jpg" style="margin-bottom:15px;" alt="topics">
                 <span>詳細はこちら</span>
               </div>
-              <img src="<?=$r?>/images/top/logo_more.svg" style="margin-bottom:15px;" alt="S&T moreロゴ">
+              <img src="<?=$r?>/images/top/logo_more.svg" style="max-height:26px;margin-bottom:7px;" alt="S&T moreロゴ">
               <p>
                 <span>建築プロデュース・<br class="sp-show">施設再⽣</span>
                 <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
