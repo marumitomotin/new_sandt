@@ -1465,6 +1465,18 @@ footer {
 
 @media (max-width:767px) {
 
+  #company #firstview {
+    height: 160px;
+  }
+
+  #company #greeting .container .sub-title {
+    margin-bottom: 15px;
+  }
+
+  #company #greeting .container h2 {
+    margin-bottom: 30px;
+  }
+
   #company #greeting {
     padding-bottom: 40px;
   }
