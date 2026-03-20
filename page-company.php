@@ -195,11 +195,9 @@
 
 <section id="map">
 
-  <h2 class="shippori">アクセス</h2>
+  <h2 class="shippori" style="margin-bottom:60px;">アクセス</h2>
 
-  <img style="margin-top:70px;width:100%;max-width:initial;" src="<?=$r?>/images/company/map_dummy.png" alt="マップダミー">
-
-  <div id="campus-map"></div>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1617.4806340188265!2d139.6794093550854!3d35.825425993276525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018eb3aa8ece89f%3A0xe987df16009fbed1!2zKOagqinjgqjjgrnjgqLjg7Pjg4njg4bjgqM!5e0!3m2!1sja!2sus!4v1774048920609!5m2!1sja!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </section> <?php
 

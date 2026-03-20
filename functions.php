@@ -17,6 +17,9 @@ function my_debug ($target) {
  Wordpressのカスタム設定
 **************************************************/
 
+// 投稿とカスタム投稿タイプでサムネイルを有効化
+add_theme_support('post-thumbnails', ['post', 'page', 'chintai']);
+
 /***** Gutenbergの無効化 *****/
 
 add_filter('use_block_editor_for_post', '__return_false', 10);
