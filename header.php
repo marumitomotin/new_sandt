@@ -29,7 +29,7 @@ global $post; ?>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet"> <?php
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet"> <?php
 
     wp_head(); ?>
 
@@ -53,8 +53,7 @@ global $post; ?>
         <nav>
 
           <a href="/">
-            <img src="<?=$r?>/images/header/logo.svg" class="sp-hide" alt="S&T Group">
-            <img src="<?=$r?>/images/footer/footer_logo_sp.svg" class="sp-show" style="margin-left:15px;" alt="ロゴ">
+            <img src="<?=$r?>/images/header/logo.svg" alt="S&T Group">
           </a>
 
           <div class="nav-area">

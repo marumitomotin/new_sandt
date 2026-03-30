@@ -121,7 +121,11 @@ $r = get_template_directory_uri(); ?>
         </div>
       </section>
 
-    </footer> <?php
+    </footer>
+
+    <div id="to-top">
+      <span>↑<br>TOP</span>
+    </div> <?php
 
     wp_footer(); ?>
 
@@ -139,6 +143,23 @@ $r = get_template_directory_uri(); ?>
       });
       closeBtn.addEventListener('click', () => {
         nav.classList.remove('open');
+      });
+
+/*******************************************
+ To top
+********************************************/
+
+      const topBtn = document.getElementById('to-top');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 200) {
+          topBtn.classList.add('show');
+        } else {
+          topBtn.classList.remove('show');
+        }
+      });
+      topBtn.addEventListener('click', e => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
 /*******************************************

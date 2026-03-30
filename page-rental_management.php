@@ -16,13 +16,13 @@ get_header(); ?>
       <div class="btn-1">
         <p class="first">管理戸数</p>
         <p class="second">
-          約<span class="shippori">1,200</span>戸
+          約<span class="oswald">1,200</span>戸
         </p>
-        <p class="third">＜2025年12月時点＞</p>
+        <p class="third">＜2024年12月時点＞</p>
       </div>
       <div class="btn-2">
         <p class="first">入居率</p>
-        <p class="second"><span class="shippori" style="">99.2</span>%</p>
+        <p class="second"><span class="oswald">99.2</span>%</p>
         <p class="third">＜2024年＞</p>
       </div>
     </div>

@@ -29,13 +29,13 @@ get_header(); ?>
   <div class="container">
 
     <div class="circle-area">
-      <div class="col-liq-5">
+      <div class="col-5">
         <img src="<?=$r?>/images/top/circle_st.png" alt="S&T">
       </div>
-      <div class="col-liq-2">
+      <div class="col-2">
         <img src="<?=$r?>/images/top/icon_cross.png" alt="cross">
       </div>
-      <div class="col-liq-5">
+      <div class="col-5">
         <img src="<?=$r?>/images/top/circle_more.png" alt="S&T more">
       </div>
     </div>
@@ -119,7 +119,7 @@ get_header(); ?>
                 <img src="<?=$r?>/images/top/topics_01.jpg" style="margin-bottom:15px;" alt="topics">
                 <span>詳細はこちら</span>
               </div>
-              <img src="<?=$r?>/images/top/logo_more.svg" style="max-height:26px;margin-bottom:7px;" alt="S&T moreロゴ">
+              <img src="<?=$r?>/images/top/logo_more.svg" style="max-height:19px;margin-bottom:7px;" alt="S&T moreロゴ">
               <p>
                 <span>建築プロデュース・<br class="sp-show">施設再⽣</span>
                 <img src="<?=$r?>/images/common/arrow_fat_black.svg" alt="矢印アイコン">
@@ -207,7 +207,7 @@ get_header(); ?>
             <a href="/service/#broker">
               <img src="<?=$r?>/images/top/business_01.jpg" class="main-img" alt="topics">
               <div class="title">
-                <h3 class="shippori" style="font-weight:bold !important;">不動産／売却・購入</h3>
+                <h3 class="shippori">不動産／売却・購入</h3>
                 <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
               </div>
             </a>
@@ -220,7 +220,7 @@ get_header(); ?>
             <a href="/service/#rent">
               <img src="<?=$r?>/images/top/business_02.jpg" class="main-img" alt="topics">
               <div class="title">
-                <h3 class="shippori" style="font-weight:bold !important;">店舗・テナント</h3>
+                <h3 class="shippori">店舗・テナント</h3>
                 <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
               </div>
             </a>
@@ -237,7 +237,7 @@ get_header(); ?>
             <a href="/service/#howto">
               <img src="<?=$r?>/images/top/business_03.jpg" class="main-img" alt="topics">
               <div class="title">
-                <h3 class="shippori" style="font-weight:bold !important;">土地活用</h3>
+                <h3 class="shippori">土地活用</h3>
                 <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
               </div>
             </a>
@@ -252,7 +252,7 @@ get_header(); ?>
             <a href="/service/#consulting">
               <img src="<?=$r?>/images/top/business_04.jpg" class="main-img" alt="topics">
               <div class="title">
-                <h3 class="shippori" style="font-weight:bold !important;">不動産コンサルティング</h3>
+                <h3 class="shippori">不動産コンサルティング</h3>
                 <img src="<?=$r?>/images/common/arrow_fat_black.svg" class="sp-hide" alt="矢印アイコン">
               </div>
             </a>

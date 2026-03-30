@@ -4,7 +4,7 @@
 $r = get_template_directory_uri();
 get_header(); ?>
 
-<section id="firstview">
+<section id="firstview" style="background-position:bottom center;">
   <div class="container">
     <h1 class="shippori">S&amp;Tを知る</h1>
   </div>

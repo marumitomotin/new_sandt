@@ -26,7 +26,7 @@ get_header(); ?>
       新しい住まいの価値や文化を創造することに努めて参ります。
     </p>
 
-    <img src="<?=$r?>/images/sustainable/icon_title.png" alt="sdgsアイコン" class="sp-hide">
+    <img src="<?=$r?>/images/sustainable/icon_title.png" style="display:block;margin:0 auto;" alt="sdgsアイコン" class="sp-hide">
     <div class="icon-area sp-hide">
       <img src="<?=$r?>/images/sustainable/icon_sdg01.png" alt="sdgsアイコン">
       <img src="<?=$r?>/images/sustainable/icon_sdg02.png" alt="sdgsアイコン">
@@ -81,7 +81,7 @@ get_header(); ?>
           既存建物を再生をすることで環境へ配慮します。
         </h2>
         <p>
-          私たちは既存建物（アパート、ビル、マンションなど）を古くなったから解体するのではなく、当社の強みである「企画力」「デザイン力」を生かし、建物の再生（リノベーション・コンバージョン）に力を入れ、それに伴い通常の建て替え時に生じる環境・エネルギー問題の解決に寄与できよう努めてまいります
+          私たちは既存建物（アパート、ビル、マンションなど）を古くなったから解体するのではなく、当社の強みである「企画力」「デザイン力」を生かし、建物の再生（リノベーション・コンバージョン）に力を入れ、それに伴い通常の建て替え時に生じる環境・エネルギー問題の解決に寄与できよう努めてまいります。
         </p>
         <div class="icon-area">
           <img src="<?=$r?>/images/sustainable/icon_sdg11.png" alt="sdgsアイコン">
