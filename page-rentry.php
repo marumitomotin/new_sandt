@@ -6,15 +6,14 @@ get_header(); ?>
 
 <section id="firstview">
   <div class="container">
-    <h1 class="shippori">株式会社エスアンドティ 採用情報</h1>
+    <h1 class="shippori">Entry</h1>
+    <h2 class="shippori">募集要項</h2>
   </div>
 </section>
 
 <section id="content">
   <div class="container">
 
-    <h2 class="shippori">Entry</h2>
-    <h3 class="shippori">募集要項</h3>
     <h4>不動産業の経験がない方も歓迎です。まずはお気軽にご応募ください。</h4>
 
     <table>

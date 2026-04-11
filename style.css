@@ -376,7 +376,7 @@ header {
 header .container {
   height: 100%;
   max-width: 1420px;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 header nav #btn-toggler {
@@ -469,19 +469,20 @@ header .btn-area {
 @media (max-width: 767px) {
 
   header {
-    height: 80px;
+    height: 60px;
   }
 
   header .container {
-    padding: 15px 0;
+    padding: 10px 0;
   }
 
   header nav {
     position: relative;
   }
 
-  header nav img:first-child {
+  header nav .header-logo {
     margin-left: 10px;
+    height: 40px;
   }
 
   #menu-main {
@@ -623,18 +624,18 @@ header .btn-area {
   }
 
   header #btn-toggler .toggler-bar:nth-of-type(1) {
-    top: 0px;
+    top: 3px;
     right: 5px;
   }
 
   header #btn-toggler .toggler-bar:nth-of-type(2) {
-    top: 8px;
+    top: 11px;
     right: 5px;
     width: 18px;
   }
 
   header #btn-toggler .toggler-bar:nth-of-type(3) {
-    top: 16px;
+    top: 19px;
     right: 5px;
     width: 11px;
   }
@@ -1018,8 +1019,8 @@ footer {
   letter-spacing: 5px;
   background: url(images/top/top_about_bg.webp);
   background-repeat: no-repeat;
-  background-size: 123%;
-  background-position: bottom;
+  background-size: 146%;
+  background-position: center;
 }
 
 #home #about .circle-area {
@@ -1044,7 +1045,6 @@ footer {
 #home #about .description {
   margin-bottom: 20px;
   font-size: 16px;
-  font-weight: bold;
 }
 
 #home #about .description:last-of-type {
@@ -1369,6 +1369,7 @@ footer {
   background: url(images/company/company_header.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: bottom;
   position: relative;
 }
 
@@ -2133,23 +2134,24 @@ footer {
 **********************************************************/
 
 #rentry #firstview {
-  height: 300px;
-  padding: 0;
-  background: url(images/rentry/rentry_header.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  height: 250px;
+  padding: 70px 0;
+  background: #F2F5F6;
+  border-bottom: 1px solid #d6d6d6;
   position: relative;
 }
 
 #rentry #firstview .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  display: block;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
-#rentry #firstview .container h1 {
-  color: #ffffff;
+
+#rentry #firstview h1 {
+  font-size: 44px;
+  color: #375D52;
+  margin-bottom: 30px;
 }
 
 #rentry #content h2 {

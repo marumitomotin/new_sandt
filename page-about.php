@@ -34,13 +34,13 @@ get_header(); ?>
   <div class="container">
 
     <div class="circle-area">
-      <div class="col-liq-5">
+      <div class="col-5">
         <img src="<?=$r?>/images/top/circle_st.png" alt="S&T">
       </div>
-      <div class="col-liq-2">
+      <div class="col-2">
         <img src="<?=$r?>/images/top/icon_cross.png" alt="cross">
       </div>
-      <div class="col-liq-5">
+      <div class="col-5">
         <img src="<?=$r?>/images/top/circle_more.png" alt="S&T more">
       </div>
     </div>

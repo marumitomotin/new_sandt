@@ -53,14 +53,13 @@ global $post; ?>
         <nav>
 
           <a href="/">
-            <img src="<?=$r?>/images/header/logo.svg" alt="S&T Group">
+            <img src="<?=$r?>/images/header/logo.svg" alt="S&T Group" class="header-logo">
           </a>
 
           <div class="nav-area">
             <div class="sp-wrap">
               <img src="<?=$r?>/images/header/cross.svg" id="close" class="sp-show cross" alt="Xボタン">
               <div style="clear:both;margin-bottom:10px;"></div>
-              <img src="<?=$r?>/images/footer/footer_logo_sp.svg" class="sp-show" style="margin-bottom:20px;" alt="ロゴ">
               <div class="other-link">
                 <p class="sp-show bottom">
                   <span>

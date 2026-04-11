@@ -101,7 +101,7 @@ $r = get_template_directory_uri(); ?>
               <p style="line-height:1.8;margin:10px 0;">株式会社エスアンドティ<br>SPACE AND TRADE INCORPORATION</p>
               <p style="margin-bottom:20px;">〒335-0004 埼玉県蕨市中央5-12-13</p>
               <p style="font-size:20px;margin-bottom:20px;">TEL.048-433-0550</p>
-              <a href="https://www.instagram.com/sandt_warabi/" target="_blank">
+              <a href="https://www.instagram.com/sandt_official/" target="_blank">
                 <p style="display:flex;align-items:center;gap:10px;margin-bottom:20px;">
                   <img src="<?=$r?>/images/footer/instagram.svg" alt="instagram">
                   公式アカウント sandt_official
