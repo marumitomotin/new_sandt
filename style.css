@@ -1258,6 +1258,14 @@ footer {
 
 @media (max-width: 767px) {
 
+  #home #firstview h1 {
+    font-size: 22px;
+  }
+
+  #home #firstview p {
+    font-size: 12px;
+  }
+
   #home #about .circle-area img {
     display: block;
     margin: 0 auto;
@@ -1382,7 +1390,7 @@ footer {
 }
 
 #company #firstview h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #ffffff;
 }
 
@@ -1474,7 +1482,6 @@ footer {
   max-width: 500px;
   color: #595757;
   font-size: 14px;
-  font-weight: bold;
 }
 
 #company #information td {
@@ -1666,7 +1673,7 @@ footer {
 }
 
 #service #firstview h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #ffffff;
 }
 
@@ -1913,7 +1920,7 @@ footer {
 }
 
 #about #firstview h1 {
-  font-size: 24px;
+  font-size: 28px;
   color: #ffffff;
 }
 
@@ -3201,7 +3208,6 @@ footer {
 #recruitment #message p {
   max-width: 500px;
   font-size: 15px;
-  font-weight: bold !important;
 }
 
 #recruitment .btn-fill-green {
